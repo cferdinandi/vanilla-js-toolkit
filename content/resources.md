@@ -7,7 +7,7 @@ noIndex: false
 anchors: true
 ---
 
-Ready to dig deeper? Make {{<year>}} the year your master vanilla JavaScript!
+Ready to dig deeper? Make 2018 the year your master vanilla JavaScript!
 
 *__Note:__ Learning resources with a ⭐️ next to them are mine.*
 
