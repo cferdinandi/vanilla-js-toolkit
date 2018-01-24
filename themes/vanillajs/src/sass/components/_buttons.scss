@@ -1,0 +1,144 @@
+/**
+ * @section Buttons
+ * Styling for CSS buttons.
+ */
+
+
+/**
+ * Primary buttons
+ */
+.btn {
+	background-color: darken( $color-secondary, 15% );
+	border: calc-em(2px) solid darken( $color-secondary, 15% );
+	border-radius: calc-em(1px);
+	color: $color-white;
+	display: inline-block;
+	font-size: calc-em(15px);
+	font-weight: normal;
+	line-height: 1.2;
+	margin-right: calc-em(5px);
+	margin-bottom: calc-em(5px);
+	padding: calc-em(8px) calc-em(11px);
+
+	&,
+	&:visited {
+		color: $color-white;
+	}
+
+	del {
+		@extend .text-muted-light;
+	}
+}
+
+a.btn {
+	text-decoration: none;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active {
+	background-color: darken( $color-secondary, 30% );
+	border-color: darken( $color-secondary, 30% );
+	color: $color-white;
+	// text-decoration: none;
+}
+
+
+/**
+ * Secondary buttons
+ */
+.btn-secondary {
+	background-color: $color-gray-dark;
+	border-color: $color-gray-dark;
+	// color: $color-white;
+
+	// del {
+	// 	@extend .text-muted-light;
+	// }
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary.active {
+	background-color: darken( $color-gray-dark, 30% );
+	border-color: darken( $color-gray-dark, 30% );
+}
+
+
+/**
+ * Active state
+ */
+.btn:active,
+.btn.active {
+	box-shadow: inset 0 calc-em(2.5px) calc-em(4px) rgba(0, 0, 0, 0.15), 0 calc-em(1px) calc-em(2.5px) rgba(0, 0, 0, 0.05);
+	outline: 0;
+}
+
+
+/**
+ * Disabled state
+ */
+.btn.disabled,
+.btn[disabled] {
+	box-shadow: none;
+	cursor: not-allowed;
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+
+/**
+ * Button size
+ */
+.btn-large {
+	font-size: 1em;
+	line-height: normal;
+	padding: calc-em(11px) calc-em(15px);
+}
+
+
+/**
+ * Block-level buttons
+ */
+.btn-block,
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+	display: block;
+	margin-right: 0;
+	padding-right: 0;
+	padding-left: 0;
+	width: 100%;
+}
+
+
+/**
+ * General styles
+ */
+.btn,
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+
+	/**
+	 * @workaround Override default button styling
+	 * @affected Webkit/Firefox
+	 */
+	// background-image: none;
+	-webkit-appearance: none;
+}
+
+
+/**
+ * Remove right margin on last element and inputs
+ */
+.btn:last-child,
+input.btn {
+	margin-right: 0;
+}

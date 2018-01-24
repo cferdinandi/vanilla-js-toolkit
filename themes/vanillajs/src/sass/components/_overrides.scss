@@ -1,0 +1,263 @@
+/**
+ * @section Overrides
+ * Nudge and tweak alignment, spacing, and visibility.
+ */
+
+
+/**
+ * Backgrounds
+ */
+
+.bg-muted {
+	background-color: lighten( $color-gray-light, 7% );
+}
+
+
+/**
+ * Font weights
+ */
+
+.text-normal {
+	font-weight: normal;
+	font-style: normal;
+	// line-height: 1.4;
+}
+
+
+/**
+ * Text sizes
+ */
+
+.text-small {
+	font-size: calc-em(15px);
+}
+
+.text-large {
+	font-size: calc-em(19px);
+	line-height: 1.4;
+
+	@media (min-width: $bp-medium) {
+		font-size: calc-em(21px);
+	}
+}
+
+.text-xlarge {
+	@extend .text-large;
+	font-size: 1.7em;
+
+	@media (min-width: $bp-medium) {
+		font-size: 2em;
+	}
+}
+
+
+/**
+ * Text colors
+ */
+
+.text-muted {
+	color: $color-gray-dark;
+}
+
+.text-muted-light {
+	color: $color-gray-medium;
+}
+
+
+/**
+ * Font weight
+ */
+
+.text-normal {
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/**
+ * Text alignment
+ */
+
+.text-center {
+	text-align: center;
+}
+
+// .text-right {
+// 	text-align: right;
+// }
+
+@media (min-width: $bp-medium) {
+	.text-right-large {
+		text-align: right;
+	}
+}
+
+// .text-left {
+// 	text-align: left;
+// }
+
+
+/**
+ * Floats
+ */
+
+// .float-left {
+// 	float: left;
+// }
+
+.float-center {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// .float-right {
+// 	float: right;
+// }
+
+
+/**
+ * Margins
+ */
+
+.no-margin-top {
+	margin-top: 0;
+}
+
+.no-margin-bottom {
+	margin-bottom: 0;
+}
+
+.margin-top {
+	margin-top: $spacing;
+}
+
+.margin-bottom {
+	margin-bottom: $spacing;
+}
+
+.margin-bottom-small {
+	margin-bottom: calc-em(8px);
+}
+
+.margin-bottom-large {
+	margin-bottom: calc-em(32px);
+}
+
+.margin-right {
+	margin-right: calc-em(4px);
+}
+
+
+/**
+ * Padding
+ */
+
+.no-padding-top {
+	padding-top: 0;
+}
+
+.no-padding-bottom {
+	padding-bottom: 0;
+}
+
+.padding-top {
+	padding-top: $spacing;
+}
+
+.padding-top-small {
+	padding-top: calc-em(8px);
+}
+
+.padding-top-medium {
+	padding-top: calc-em(16px);
+}
+
+.padding-top-large {
+	padding-top: calc-em(32px);
+}
+
+.padding-top-xlarge {
+	padding-top: calc-em(48px);
+}
+
+.padding-bottom {
+	padding-bottom: $spacing;
+}
+
+.padding-bottom-small {
+	padding-bottom: calc-em(8px);
+}
+
+.padding-bottom-large {
+	padding-bottom: calc-em(32px);
+}
+
+.padding-bottom-xlarge {
+	padding-bottom: calc-em(48px);
+}
+
+
+/**
+ * Visibility
+ */
+
+/**
+ * Visually hide an element, but leave it available for screen readers
+ * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+ * @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.screen-reader {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/**
+ * Extends the .screen-reader class to allow the element to be focusable when navigated to via the keyboard
+ * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+ * @link https://www.drupal.org/node/897638
+ */
+.screen-reader-focusable:active,
+.screen-reader-focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	white-space: normal;
+	width: auto;
+}
+
+/**
+ * @workaround
+ * @affected IE 8/9/10
+ * @link http://juicystudio.com/article/screen-readers-display-none.php
+ */
+[hidden] {
+	display: none;
+	visibility: hidden;
+}
+
+
+/**
+ * Contain floats
+ * The space content is one way to avoid an Opera bug when the `contenteditable` attribute is included anywhere else in the document.
+ * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+ */
+
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	content: " ";
+}
+
+.clearfix:after {
+	clear: both;
+}

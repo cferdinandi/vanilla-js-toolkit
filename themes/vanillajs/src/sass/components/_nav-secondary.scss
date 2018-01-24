@@ -1,0 +1,8 @@
+/**
+ * @section Secondary Nav
+ * Styling for the secondary navigation area
+ */
+
+.nav-secondary a {
+	@extend .link-no-underline;
+}

@@ -1,0 +1,85 @@
+/**
+ * @section Grid
+ * Structure and layout
+ */
+
+/**
+ * Base grid styles: single column
+ */
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $container-max-width;
+	width: $container-width;
+}
+
+.container-large {
+	max-width: $container-large-max-width;
+}
+
+.row {
+	margin-left: $grid-margins * -1;
+	margin-right: $grid-margins * -1;
+}
+
+%grid-base {
+	float: left;
+	padding-left: $grid-margins;
+	padding-right: $grid-margins;
+	width: 100%;
+}
+
+@each $grid, $width in ($grid-sizes) {
+	.grid-#{$grid} {
+		@extend %grid-base;
+	}
+}
+
+
+/**
+ * Reverses order of grid for content choreography
+ */
+.grid-flip {
+	float: right;
+}
+
+
+/**
+ * Add columns to grid on bigger screens
+ */
+@each $breakpoint, $prefix, $offset in ($grid-breakpoints){
+	@media (min-width: $breakpoint) {
+		@each $grid, $width in ($grid-sizes) {
+			#{$prefix} .grid-#{$grid} {
+				width: $width;
+			}
+		}
+		@if $offset {
+			@each $grid, $width in ($grid-sizes) {
+				#{$prefix} .offset-#{$grid} {
+					margin-left: $width;
+				}
+			}
+		}
+	}
+}
+
+/**
+ * Dynamic grid
+ */
+ @each $namespace, $breakpoint, $width in ($grid-dynamic){
+ 	#{$namespace} {
+ 		@extend %grid-base;
+ 	}
+ 	@media (min-width: $breakpoint) {
+ 		#{$namespace} {
+ 			width: $width;
+ 		}
+ 	}
+ }
+
+// Add clearfix
+.container,
+.row {
+	@extend .clearfix;
+}

@@ -1,0 +1,360 @@
+/**
+ * @section Typography
+ * Sets font styles for entire site
+ */
+
+body {
+	background: $color-white;
+	border-top: calc-em(8px) solid $color-gray-light;
+	color: $color-black;
+	font-family: $font-primary;
+	font-size: $font-size;
+	line-height: 1.5;
+
+	.fonts-loaded & {
+		font-family: $font-enhanced;
+	}
+
+	@media (min-width: $bp-medium) {
+		line-height: $spacing;
+	}
+}
+
+p {
+	margin: 0 0 $spacing;
+}
+
+
+/**
+ * Hyperlink styling
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+
+a {
+	background-color: transparent; /* 1 */
+	color: $color-primary;
+	text-decoration: underline;
+	text-decoration-skip: ink; /* 2 */
+	text-decoration-skip-ink: auto; /* 2 */
+	word-wrap: break-word;
+
+	/**
+	 * Improve readability when focused and also mouse hovered in all browsers.
+	 */
+	&:active,
+	&:hover {
+		outline: 0;
+	}
+
+	&:active,
+	&:focus,
+	&:hover {
+		color: darken( $color-primary, 15% );
+		// text-decoration: underline;
+	}
+
+	&:visited {
+		color: $color-accent;
+	}
+}
+
+
+.link-no-underline {
+	text-decoration: none;
+
+	&:active,
+	&:focus,
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+
+/**
+ * Remove default link styling
+ */
+.link-plain {
+	&,
+	&:visited {
+		color: $color-black;
+		text-decoration: none;
+	}
+
+	&:active,
+	&:focus,
+	&:hover {
+		color: $color-primary;
+		// text-decoration: none;
+	}
+}
+
+
+/**
+ * Creates block-level links
+ */
+
+a.link-block {
+	color: $color-black;
+	display: block;
+	text-decoration: none;
+}
+
+.link-block-styled {
+	@extend a;
+
+	.link-block:hover & {
+		@extend a:hover;
+	}
+}
+
+
+/**
+ * List styling
+ */
+
+ul,
+ol {
+	margin: 0 0 $spacing calc-em(32px);
+	padding: 0;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+	margin-bottom: 0;
+}
+
+li {
+	margin-bottom: calc-em(8px);
+
+	@media (min-width: $bp-medium) {
+		margin-bottom: calc-em(4px);
+	}
+
+	.list-spaced & {
+		margin-bottom: calc-em(16px);
+
+		@media (min-width: $bp-medium) {
+			margin-bottom: calc-em(11px);
+		}
+	}
+}
+
+dl,
+dd {
+	margin: 0;
+	padding: 0;
+}
+
+dd {
+	margin-bottom: $spacing;
+}
+
+dt {
+	font-weight: bold;
+}
+
+/**
+ * Removes list styling.
+ * For semantic reasons, should only be used on unordered lists.
+ */
+.list-unstyled {
+	margin-left: 0;
+	list-style: none;
+}
+
+/**
+ * Display lists on a single line.
+ */
+
+.list-inline {
+	list-style: none;
+	margin-left: calc-em(-8px);
+	margin-right: calc-em(-8px);
+	padding: 0;
+
+	li {
+		display: inline-block;
+		margin-left: calc-em(8px);
+		margin-right: calc-em(8px);
+	}
+
+	@media (max-width: $bp-medium) {
+		&.list-inline-responsive li {
+			display: block;
+		}
+	}
+}
+
+
+/**
+ * Heading styling for h1 through h6 elements.
+ * Heading class lets you use one heading type for semantics, but style it as another heading type.
+ */
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 0 0 1em;
+	padding: 1em 0 0;
+	word-wrap: break-word;
+}
+
+h1,
+.h1 {
+	font-size: calc-em(24px);
+	padding-top: .5em;
+
+	@media (min-width: $bp-medium) {
+		font-size: calc-em(28px);
+	}
+}
+
+h2,
+.h2 {
+	font-size: calc-em(21px);
+}
+
+h3,
+.h3 {
+	font-size: calc-em(19px);
+}
+
+h4, h5, h6,
+.h4, .h5, .h6 {
+	font-size: calc-em(16px);
+}
+
+h4,
+.h4 {
+	text-transform: uppercase;
+}
+
+
+/**
+ * Lines, Quotes and Emphasis
+ */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+	border: 0;
+	border-top: calc-em(1px) solid $color-gray-light;
+	border-bottom: 0 solid transparent;
+	box-sizing: content-box; /* 1 */
+	margin: calc-em(32px) auto;
+	overflow: visible; /* 2 */
+}
+
+.line-secondary {
+	width: 50%;
+}
+
+.line-clear {
+	border-top-color: transparent;
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+	font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+	border-bottom: none; /* 1 */
+	text-decoration: underline; /* 2 */
+	text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+	font-style: italic;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark,
+.highlight {
+	background: #fbf89a;
+	background-image: linear-gradient(to right, #fbf89a 0%, #fbf9c9 100%);
+	color: $color-black;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+	font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+
+/**
+ * Blockquotes
+ */
+
+blockquote {
+	border-left: calc-em(4px) solid $color-gray-light;
+	// font-size: calc-em(19px);
+	font-style: italic;
+	margin: 0 0 $spacing;
+	padding-left: calc-em(16px);
+	padding-right: calc-em(16px);
+
+	cite {
+		color: $color-gray-dark;
+		font-size: calc-em(15px);
+		padding-top: calc-em(16px);
+	}
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+}

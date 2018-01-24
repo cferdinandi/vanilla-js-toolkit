@@ -1,0 +1,33 @@
+{{ `<?` | safeHTML }}xml version="1.0" encoding="UTF-8"{{ `?>` | safeHTML }}
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+>
+	<channel>
+		<title>{{ .Site.Title }}</title>
+		<atom:link href="{{ .Site.BaseURL }}/feed/" rel="self" type="application/rss+xml" />
+		<link>{{ .Site.BaseURL }}</link>
+		<description>{{ $.Site.Params.description }}</description>
+		{{ if not .Date.IsZero }}<lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0500" | safeHTML }}</lastBuildDate>{{ end }}
+		{{ with .Site.LanguageCode }}<language>{{.}}</language>{{end}}
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+		<generator>Hugo -- gohugo.io</generator>
+		{{ $all := where .Site.RegularPages "Type" "articles" }}
+		{{ range first ($.Site.Params.rssLimit) $all }}
+			<item>
+				<title>{{ .Title }}</title>
+				<link>{{ .Permalink }}</link>
+				<pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+				{{ with .Site.Author.name }}<dc:creator>{{.}}</dc:creator>{{end}}
+				<guid>{{ .Permalink }}</guid>
+				<description>{{ `<![CDATA[ ` | safeHTML }}{{ .Summary | safeHTML }}]]></description>
+				<content:encoded>{{ `<![CDATA[ ` | safeHTML }}{{ .Content | safeHTML }}]]></content:encoded>
+			</item>
+		{{ end }}
+	</channel>
+</rss>

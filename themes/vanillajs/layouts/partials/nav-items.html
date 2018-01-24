@@ -1,0 +1,5 @@
+<li{{ if eq .URL "/code-snippets/" }} class="active"{{ end }}><a href="{{ "/code-snippets" | absURL }}">Code Snippets</a></li>
+<li{{ if or (eq .URL "/helpers/") (eq .Type "helpers") }} class="active"{{ end }}><a href="{{ "/helpers" | absURL }}">Helper Functions</a></li>
+<li{{ if or (eq .URL "/polyfills/") (eq .Type "polyfills") }} class="active"{{ end }}><a href="{{ "/polyfills" | absURL }}">Polyfills</a></li>
+<li{{ if eq .URL "/plugins/" }} class="active"{{ end }}><a href="{{ "/plugins" | absURL }}">Plugins</a></li>
+<li{{ if eq .URL "/resources/" }} class="active"{{ end }}><a href="{{ "/resources" | absURL }}">Learning Resources</a></li>

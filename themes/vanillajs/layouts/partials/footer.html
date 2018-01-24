@@ -1,0 +1,33 @@
+			</div>
+		</main>
+
+		<footer class="container container-large">
+			<hr class="margin-bottom">
+			{{ partial "nav-secondary.html" }}
+			<p class="text-small">Made with ❤️ in Massachussets by <a href="https://gomakethings.com">Chris Ferdinandi</a>. Unless otherwise noted, all code is free to use under the <a href="/mit">MIT License</a>.</p>
+		</footer>
+
+		<script src="{{ if eq $.Site.Params.cacheBust true }}{{ ( printf "/js/loadJS.min.%s.js" $.Site.Params.version | absURL ) }}{{ else }}{{ "/js/loadJS.js" | absURL }}{{ end }}"></script>
+		<script>
+			if ('querySelector' in document && 'addEventListener' in window) {
+				loadJS('{{ if eq $.Site.Params.cacheBust true }}{{ ( printf "/js/main.min.%s.js" $.Site.Params.version | absURL ) }}{{ else }}{{ "/js/main.js" | absURL }}{{ end }}');
+				if (document.querySelector('#form-search')) {
+					loadJS('{{ if eq $.Site.Params.cacheBust true }}{{ ( printf "/js/lunr.min.%s.js" $.Site.Params.version | absURL ) }}{{ else }}{{ "/js/lunr.js" | absURL }}{{ end }}');
+				}
+			}
+			// Analytics
+			var _paq = _paq || [];
+			/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+			(function() {
+				var u="//analytics.gomakethings.com/";
+				_paq.push(['setTrackerUrl', u+'piwik.php']);
+				_paq.push(['setSiteId', '9']);
+				var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+				g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+			})();
+		</script>
+		<noscript><p><img src="//analytics.gomakethings.com/piwik.php?idsite=9&rec=1" style="border:0;" alt="" /></p></noscript>
+	</body>
+</html>

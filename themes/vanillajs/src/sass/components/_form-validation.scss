@@ -1,0 +1,15 @@
+/**
+ * @section Form Validation
+ * Styling for form validation
+ */
+
+.error {
+	@extend .margin-bottom-small;
+	border-color: darken( $color-secondary, 25% );
+}
+
+.error-message {
+	color: darken( $color-secondary, 25% );
+	font-style: italic;
+	margin-bottom: 1em;
+}

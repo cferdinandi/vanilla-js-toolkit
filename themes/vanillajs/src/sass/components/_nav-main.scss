@@ -1,0 +1,175 @@
+/**
+ * @section Main Nav
+ * Styling for the main navigation area
+ */
+
+/**
+ * The navigation container
+ */
+.nav-wrap {
+	@extend .clearfix;
+	padding-top: 1em;
+	padding-bottom: 0.5em;
+	text-align: center;
+
+	@media (min-width: $bp-large) {
+		text-align: left;
+	}
+
+	// @media (max-width: $bp-large) {
+	// 	.js-astro & {
+	// 		text-align: left;
+	// 	}
+	// }
+}
+
+
+/**
+ * The logo
+ */
+.logo {
+	display: inline-block;
+	font-size: 1.2em;
+	font-weight: bold;
+	line-height: 1.2;
+	margin-bottom: calc-em(5px);
+	text-decoration: none;
+
+	@media (min-width: $bp-large) {
+		float: left;
+		margin-bottom: 0;
+	}
+
+	// @media (max-width: $bp-large) {
+	// 	.js-astro & {
+	// 		float: left;
+	// 	}
+	// }
+
+	&,
+	&:visited {
+		color: $color-black;
+	}
+
+	&:active,
+	&:focus,
+	&:hover {
+		color: $color-primary;
+		// text-decoration: none;
+	}
+
+	.icon {
+		height: 0.8em;
+		width: 0.8em;
+	}
+}
+
+
+/**
+ * The nav menu
+ */
+.nav {
+	list-style: none;
+	// font-size: calc-em(15px);
+	margin: 0 calc-em(-8px);
+	padding: 0;
+
+	// @media (min-width: $bp-small) {
+	// 	font-size: calc-em(16px);
+	// }
+
+	@media (min-width: $bp-large) {
+		text-align: right;
+	}
+
+	// @media (max-width: $bp-large) {
+	// 	.js-astro & {
+	// 		text-align: left;
+	// 	}
+	// }
+
+	li {
+		display: inline-block;
+		float: none;
+		margin-left: calc-em(8px);
+		margin-right: calc-em(8px);
+
+		// @media (max-width: $bp-large) {
+		// 	.js-astro & {
+		// 		display: block;
+		// 		width: 100%;
+		// 		padding-top: calc-em(4px);
+		// 		padding-bottom: calc-em(4px);
+		// 	}
+		// }
+	}
+
+	a {
+		color: $color-gray-dark;
+		text-decoration: none;
+	}
+
+	/**
+	 * Active link styling
+	 */
+	a:hover,
+	a:active,
+	a:focus,
+	.active a {
+		border-bottom: calc-em(2px) solid $color-secondary;
+		color: $color-black;
+		// text-decoration: none;
+	}
+}
+
+
+// /**
+//  * Small screen navigation toggle
+//  */
+// .nav-toggle {
+// 	@extend [hidden];
+// 	color: $color-gray-dark;
+
+// 	&:hover,
+// 	&:active,
+// 	&:focus {
+// 		color: $color-primary;
+// 		text-decoration: none;
+// 	}
+
+// 	@media (max-width: $bp-large) {
+// 		.js-astro & {
+// 			display: block;
+// 			visibility: visible;
+// 			float: right;
+// 		}
+// 	}
+
+// 	.nav-toggle-icon {
+// 		display: inline-block;
+// 		font-weight: bold;
+// 		transition-duration: 150ms;
+// 		transition-property: transform;
+// 	}
+
+// 	&.active .nav-toggle-icon{
+// 		transform: rotate(45deg);
+// 	}
+// }
+
+
+// /**
+//  * Nav menu wrapper
+//  */
+// .js-astro .nav-menu {
+// 	@media (max-width: $bp-large) {
+// 		clear: left;
+// 		display: none;
+// 		padding-top: calc-em(8px);
+// 		width: 100%;
+
+// 		&.active {
+// 			display: block;
+// 		}
+// 	}
+// }

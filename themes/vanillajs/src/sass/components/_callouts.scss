@@ -1,0 +1,11 @@
+/**
+ * @section Callouts
+ * Styling for callout boxes
+ */
+
+.callout {
+	background-color: lighten( $color-gray-light, 7% );
+	border: calc-em(1px) solid $color-gray-light;
+	margin-bottom: $spacing;
+	padding: calc-em(16px) calc-em(24px);
+}

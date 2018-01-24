@@ -1,0 +1,18 @@
+/*  Adds a border */
+.img-border {
+	border: calc-em(1px) solid darken( $color-gray-light, 10% );
+}
+
+// /*  Adds padding and a white border */
+// .img-photo {
+//	@extend .img-border;
+// 	padding: calc-em(4px);
+// 	background-color: $color-white;
+// 	box-shadow: 0 calc-em(1px) calc-em(1px) rgba(0, 0, 0, 0.1);
+// }
+
+/*  Adds a 50% border radius,
+ *  turning square images into a circle. */
+.img-circle {
+	border-radius: 50%;
+}

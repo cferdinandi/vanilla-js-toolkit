@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+
+	<article>
+
+		<header>
+
+			<aside class="text-muted">
+				<time datetime="{{ .Date }}" pubdate>{{ dateFormat "January 2, 2006" .Date }}</time>
+			</aside>
+
+			<h1 class="no-padding-top">
+				{{ .Title }}
+			</h1>
+
+		</header>
+
+		{{ .Content }}
+
+	</article>
+
+	{{ partial "cta-individual-post.html" }}
+
+{{ partial "footer.html" . }}

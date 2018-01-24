@@ -1,0 +1,15 @@
+{{ partial "header.html" . }}
+
+	{{ partial "content-page.html" . }}
+
+	{{- $.Scratch.Add "index" slice -}}
+	{{- range where .Site.Pages "Type" "not in"  (slice "page" "search") -}}
+		{{- if ne .Params.noSearch true -}}
+			{{- $.Scratch.Add "index" (dict "title" .Title "url" .Permalink "categories" .Params.categories "content" (.Content | plainify) "summary" (.Summary | plainify) ) -}}
+		{{- end -}}
+	{{- end -}}
+	<script>
+		var searchIndex = JSON.parse({{- $.Scratch.Get "index" | jsonify -}});
+	</script>
+
+{{ partial "footer.html" . }}
