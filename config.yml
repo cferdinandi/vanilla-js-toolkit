@@ -28,7 +28,7 @@ permalinks:
 disableKinds: ["RSS", "hugoGeneratorInject", "404"]
 
 # Files to ignore while rendering
-ignoreFiles: ["/content/articles/_2018-01-19-title.md"]
+ignoreFiles: []
 
 # the length of text to show in a .Summary
 summaryLength: 70

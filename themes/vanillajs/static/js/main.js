@@ -2539,6 +2539,6 @@ if (document.querySelector('#mc-embedded-subscribe-form')) {
 }
 
 // Anchor links on posts
-if (document.body.matches('.type-articles.page-single') || document.body.matches('#page-54a32daa7699b0585cab71188bd8c152') || document.body.matches('.js-anchors')) {
+if (document.body.matches('.js-anchors')) {
 	addHeadingLinks('h2, h3, h4, h5, h6', '#', 'link-no-underline');
 }

@@ -23,11 +23,6 @@
 		<link rel="shortcut icon" href="{{ "/img/favicon.ico" | absURL }}">
 		<link rel="icon" sizes="16x16 24x24 32x32 64x64" href="{{ "/img/favicon.ico" | absURL }}">
 
-		<!-- RSS Feed -->
-		<!-- {{ "posts/index.xml" | absURL }} -->
-		<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} RSS Feed" href="{{ $.Site.Params.rssURL }}">
-		<link rel="feed" type="application/rss+xml" title="{{ .Site.Title }} RSS Feed" href="{{ $.Site.Params.rssURL }}">
-
 		<!-- Stylesheet -->
 		<link rel="stylesheet" href="{{ if eq $.Site.Params.cacheBust true }}{{ ( printf "/css/main.min.%s.css" $.Site.Params.version | absURL ) }}{{ else }}{{ "/css/main.css" | absURL }}{{ end }}">
 
