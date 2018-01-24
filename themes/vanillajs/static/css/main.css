@@ -1249,6 +1249,45 @@ button:-moz-focusring,
 }
 
 /**
+ * @section Image Classes
+ * Styling for images.
+ */
+/**
+ * Image alignment
+ */
+/* line 10, src/sass/components/_images.scss */
+.aligncenter, .alignleft, .alignright, .alignnone {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 28em) {
+  /* line 17, src/sass/components/_images.scss */
+  .alignleft {
+    float: left;
+    margin-right: 1em;
+  }
+}
+
+@media (min-width: 28em) {
+  /* line 26, src/sass/components/_images.scss */
+  .alignright {
+    float: right;
+    margin-left: 1em;
+  }
+}
+
+@media (min-width: 28em) {
+  /* line 35, src/sass/components/_images.scss */
+  .alignnone {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/**
  * @section Callouts
  * Styling for callout boxes
  */

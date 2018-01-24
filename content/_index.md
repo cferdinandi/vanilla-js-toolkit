@@ -11,3 +11,9 @@ fullWidth: false
 <p class="text-large">{{%md%}}A growing collection of [code snippets](/code-snippets), [helper functions](/helpers), [polyfills](/polyfills), [plugins](/plugins), and [learning resources](/resources), by [Chris Ferdinandi](https://gomakethings.com).{{%/md%}}</p>
 
 {{<mailchimp intro>}}
+
+<div class="clearfix padding-top">
+{{%md%}}
+<img src="/img/chris-ferdinandi-high-res.jpg" alt="Chris Ferdinandi" width="100" height="100" class="img-circle alignleft margin-bottom">*__Hi, I’m Chris Ferdinandi. I help people learn JavaScript.__ If you have a question about something, have feedback, or need JavaScript help, [get&nbsp;in&nbsp;touch](https://gomakethings.com/about).*
+{{%/md%}}
+</div>
