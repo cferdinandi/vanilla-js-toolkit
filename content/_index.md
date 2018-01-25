@@ -14,6 +14,6 @@ fullWidth: false
 
 <div class="clearfix padding-top">
 {{%md%}}
-<img src="/img/chris-ferdinandi-high-res.jpg" alt="Chris Ferdinandi" width="100" height="100" class="img-circle alignleft margin-bottom">*__Hi, I’m Chris Ferdinandi. I help people learn JavaScript.__ If you have a question about something, have feedback, or need JavaScript help, [get&nbsp;in&nbsp;touch](https://gomakethings.com/about).*
+<img src="/img/chris-ferdinandi-high-res.jpg" alt="Chris Ferdinandi" width="100" height="100" class="img-circle alignleft margin-bottom">*__Hi, I’m Chris Ferdinandi. I help people learn JavaScript.__ If you have a question about something or need JavaScript help, [get&nbsp;in&nbsp;touch](https://gomakethings.com/about). There are [many ways I can help you master vanilla JS](https://gomakethings.com/resources/) .*
 {{%/md%}}
 </div>
