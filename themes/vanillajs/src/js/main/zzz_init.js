@@ -24,6 +24,11 @@ if (document.querySelector('#mc-embedded-subscribe-form')) {
 	});
 }
 
+// Add table of contents
+if (document.querySelector('#table-of-contents')) {
+	tableOfContents('#table-of-contents', 'h2', '<h2>Table of Contents</h2>', null, 'ol');
+}
+
 // Anchor links on posts
 if (document.body.matches('.js-anchors')) {
 	addHeadingLinks('h2, h3, h4, h5, h6', '#', 'link-no-underline');

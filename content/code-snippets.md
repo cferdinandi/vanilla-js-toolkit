@@ -896,7 +896,7 @@ elem.parentNode.removeChild(elem);
 
 **Works back to at least IE6.**
 
-## remove()
+### remove()
 
 Remove an element from the DOM. Call the `remove()` method on the element you want to remove.
 

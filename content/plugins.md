@@ -17,6 +17,8 @@ As a result, the list is a lot shorter than some of the bigger "plugin repositor
 🚀 <strong>Want to learn how to write your own plugins?</strong> Check out my <em>Writing Plugins</em> <a href="https://gomakethings.com/guides/web-apps/">Pocket Guide</a> or <a href="https://gomakethings.com/courses/web-apps/">Mini Course</a>.
 </div>
 
+{{<toc>}}
+
 ## Hide & Show Content
 
 - ⭐️ **[Houdini.](https://github.com/cferdinandi/houdini/)** A progressively enhanced expand-and-collapse and accordion widget.

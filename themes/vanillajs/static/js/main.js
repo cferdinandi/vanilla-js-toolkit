@@ -261,25 +261,25 @@ if (!Element.prototype.matches) {
  * @param {String} content  The content to add to the anchor link [default: #]
  * @param {String} styles   The class(es) to add to the link [default: anchor-link]
  */
- var addHeadingLinks = function (selector, content, styles) {
+var addHeadingLinks = function (selector, content, styles) {
 
- 	'use strict';
+	'use strict';
 
- 	// Make sure a selector was provided
- 	if (!selector) return;
+	// Make sure a selector was provided
+	if (!selector) return;
 
- 	// Variables
- 	var headings = document.querySelectorAll(selector);
- 	content = content || '#';
- 	styles = styles || 'anchor-link';
+	// Variables
+	var headings = document.querySelectorAll(selector);
+	content = content || '#';
+	styles = styles || 'anchor-link';
 
- 	// Loop through each heading and add an anchor link
- 	for (var i = 0; i < headings.length; i++) {
- 		if (!headings[i].id) continue;
- 		headings[i].innerHTML += ' <a class="' + styles + '" href="#' + headings[i].id + '">' + content + '</a>';
- 	}
+	// Loop through each heading and add an anchor link
+	for (var i = 0; i < headings.length; i++) {
+		if (!headings[i].id) continue;
+		headings[i].innerHTML += ' <a class="' + styles + '" href="#' + headings[i].id + '">' + content + '</a>';
+	}
 
- };
+};
 // Serialize the form data into a query string
 // Forked and modified from https://stackoverflow.com/a/30153391/1293256
 var serialize = function (form) {
@@ -2001,6 +2001,46 @@ if (window.Element && !Element.prototype.closest) {
 
 }));
 /**
+ * Generate a table of contents from headings
+ * @param  {String} navSelector      Selector for the nav container
+ * @param  {String} headingsSelector Selector for the headings
+ * @param  {String} heading          The table of contents heading
+ * @param  {String} styles           Any classes to add to the list nav
+ * @param  {String} type             The list type (ul/ol)
+ */
+var tableOfContents = function (navSelector, headingsSelector, heading, styles, type) {
+
+	'use strict';
+
+	// Make sure a selector was provided
+	if (!navSelector || !headingsSelector) return;
+
+	// Get the nav
+	var nav = document.querySelector(navSelector);
+	if (!nav) return;
+
+	// Variables
+	var headings = document.querySelectorAll(headingsSelector);
+	type = type || 'ul';
+	var navList = '';
+
+	// Loop through each heading
+	for (var i = 0; i < headings.length; i++) {
+		if (!headings[i].id) continue;
+		navList += '<li><a href="#' + headings[i].id + '">' + headings[i].innerHTML + '</a></li>';
+	}
+
+	// Make sure a navList exists
+	if (navList.length < 1) return;
+
+	nav.innerHTML =
+		(heading ? heading : '') +
+		'<' + type + (styles ? ' class="' + styles + '"' : '') + '>' +
+			navList +
+		'</' + type + '>';
+
+};
+/**
  * validate v1.1.0: A lightweight form validation script that augments native HTML5 form validation elements and attributes.
  * (c) 2017 Chris Ferdinandi
  * MIT License
@@ -2536,6 +2576,11 @@ if (document.querySelector('#mc-embedded-subscribe-form')) {
 			submitMailChimpForm(form);
 		}
 	});
+}
+
+// Add table of contents
+if (document.querySelector('#table-of-contents')) {
+	tableOfContents('#table-of-contents', 'h2', '<h2>Table of Contents</h2>', null, 'ol');
 }
 
 // Anchor links on posts
