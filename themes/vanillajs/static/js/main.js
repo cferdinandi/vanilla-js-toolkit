@@ -1,5 +1,5 @@
 /*!
- * vanillajs v1.0.0: The theme for vanillajstoolkit.com
+ * vanillajs v1.1.0: The theme for vanillajstoolkit.com
  * (c) 2018 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/vanilla-js-toolkit
@@ -327,7 +327,7 @@ var displayMailChimpStatus = function (data) {
 	}
 
 	// Otherwise, redirect to success page
-	window.location.href = '/newsletter-success/';
+	window.location.href = 'https://gomakethings.com/newsletter-success/';
 
 };
 

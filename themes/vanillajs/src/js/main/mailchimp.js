@@ -45,7 +45,7 @@ var displayMailChimpStatus = function (data) {
 	}
 
 	// Otherwise, redirect to success page
-	window.location.href = '/newsletter-success/';
+	window.location.href = 'https://gomakethings.com/newsletter-success/';
 
 };
 
