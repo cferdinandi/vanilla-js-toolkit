@@ -9,18 +9,18 @@ anchors: true
 
 Ready to dig deeper? Make 2018 the year your master vanilla JavaScript!
 
-*__Note:__ Learning resources with a ⭐️ next to them are mine.*
+*__Note:__ Learning resources with a 👋 next to them are mine.*
 
 ## Books
 
-- ⭐️ [Vanilla JS Pocket Guides](https://gomakethings.com/guides/)
+- 👋 [Vanilla JS Pocket Guides](https://gomakethings.com/guides/)
 - [JavaScript for Web Designers](https://abookapart.com/products/javascript-for-web-designers)
 - [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
 
 
 ## Videos
 
-- ⭐️ [Vanilla JS Mini Courses](https://gomakethings.com/courses/)
+- 👋 [Vanilla JS Mini Courses](https://gomakethings.com/courses/)
 - [JavaScript for WordPress](https://javascriptforwp.com/)
 - [ES6 for Everyone](https://es6.io/)
 - [JavaScript 30](https://javascript30.com/)
@@ -34,7 +34,7 @@ Ready to dig deeper? Make 2018 the year your master vanilla JavaScript!
 
 ## Tutorials
 
-- ⭐️ [Daily Developer Tips](https://gomakethings.com/articles/)
+- 👋 [Daily Developer Tips](https://gomakethings.com/articles/)
 - [David Walsh](https://davidwalsh.name/)
 - [Remy Sharp](https://remysharp.com/archive)
 - [Todd Motto](https://toddmotto.com/javascript/) (the old, pre-Angular stuff)
