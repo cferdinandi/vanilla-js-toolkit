@@ -1,0 +1,21 @@
+{{ partial "header.html" . }}
+
+{{ partial "content-page.html" . }}
+
+{{ range .Sections }}
+	<h2 class="margin-bottom-small">{{ .Title }}</h2>
+	<p class="margin-bottom-small">{{ .Summary }}</p>
+
+	<ul>
+	{{ range .Pages }}
+		<li><a href="{{ .URL }}">{{ .Title }}</a></li>
+	{{ end }}
+	</ul>
+{{ end }}
+
+<aside>
+	{{ partial "mailchimp-intro.html" }}
+	{{ partial "mailchimp-form.html" }}
+</aside>
+
+{{ partial "footer.html" . }}
