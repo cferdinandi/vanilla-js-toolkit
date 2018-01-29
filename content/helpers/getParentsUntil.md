@@ -15,25 +15,14 @@ Get all of an element's parent elements up the DOM tree until a matching parent 
  * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {Node}   elem     The element
  * @param  {String} parent   The selector for the parent to stop at
- * @param  {String} selector The selector to filter against [optionals]
+ * @param  {String} filter   The selector to filter against [optional]
  * @return {Array}           The parent elements
  */
-var getParentsUntil = function (elem, parent, selector) {
+var getParentsUntil = function (elem, parent, filter) {
 
-	// Element.matches() polyfill
+	// matches() polyfill
 	if (!Element.prototype.matches) {
-		Element.prototype.matches =
-			Element.prototype.matchesSelector ||
-			Element.prototype.mozMatchesSelector ||
-			Element.prototype.msMatchesSelector ||
-			Element.prototype.oMatchesSelector ||
-			Element.prototype.webkitMatchesSelector ||
-			function(s) {
-				var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-					i = matches.length;
-				while (--i >= 0 && matches.item(i) !== this) {}
-				return i > -1;
-			};
+		Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
 	}
 
 	// Setup parents array
@@ -46,11 +35,11 @@ var getParentsUntil = function (elem, parent, selector) {
 			if (elem.matches(parent)) break;
 		}
 
-		if (selector) {
-			if (elem.matches(selector)) {
+		if (filter) {
+			if (elem.matches(filter)) {
 				parents.push(elem);
 			}
-			break;
+			continue;
 		}
 
 		parents.push(elem);
