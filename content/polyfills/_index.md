@@ -18,4 +18,4 @@ Alternatively, you can automatically polyfill your site with a service like [pol
 
 ## The Polyfills
 
-Some where written by me. Others were squirreled away from around the web. Links to the source and attribution are included with each.
+Some were written by me. Others were squirreled away from around the web. Links to the source and attribution are included with each.
