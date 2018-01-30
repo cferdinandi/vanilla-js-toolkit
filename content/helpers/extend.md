@@ -53,5 +53,4 @@ var extend = function () {
 	return extended;
 
 };
-
 ```
