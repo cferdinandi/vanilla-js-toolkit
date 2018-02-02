@@ -1,5 +1,5 @@
 /*!
- * vanillajs v1.2.0: The theme for vanillajstoolkit.com
+ * vanillajs v1.2.1: The theme for vanillajstoolkit.com
  * (c) 2018 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/vanilla-js-toolkit
@@ -287,12 +287,7 @@ var mailchimp = function (callback) {
 
 	};
 
-
-	//
-	// Event Listeners & Inits
-	//
-
-	form.addEventListener('submit', (function (event) {
+	var submitHandler = function (event) {
 
 		// Stop form from submitting
 		event.preventDefault();
@@ -307,7 +302,15 @@ var mailchimp = function (callback) {
 			submitForm();
 		}
 
-	}), false);
+	};
+
+
+	//
+	// Event Listeners & Inits
+	//
+
+	form.setAttribute('novalidate', 'novalidate');
+	form.addEventListener('submit', submitHandler, false);
 
 };
 /* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+bash+css-extras+php+php-extras+scss */

@@ -7,7 +7,7 @@ params:
   rssURL: ""
   rssLimit: 7
   cacheBust: true
-  version: "1.2.0"
+  version: "1.2.1"
 
 # The language code for the site
 languageCode: "en-us"

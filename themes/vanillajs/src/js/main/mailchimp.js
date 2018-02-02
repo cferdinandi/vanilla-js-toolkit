@@ -174,12 +174,7 @@ var mailchimp = function (callback) {
 
 	};
 
-
-	//
-	// Event Listeners & Inits
-	//
-
-	form.addEventListener('submit', function (event) {
+	var submitHandler = function (event) {
 
 		// Stop form from submitting
 		event.preventDefault();
@@ -194,6 +189,14 @@ var mailchimp = function (callback) {
 			submitForm();
 		}
 
-	}, false);
+	};
+
+
+	//
+	// Event Listeners & Inits
+	//
+
+	form.setAttribute('novalidate', 'novalidate');
+	form.addEventListener('submit', submitHandler, false);
 
 };
