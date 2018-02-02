@@ -13,13 +13,11 @@ if (document.querySelector('a[href*="#"]')) {
 	var scroll = new SmoothScroll('a[href*="#"]');
 }
 
-// Form validation
-if (document.querySelector('#mc-embedded-subscribe-form')) {
-	validate.init({
-		selector: '#mc-embedded-subscribe-form', // The selector for forms to validate
-		disableSubmit: true, // If true, don't submit the form to the server (for Ajax for submission)
-		onSubmit: function (form, fields) { // Function to run if the form successfully validates
-			submitMailChimpForm(form);
+// Mailchimp form
+if (document.querySelector('#mailchimp-form')) {
+	mailchimp(function (data) {
+		if (data.result !== 'error') {
+			window.location.href = '/newsletter-success';
 		}
 	});
 }
