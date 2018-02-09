@@ -449,7 +449,7 @@ var pointNum = parseFloat(text);
 
 ### Number()
 
-Convert a string to a number. Less predictable than `parseInt()` and `parseFloat()`.
+Convert a string to a number. Less safe than `parseInt()` and `parseFloat()`.
 
 ```javascript
 // Convert strings
