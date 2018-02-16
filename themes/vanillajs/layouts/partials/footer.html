@@ -4,7 +4,7 @@
 		<footer class="container container-large">
 			<hr class="margin-bottom">
 			{{ partial "nav-secondary.html" }}
-			<p class="text-small">Made with ❤️ in Massachussets by <a href="https://gomakethings.com">Chris Ferdinandi</a>. Unless otherwise noted, all code is free to use under the <a href="/mit">MIT License</a>.</p>
+			<p class="text-small">Made with ❤️ in Massachusetts by <a href="https://gomakethings.com">Chris Ferdinandi</a>. Unless otherwise noted, all code is free to use under the <a href="/mit">MIT License</a>.</p>
 		</footer>
 
 		<script src="{{ if eq $.Site.Params.cacheBust true }}{{ ( printf "/js/loadJS.min.%s.js" $.Site.Params.version | absURL ) }}{{ else }}{{ "/js/loadJS.js" | absURL }}{{ end }}"></script>
