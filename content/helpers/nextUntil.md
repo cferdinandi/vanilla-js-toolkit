@@ -3,7 +3,7 @@ title: "nextUntil.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Get all following siblings of each element up to but not including the element matched by the selector."
-weight: 20
+weight: 10
 noIndex: false
 ---
 
