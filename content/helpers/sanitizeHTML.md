@@ -16,9 +16,9 @@ Sanitize and encode all HTML in a user-submitted string to prevent XSS attacks. 
  * @param  {String} str  The user-submitted string
  * @return {String} str  The sanitized string
  */
- var sanitizeHTML = function (str) {
- 	var temp = document.createElement('div');
- 	temp.textContent = str;
- 	return temp.innerHTML;
- };
+var sanitizeHTML = function (str) {
+	var temp = document.createElement('div');
+	temp.textContent = str;
+	return temp.innerHTML;
+};
 ```
