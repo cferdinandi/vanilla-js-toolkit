@@ -6,6 +6,8 @@ weight: 10
 noIndex: false
 ---
 
+Pushes support back to at least IE6.
+
 ```js
 /**
  * ParentNode.prepend() polyfill

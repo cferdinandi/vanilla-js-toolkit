@@ -6,6 +6,8 @@ weight: 10
 noIndex: false
 ---
 
+Pushes support back to at least IE6 when used with the [`addEventListener()` polyfill](/polyfills/addeventlistener/).
+
 ```js
 /*! matchMedia() polyfill addListener/removeListener extension. Author & copyright (c) 2012: Scott Jehl. MIT license */
 (function(){

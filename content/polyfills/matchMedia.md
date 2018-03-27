@@ -6,11 +6,13 @@ weight: 10
 noIndex: false
 ---
 
+Pushes support back to IE9.
+
 ```js
-/*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas, David Knight. MIT license */
+/*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas, David Knight. MIT license. https://github.com/paulirish/matchMedia.js/ */
 
 window.matchMedia || (window.matchMedia = function() {
-    "use strict";
+    'use strict';
 
     // For browsers that support matchMedium api such as IE 9 and webkit
     var styleMedia = (window.styleMedia || window.media);

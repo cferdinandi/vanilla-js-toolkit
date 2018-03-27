@@ -6,6 +6,8 @@ weight: 10
 noIndex: false
 ---
 
+Pushes support back to at least IE6.
+
 ```js
 /**
  * Mashup from https://github.com/nbouvrette/eventListenerPolyfill
@@ -18,6 +20,7 @@ noIndex: false
  */
 (function (window, document, listeners_prop_name) {
     if ((!window.addEventListener || !window.removeEventListener) && window.attachEvent && window.detachEvent) {
+
         /**
          * @param {*} value
          * @return {boolean}
@@ -25,6 +28,7 @@ noIndex: false
         var is_callable = function (value) {
             return typeof value === 'function';
         };
+
         /**
          * @param {!Window|HTMLDocument|Node} self
          * @param {EventListener|function(!Event):(boolean|undefined)} listener
@@ -43,6 +47,7 @@ noIndex: false
                 }
             }
         };
+
         /**
          * @param {!Window|HTMLDocument|Node} self
          * @param {EventListener|function(!Event):(boolean|undefined)} listener
@@ -53,6 +58,7 @@ noIndex: false
             var listeners = listener[listeners_prop_name] || (listener[listeners_prop_name] = []);
             return listener_get(self, listener) || (listeners[listeners.length] = [self, callback], callback);
         };
+
         /**
          * @param {string} methodName
          */
@@ -62,6 +68,7 @@ noIndex: false
                 return addListen(old(v));
             };
         };
+
         /**
          * @this {!Window|HTMLDocument|Node}
          * @param {string} type
@@ -85,6 +92,7 @@ noIndex: false
                 );
             }
         };
+
         /**
          * @this {!Window|HTMLDocument|Node}
          * @param {string} type
@@ -100,6 +108,7 @@ noIndex: false
                 }
             }
         };
+
         /**
          * @param {!Node|NodeList|Array} obj
          * @return {!Node|NodeList|Array}
@@ -119,6 +128,7 @@ noIndex: false
         };
 
         addListen([document, window]);
+
         if ('Element' in window) {
             /**
              * IE8
@@ -137,6 +147,7 @@ noIndex: false
             docHijack('createElement');
             addListen(document.all);
         }
+
     }
 })(window, document, 'x-ms-event-listeners');
 ```

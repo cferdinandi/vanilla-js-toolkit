@@ -6,6 +6,8 @@ weight: 10
 noIndex: false
 ---
 
+Pushes support back to IE8.
+
 ```js
 /*
  * classList.js: Cross-browser full element.classList implementation.

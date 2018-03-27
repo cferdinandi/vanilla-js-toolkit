@@ -6,6 +6,8 @@ weight: 10
 noIndex: false
 ---
 
+Pushes support back to IE9.
+
 ```js
 /**
  * ChildNode.before() polyfill
