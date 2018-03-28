@@ -10,40 +10,45 @@ Pushes support back to at least IE6.
 
 ```js
 /**
- * ParentNode.prepend() polyfill
+ * ChildNode.prepend() polyfill
+ * Adapted from https://github.com/jserz/js_piece/blob/master/DOM/ParentNode/prepend()/prepend().md
+ * @author Chris Ferdinandi
+ * @license MIT
  */
-// Source: https://github.com/Financial-Times/polyfill-service
-var _mutation = (function () {
+(function (elem) {
 
-    function isNode(object) {
-        // DOM, Level2
-        if (typeof Node === 'function') {
-            return object instanceof Node;
-        }
-        // Older browsers, check if it looks like a Node instance)
-        return object &&
-            typeof object === "object" &&
-            object.nodeName &&
-            object.nodeType >= 1 &&
-            object.nodeType <= 12;
-    }
+	// Check if element is a node
+	// https://github.com/Financial-Times/polyfill-service
+	var isNode = function (object) {
 
-    // http://dom.spec.whatwg.org/#mutation-method-macro
-    return function mutation(nodes) {
-        if (nodes.length === 1) {
-            return isNode(nodes[0]) ? nodes[0] : document.createTextNode(nodes[0] + '');
-        }
+		// DOM, Level2
+		if (typeof Node === 'function') {
+			return object instanceof Node;
+		}
 
-        var fragment = document.createDocumentFragment();
-        for (var i = 0; i < nodes.length; i++) {
-            fragment.appendChild(isNode(nodes[i]) ? nodes[i] : document.createTextNode(nodes[i] + ''));
+		// Older browsers, check if it looks like a Node instance)
+		return object &&
+			typeof object === "object" &&
+			object.nodeName &&
+			object.nodeType >= 1 &&
+			object.nodeType <= 12;
 
-        }
-        return fragment;
-    };
-}());
+	};
 
-Document.prototype.prepend = Element.prototype.prepend = function prepend() {
-    this.insertBefore(_mutation(arguments), this.firstChild);
-};
+	// Add append() method to prototype
+	for (var i = 0; i < elem.length; i++) {
+		if (!window[elem[i]] || 'prepend' in window[elem[i]].prototype) continue;
+		window[elem[i]].prototype.prepend = function () {
+			var argArr = Array.prototype.slice.call(arguments);
+			var docFrag = document.createDocumentFragment();
+
+			for (var n = 0; n < argArr.length; n++) {
+				docFrag.appendChild(isNode(argArr[n]) ? argArr[n] : document.createTextNode(String(argArr[n])));
+			}
+
+			this.appendChild(docFrag);
+		};
+	}
+
+})(['Element', 'CharacterData', 'DocumentType']);
 ```

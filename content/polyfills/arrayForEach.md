@@ -14,7 +14,7 @@ Pushes support back to at least IE6.
  * @author Chris Ferdinandi
  * @license MIT
  */
-if (window.Array && !Array.prototype.forEach) {
+if (!Array.prototype.forEach) {
 	Array.prototype.forEach = function (callback, thisArg) {
 		thisArg = thisArg || window;
 		for (var i = 0; i < this.length; i++) {

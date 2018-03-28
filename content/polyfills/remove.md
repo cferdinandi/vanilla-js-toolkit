@@ -6,26 +6,21 @@ weight: 10
 noIndex: false
 ---
 
-Pushes support back to IE9.
+Pushes support back to IE6.
 
 ```js
 /**
  * ChildNode.remove() polyfill
+ * https://gomakethings.com/removing-an-element-from-the-dom-the-es6-way/
+ * @author Chris Ferdinandi
+ * @license MIT
  */
-// from:https://github.com/jserz/js_piece/blob/master/DOM/ChildNode/remove()/remove().md
-(function (arr) {
-	arr.forEach(function (item) {
-		if (item.hasOwnProperty('remove')) {
-			return;
-		}
-		Object.defineProperty(item, 'remove', {
-			configurable: true,
-			enumerable: true,
-			writable: true,
-			value: function remove() {
-				this.parentNode.removeChild(this);
-			}
-		});
-	});
-})([Element.prototype, CharacterData.prototype, DocumentType.prototype]);
+(function (elem) {
+	for (var i = 0; i < elem.length; i++) {
+		if (!window[elem[i]] || 'remove' in window[elem[i]].prototype) continue;
+		window[elem[i]].prototype.remove = function () {
+			this.parentNode.removeChild(this);
+		};
+	}
+})(['Element', 'CharacterData', 'DocumentType']);
 ```

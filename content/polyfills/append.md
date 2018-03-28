@@ -6,34 +6,49 @@ weight: 10
 noIndex: false
 ---
 
-Pushes support back to IE9.
+Pushes support back to at least IE6.
 
 ```js
 /**
- * ParentNode.append() polyfill
+ * ChildNode.append() polyfill
+ * https://gomakethings.com/adding-an-element-to-the-end-of-a-set-of-elements-with-vanilla-javascript/
+ * @author Chris Ferdinandi
+ * @license MIT
  */
-// Source: https://github.com/jserz/js_piece/blob/master/DOM/ParentNode/append()/append().md
-(function (arr) {
-	arr.forEach(function (item) {
-		if (item.hasOwnProperty('append')) {
-			return;
+(function (elem) {
+
+	// Check if element is a node
+	// https://github.com/Financial-Times/polyfill-service
+	var isNode = function (object) {
+
+		// DOM, Level2
+		if (typeof Node === 'function') {
+			return object instanceof Node;
 		}
-		Object.defineProperty(item, 'append', {
-			configurable: true,
-			enumerable: true,
-			writable: true,
-			value: function append() {
-				var argArr = Array.prototype.slice.call(arguments),
-					docFrag = document.createDocumentFragment();
 
-				argArr.forEach(function (argItem) {
-					var isNode = argItem instanceof Node;
-					docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
-				});
+		// Older browsers, check if it looks like a Node instance)
+		return object &&
+			typeof object === "object" &&
+			object.nodeName &&
+			object.nodeType >= 1 &&
+			object.nodeType <= 12;
 
-				this.appendChild(docFrag);
+	};
+
+	// Add append() method to prototype
+	for (var i = 0; i < elem.length; i++) {
+		if (!window[elem[i]] || 'append' in window[elem[i]].prototype) continue;
+		window[elem[i]].prototype.append = function () {
+			var argArr = Array.prototype.slice.call(arguments);
+			var docFrag = document.createDocumentFragment();
+
+			for (var n = 0; n < argArr.length; n++) {
+				docFrag.appendChild(isNode(argArr[n]) ? argArr[n] : document.createTextNode(String(argArr[n])));
 			}
-		});
-	});
-})([Element.prototype, Document.prototype, DocumentFragment.prototype]);
+
+			this.appendChild(docFrag);
+		};
+	}
+
+})(['Element', 'CharacterData', 'DocumentType']);
 ```

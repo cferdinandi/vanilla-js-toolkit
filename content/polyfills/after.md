@@ -6,34 +6,49 @@ weight: 10
 noIndex: false
 ---
 
-Pushes support back to IE9.
+Pushes support back to at least IE6.
 
 ```js
 /**
  * ChildNode.after() polyfill
+ * Adapted from https://github.com/jserz/js_piece/blob/master/DOM/ChildNode/after()/after().md
+ * @author Chris Ferdinandi
+ * @license MIT
  */
-//from: https://github.com/jserz/js_piece/blob/master/DOM/ChildNode/after()/after().md
-(function (arr) {
-	arr.forEach(function (item) {
-		if (item.hasOwnProperty('after')) {
-			return;
+(function (elem) {
+
+	// Check if element is a node
+	// https://github.com/Financial-Times/polyfill-service
+	var isNode = function (object) {
+
+		// DOM, Level2
+		if (typeof Node === 'function') {
+			return object instanceof Node;
 		}
-		Object.defineProperty(item, 'after', {
-			configurable: true,
-			enumerable: true,
-			writable: true,
-			value: function after() {
-				var argArr = Array.prototype.slice.call(arguments),
-					docFrag = document.createDocumentFragment();
 
-				argArr.forEach(function (argItem) {
-					var isNode = argItem instanceof Node;
-					docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
-				});
+		// Older browsers, check if it looks like a Node instance)
+		return object &&
+			typeof object === "object" &&
+			object.nodeName &&
+			object.nodeType >= 1 &&
+			object.nodeType <= 12;
 
-				this.parentNode.insertBefore(docFrag, this.nextSibling);
+	};
+
+	// Add after() method to prototype
+	for (var i = 0; i < elem.length; i++) {
+		if (!window[elem[i]] || 'after' in window[elem[i]].prototype) continue;
+		window[elem[i]].prototype.after = function () {
+			var argArr = Array.prototype.slice.call(arguments);
+			var docFrag = document.createDocumentFragment();
+
+			for (var n = 0; n < argArr.length; n++) {
+				docFrag.appendChild(isNode(argArr[n]) ? argArr[n] : document.createTextNode(String(argArr[n])));
 			}
-		});
-	});
-})([Element.prototype, CharacterData.prototype, DocumentType.prototype]);
+
+			this.parentNode.insertBefore(docFrag, this.nextSibling);
+		};
+	}
+
+})(['Element', 'CharacterData', 'DocumentType']);
 ```
