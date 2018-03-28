@@ -7,7 +7,7 @@ params:
   rssURL: ""
   rssLimit: 7
   cacheBust: true
-  version: "1.2.2"
+  version: "1.3.0"
 
 # The language code for the site
 languageCode: "en-us"
@@ -41,7 +41,6 @@ paginatePath: "page"
 blackfriday:
   fractions: false
 
-# Site taxonomies
-taxonomies:
-  - category: "categories"
-  - tag: "tags"
+# Syntax Highlighting
+pygmentsCodefences: true
+pygmentsUseClasses: true

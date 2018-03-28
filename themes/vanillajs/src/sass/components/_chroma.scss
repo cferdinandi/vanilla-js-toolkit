@@ -1,0 +1,106 @@
+/**
+ * @section Chroma syntax highlighting
+ * Styles for Hugo's syntax highlighting engine
+ */
+
+@media screen {
+
+	.chroma {
+
+		.err,	// Error
+		.kc,	// KeywordConstant
+		.no, 	// NameConstant
+		.py,	// NameProperty
+		.nt,	// NameTag
+		.ss,	// LiteralStringSymbol
+		.m,		// LiteralNumber
+		.mb,	// LiteralNumberBin
+		.mf, 	// LiteralNumberFloat
+		.mh,	// LiteralNumberHex
+		.mi,	// LiteralNumberInteger
+		.il,	// LiteralNumberIntegerLong
+		.mo { 	// LiteralNumberOct
+			color: #905;
+		}
+
+		.k, 	// Keyword
+		.kd,	// KeywordDeclaration
+		.kn,	// KeywordNamespace
+		.kp,	// KeywordPseudo
+		.kr, 	// KeywordReserved
+		.kt,	// KeywordType
+		.nb,	// NameBuiltin
+		.s {	// LiteralString
+			color: #07a;
+		}
+
+		.n,		// Name
+		.na, 	// NameAttribute
+		.nc,	// NameClass
+		.ne,	// NameException
+		.l, 	// Literal
+		.ld, 	// LiteralDate
+		.sa, 	// LiteralStringAffix
+		.sb,	// LiteralStringBacktick
+		.sc, 	// LiteralStringChar
+		.dl,	// LiteralStringDelimiter
+		.s1, 	// LiteralStringSingle
+		.s2,	// LiteralStringDouble
+		.se,	// LiteralStringEscape
+		.sh,	// LiteralStringHeredoc
+		.si,	// LiteralStringInterpol
+		.sx {	// LiteralStringOther
+			color: #690;
+		}
+
+		.bp, 	// NameBuiltinPseudo
+		.nd,	// NameDecorator
+		.nl,	// NameLabel
+		.sd,	// LiteralStringDoc
+		.p, 	// Punctuation
+		.c, 	// Comment
+		.ch,	// CommentHashbang
+		.cm,	// CommentMultiline
+		.c1,	// CommentSingle
+		.cs,	// CommentSpecial
+		.cp,	// CommentPreproc
+		.cpf {	// CommentPreprocFile
+			color: slategray;
+		}
+
+		.ni, 	// NameEntity
+		.o {	// Operator
+			color: #a67f59;
+			background: hsla(0, 0%, 100%, .5);
+		}
+
+		.nf, 	// NameFunction
+		.fm,	// NameFunctionMagic
+		// .nx,	// NameOther
+		.ow { 	// OperatorWord
+			color: #dd4a68;
+		}
+
+		.nv,	// NameVariable
+		.vc,	// NameVariableClass
+		.vg,	// NameVariableGlobal
+		.vi,	// NameVariableInstance
+		.vm,	// NameVariableMagic
+		.sr { 	// LiteralStringRegex
+			color: #e90
+		}
+
+		// NameNamespace
+		.nn {
+			opacity: .7;
+		}
+
+		// GenericEmph
+		.ge { font-style: italic; }
+
+		// GenericStrong
+		.gs { font-weight: bold; }
+
+	}
+
+}
