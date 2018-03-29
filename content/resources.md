@@ -9,35 +9,26 @@ anchors: true
 
 Ready to dig deeper? Make 2018 the year your master vanilla JavaScript!
 
-*__Note:__ Learning resources with a 👋 next to them are mine.*
+[Daily Developer Tips](https://gomakethings.com/articles/)
+: I send out a short email each weekday with code snippets, tools, techniques, and interesting stuff from around the web.
 
-## Books
+[The Vanilla JS Podcast](https://vanillajspodcast.com)
+: A show about JavaScript for people who hate the complexity of modern front‑end web development.
 
-- 👋 [Vanilla JS Pocket Guides](https://gomakethings.com/guides/)
-- [JavaScript for Web Designers](https://abookapart.com/products/javascript-for-web-designers)
-- [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
+[Pocket Guides](https://gomakethings.com/guides/)
+: Step-by-step training guides to help you master vanilla JavaScript. They’re short, focused, and made for beginners.
 
+[1-on-1 Consulting Call](https://gomakethings.com/call/)
+: Have a JavaScript problem you're stuck on? Chat with an expert and get unstuck.
 
-## Videos
+[Private Mentoring](https://gomakethings.com/mentoring/)
+: Ready to master vanilla JavaScript? Get unlimited 1-on-1 access to me via email, IM, and weekly video chats.
 
-- 👋 [Vanilla JS Mini Courses](https://gomakethings.com/courses/)
-- [JavaScript for WordPress](https://javascriptforwp.com/)
-- [ES6 for Everyone](https://es6.io/)
-- [JavaScript 30](https://javascript30.com/)
+[Team Training](https://gomakethings.com/training/)
+: Level-up your team’s core JavaScript skills with team workshops.
 
-## Podcasts
+[JavaScript Consulting](https://gomakethings.com/consulting/)
+: Minimize your risk, reduce the amount of bugs and bloat in your code, and avoid costly delays caused by common mistakes.
 
-- [JavaScript Jabber](https://devchat.tv/js-jabber)
-- [The Shop Talk Show](https://shoptalkshow.com/)
-- [The JavaScript for WordPress Show](https://javascriptforwp.com/show/)
-- [Syntax](https://syntax.fm/)
-
-## Tutorials
-
-- 👋 [Daily Developer Tips](https://gomakethings.com/articles/)
-- [David Walsh](https://davidwalsh.name/)
-- [Remy Sharp](https://remysharp.com/archive)
-- [Todd Motto](https://toddmotto.com/javascript/) (the old, pre-Angular stuff)
-- [Hackernoon](https://hackernoon.com/tagged/software-development)
-
-{{<mailchimp intro>}}
+Custom Development
+: Need a trusted expert to write custom code for your project? My JavaScript plugins have been used by organizations like Apple, Harvard Business School, and CNN. [Contact me](https://gomakethings.com/about/) to discuss your project.
