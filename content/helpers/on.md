@@ -25,6 +25,8 @@ var on = function (event, elem, callback, capture) {
 		elem = window;
 	}
 	capture = capture ? true : false;
+	elem = typeof elem === 'string' ? document.querySelector(elem) : elem;
+	if (!elem) return;
 	elem.addEventListener(event, callback, capture);
 };
 ```
