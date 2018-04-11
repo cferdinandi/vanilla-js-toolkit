@@ -13,7 +13,7 @@ Let's make 2018 the year that you master&nbsp;JavaScript! You can do this. I can
 {{%md%}}
 - **[Daily Developer Tips.](https://gomakethings.com/articles/)** I send out a short email each weekday with code snippets, tools, techniques, and interesting stuff from around the web.
 - **[Podcast.](https://vanillajspodcast.com)** A show about JavaScript for people who hate the complexity of modern front‑end web development.
-- **[Pocket Guides.](https://gomakethings.com/guides/)** Short, focused ebooks and video courses made for beginners. Start building real JavaScript projects in under an hour.
+- **[Pocket Guides.](https:/vanillajsguides.com/)** Short, focused ebooks and video courses made for beginners. Start building real JavaScript projects in under an hour.
 {{%/md%}}
 </div>
 
