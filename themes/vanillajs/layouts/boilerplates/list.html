@@ -3,7 +3,7 @@
 {{ partial "content-page.html" . }}
 
 {{ range .Sections }}
-	<h2 class="margin-bottom-small">{{ .Title }}</h2>
+	<h2 class="margin-bottom-small" id="{{ replace .Title " " "-" }}">{{ .Title }}</h2>
 	<p class="margin-bottom-small">{{ .Summary }}</p>
 
 	<ul>
