@@ -16,7 +16,7 @@ if (document.querySelector('a[href*="#"]')) {
 // Mailchimp form
 if (document.querySelector('#mailchimp-form')) {
 	mailchimp(function (data) {
-		if (data.result !== 'error') {
+		if (data.code === 200) {
 			window.location.href = 'https://gomakethings.com/newsletter-success';
 		}
 	});

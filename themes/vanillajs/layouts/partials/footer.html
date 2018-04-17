@@ -9,7 +9,7 @@
 
 		<script src="{{ if eq $.Site.Params.cacheBust true }}{{ ( printf "/js/loadJS.min.%s.js" $.Site.Params.version | absURL ) }}{{ else }}{{ "/js/loadJS.js" | absURL }}{{ end }}"></script>
 		<script>
-			if ('querySelector' in document && 'addEventListener' in window) {
+			if ('querySelector' in document && 'addEventListener' in window && 'classList' in document.createElement('_')) {
 				loadJS('{{ if eq $.Site.Params.cacheBust true }}{{ ( printf "/js/main.min.%s.js" $.Site.Params.version | absURL ) }}{{ else }}{{ "/js/main.js" | absURL }}{{ end }}');
 				if (document.querySelector('#form-search')) {
 					loadJS('{{ if eq $.Site.Params.cacheBust true }}{{ ( printf "/js/lunr.min.%s.js" $.Site.Params.version | absURL ) }}{{ else }}{{ "/js/lunr.js" | absURL }}{{ end }}');
