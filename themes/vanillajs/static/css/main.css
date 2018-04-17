@@ -1,5 +1,5 @@
 /*!
- * vanillajs v1.4.0: The theme for vanillajstoolkit.com
+ * vanillajs v1.5.0: The theme for vanillajstoolkit.com
  * (c) 2018 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/vanilla-js-toolkit
@@ -625,10 +625,8 @@ dfn {
  * Address styling not present in IE 8/9.
  */
 /* line 297, src/sass/components/_typography.scss */
-mark,
-.highlight {
-  background: #fbf89a;
-  background-image: linear-gradient(to right, #fbf89a 0%, #fbf9c9 100%);
+mark {
+  background: #fbf9c9;
   color: #272727;
 }
 

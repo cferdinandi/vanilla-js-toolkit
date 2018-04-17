@@ -1,2 +1,0 @@
-/*! vanillajs v1.4.0 | (c) 2018 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/vanilla-js-toolkit | Open Source Credits: https://github.com/toddmotto/fluidvids, http://prismjs.com, https://github.com/filamentgroup/loadJS/, https://github.com/filamentgroup/loadCSS, https://github.com/bramstein/fontfaceobserver */
-function loadJS(e,t){"use strict";var n=window.document.getElementsByTagName("script")[0],o=window.document.createElement("script");return o.src=e,o.async=!0,n.parentNode.insertBefore(o,n),t&&"function"==typeof t&&(o.onload=t),o}

@@ -294,12 +294,12 @@ dfn {
 /**
  * Address styling not present in IE 8/9.
  */
-mark,
-.highlight {
-	background: #fbf89a;
-	background-image: linear-gradient(to right, #fbf89a 0%, #fbf9c9 100%);
-	color: $color-black;
-}
+ mark {
+ 	// background: #fffcb8;
+ 	// background-image: linear-gradient(to right, #fffcb8 0%, #fbf9c9 100%);
+ 	background: #fbf9c9;
+ 	color: $color-black;
+ }
 
 /**
  * Address inconsistent and variable font size in all browsers.
