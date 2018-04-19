@@ -19,7 +19,7 @@ Serialize all form data into a query string.
 var serialize = function (form) {
 
 	// Setup our serialized data
-	var serialized = '';
+	var serialized = [];
 
 	// Loop through each field in the form
 	for (var i = 0; i < form.elements.length; i++) {
@@ -31,11 +31,11 @@ var serialize = function (form) {
 
 		// Convert field data to a query string
 		if ((field.type !== 'checkbox' && field.type !== 'radio') || field.checked) {
-			serialized += '&' + encodeURIComponent(field.name) + "=" + encodeURIComponent(field.value);
+			serialized.push(encodeURIComponent(field.name) + "=" + encodeURIComponent(field.value));
 		}
 	}
 
-	return serialized;
+	return serialized.join('&');
 
 };
 ```
