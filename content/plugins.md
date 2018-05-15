@@ -75,6 +75,6 @@ As a result, the list is a lot shorter than some of the bigger "plugin repositor
 
 - 👋 **[atomic.](https://github.com/cferdinandi/atomic)** Easily make Ajax/HTTP requests.
 - 👋 **[validate.](https://github.com/cferdinandi/validate)** A lightweight form validation script that augments native HTML5 form validation elements and attributes.
-- **[Dinero.js.]** A library for working with monetary values in JavaScript.
+- **[Dinero.js.](https://sarahdayan.github.io/dinero.js/)** A library for working with monetary values in JavaScript.
 
 {{<mailchimp intro>}}
