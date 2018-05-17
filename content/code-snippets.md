@@ -1180,7 +1180,7 @@ var moreParams = getParams('http://example.com?q=sandwich&type=tuna&sauce=mayo&t
 
 ## Ajax/HTTP Requests
 
-### XMLHttpRequest()
+### XMLHttpRequest() (XHR)
 
 ```javascript
 // Set up our HTTP request
@@ -1212,6 +1212,62 @@ xhr.send();
 ```
 
 **Works in all modern browsers and IE7+.**
+
+### Promise-Based XHR
+
+```js
+// Helper function that returns a promise
+var makeRequest = function (url, method) {
+
+	// Create the XHR request
+	var request = new XMLHttpRequest();
+
+	// Return it as a Promise
+	return new Promise(function (resolve, reject) {
+
+		// Setup our listener to process compeleted requests
+		request.onreadystatechange = function () {
+
+			// Only run if the request is complete
+			if (request.readyState !== 4) return;
+
+			// Process the response
+			if (request.status >= 200 && request.status < 300) {
+				// If successful
+				resolve(request);
+			} else {
+				// If failed
+				reject({
+					status: request.status,
+					statusText: request.statusText
+				});
+			}
+
+		};
+
+		// Setup our HTTP request
+		request.open(method || 'GET', url, true);
+
+		// Send the request
+		request.send();
+
+	});
+};
+
+// Make the request to a URL
+makeRequest('https://some-url.com/posts')
+	.then(function (posts) {
+		// If successful
+		console.log('Success!', posts);
+	})
+	.catch(function (error) {
+		// If there's an error
+		console.log('Something went wrong', error);
+	});
+```
+
+**Promises only work natively in modern browsers. However, [a Promises polyfill](https://github.com/stefanpenner/es6-promise) pushes support back to IE7.**
+
 
 ### JSONP
 
