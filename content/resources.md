@@ -7,7 +7,7 @@ noIndex: false
 anchors: true
 ---
 
-Let's make 2018 the year that you master&nbsp;JavaScript! You can do this. I can help.
+Let's make {{<year>}} the year that you master&nbsp;JavaScript! You can do this. I can help.
 
 <div class="list-spaced">
 {{%md%}}
