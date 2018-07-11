@@ -3,7 +3,7 @@ title: "ready.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Run event after the DOM is ready."
-weight: 1
+weight: 10
 noIndex: false
 ---
 

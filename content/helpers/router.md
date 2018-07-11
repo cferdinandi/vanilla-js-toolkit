@@ -3,7 +3,7 @@ title: "router.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Route URLs in your single page web app."
-weight: 20
+weight: 10
 noIndex: false
 ---
 

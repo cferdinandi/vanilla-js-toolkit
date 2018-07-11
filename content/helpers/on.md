@@ -3,7 +3,7 @@ title: "on.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Add an event listener."
-weight: 2
+weight: 10
 noIndex: false
 ---
 

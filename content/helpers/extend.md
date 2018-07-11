@@ -3,7 +3,7 @@ title: "extend.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Merge two or more objects together."
-weight: 1
+weight: 10
 noIndex: false
 ---
 

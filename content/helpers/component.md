@@ -3,54 +3,82 @@ title: "component.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Create a web app component."
-weight: 20
+weight: 10
 noIndex: false
 ---
 
-Create a web app component. {{<learn-more title="Web Apps" url="web-apps">}}
+Create a web app component. <!-- {{<learn-more title="Web Apps" url="web-apps">}} -->
 
 ```js
 /*!
- * Create a component
- * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
- * @param  {Function}       template  The template function
- * @param  {Object}         props     The state data
- * @param  {String|Element} elem      The element to render content into
- * @return {Function}                 The template function
+ * A vanilla JS helper for creating state-based components
+ * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * @param {String|Node} elem    The element to make into a component
+ * @param {Object}      options The component options
  */
-var component = function (template, props, elem) {
+var Component = (function () {
 
-	Object.defineProperties(template, {
-		elem: {
-			value: elem,
-			writable: true
-		},
-		state: {
-			value: props,
-			writable: true
-		},
-		setState: {
-			value: function (props) {
+	'use strict';
 
-				// Shallow merge new properties into state object
-				for (var key in props) {
-					if (props.hasOwnProperty(key)) {
-						template.state[key] = props[key];
-					}
-				}
+	/**
+	 * Create the Component object
+	 * @param {String|Node} elem    The element to make into a component
+	 * @param {Object}      options The component options
+	 */
+	var Component = function (elem, options) {
+		if (!elem) throw 'ComponentJS: You did not provide an element to make into a component.';
+		this.elem = elem;
+		this.data = options ? options.data : null;
+		this.template = options ? options.template : null;
+	};
 
-				// Render the element
-				render(template, template.elem);
+	/**
+	 * Sanitize and encode all HTML in a user-submitted string
+	 * @param  {String} str  The user-submitted string
+	 * @return {String}      The sanitized string
+	 */
+	Component.sanitize = function (str) {
+		var temp = document.createElement('div');
+		temp.textContent = str;
+		return temp.innerHTML;
+	};
 
-				// Return the elem for use elsewhere
-				return template.elem;
+	/**
+	 * Render a template into the DOM
+	 * @return {[type]}                   The element
+	 */
+	Component.prototype.render = function () {
 
-			}
+		// Make sure there's a template
+		if (!this.template) throw 'ComponentJS: No template was provided.';
+
+		// If elem is an element, use it.
+		// If it's a selector, get it.
+		var elem = typeof this.elem === 'string' ? document.querySelector(this.elem) : this.elem;
+		if (!elem) return;
+
+		// Get the template
+		var template = (typeof this.template === 'function' ? this.template(this.data) : this.template);
+		if (typeof template !== 'string') return;
+
+		// Render the template into the element
+		if (elem.innerHTML === template) return;
+		elem.innerHTML = template;
+
+		// Dispatch a render event
+		if (typeof window.CustomEvent === 'function') {
+			var event = new CustomEvent('render', {
+				bubbles: true
+			});
+			elem.dispatchEvent(event);
 		}
-	});
 
-	// Return the elem for use elsewhere
-	return template;
+		// Return the elem for use elsewhere
+		return elem;
 
-};
+	};
+
+	return Component;
+
+})();
 ```
