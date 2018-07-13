@@ -2,12 +2,12 @@
 title: "component.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
-description: "Create a web app component."
+description: "Create a state-based component."
 weight: 10
 noIndex: false
 ---
 
-Create a web app component. <!-- {{<learn-more title="Web Apps" url="web-apps">}} -->
+Create a state-based component. <!-- {{<learn-more title="Web Apps" url="web-apps">}} -->
 
 ```js
 /*!
@@ -59,7 +59,7 @@ var Component = (function () {
 
 		// Get the template
 		var template = (typeof this.template === 'function' ? this.template(this.data) : this.template);
-		if (typeof template !== 'string') return;
+		if (['string', 'number'].indexOf(typeof template) === -1) return;
 
 		// Render the template into the element
 		if (elem.innerHTML === template) return;
