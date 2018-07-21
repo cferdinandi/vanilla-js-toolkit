@@ -37,6 +37,7 @@ As a result, the list is a lot shorter than some of the bigger "plugin repositor
 
 ## Design & Layout
 
+- 👋 **[Reef.](https://github.com/cferdinandi/reef/)** A simple, lightweight alternative to React, Vue, and other bloated frameworks.
 - 👋 **[Right Height.](https://github.com/cferdinandi/right-height/)** Set variable content containers to equal height.
 - 👋 **[Sticky Footer.](https://github.com/cferdinandi/sticky-footer/)** Dynamic, responsive sticky footers.
 - **[Vanilla FitText.js.](https://github.com/adactio/FitText.js)** Create scalable headlines that fill the width of a parent element.
