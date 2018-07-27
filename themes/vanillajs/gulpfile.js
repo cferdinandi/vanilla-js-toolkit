@@ -8,7 +8,7 @@ var settings = {
 	svgs: true,			// Turn on/off SVG tasks
 	images: true,		// Turn on/off image tasks
 	docs: false,		// Turn on/off documentation generation
-	cacheBust: true		// Turn on/off cache busting (adds a version number to minified files)
+	cacheBust: false	// Turn on/off cache busting (adds a version number to minified files)
 };
 
 

@@ -24,26 +24,13 @@
 		<link rel="icon" sizes="16x16 24x24 32x32 64x64" href="{{ "/img/favicon.ico" | absURL }}">
 
 		<!-- Stylesheet -->
-		<link rel="stylesheet" href="{{ if eq $.Site.Params.cacheBust true }}{{ ( printf "/css/main.min.%s.css" $.Site.Params.version | absURL ) }}{{ else }}{{ "/css/main.css" | absURL }}{{ end }}">
+		<style type="text/css">
+			{{ if eq $.Site.Params.minify true }}{{ readFile "/themes/vanillajs/static/css/main.min.css" | safeCSS }}{{ else }}{{ readFile "/themes/vanillajs/static/css/main.css" | safeCSS }}{{ end }}
+		</style>
 
 		<!-- Feature Detection -->
-		<script src="{{ if eq $.Site.Params.cacheBust true }}{{ ( printf "/js/detects.min.%s.js" $.Site.Params.version | absURL ) }}{{ else }}{{ "/js/detects.js" | absURL }}{{ end }}"></script>
 		<script>
-			;(function () {
-				var css = 'https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i';
-				if (getCookie('fontsLoaded')) {
-					loadCSS(css);
-					document.documentElement.className += 'fonts-loaded';
-				} else {
-					loadCSS(css);
-					var font = new FontFaceObserver('PT Serif');
-					font.load().then(function () {
-						var expires = new Date(+new Date() + (7 * 24 * 60 * 60 * 1000)).toUTCString();
-						document.cookie = 'fontsLoaded=true; expires=' + expires;
-						document.documentElement.className += ' fonts-loaded';
-					});
-				}
-			})();
+			{{ if eq $.Site.Params.minify true }}{{ readFile "/themes/vanillajs/static/js/detects.min.js" | safeJS }}{{ else }}{{ readFile "/themes/vanillajs/static/js/detects.js" | safeJS }}{{ end }}
 		</script>
 	</head>
 

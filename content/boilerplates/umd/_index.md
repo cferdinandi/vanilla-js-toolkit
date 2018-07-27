@@ -10,3 +10,5 @@ weight: 30
 If you want your plugin to work with RequireJS, Node, or Browserify, you should use a Universal Module Definition (UMD) pattern.
 
 This wrapper for your plugin provides support for AMD and CommonJS modules, as well as global variables (like you would use with a revealing module pattern).
+
+{{<cta for="toolkit-boilerplates">}}

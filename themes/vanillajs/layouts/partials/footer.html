@@ -7,13 +7,9 @@
 			<p class="text-small">Made with ❤️ in Massachusetts by <a href="https://gomakethings.com">Chris Ferdinandi</a>. Unless otherwise noted, all code is free to use under the <a href="/mit">MIT License</a>.</p>
 		</footer>
 
-		<script src="{{ if eq $.Site.Params.cacheBust true }}{{ ( printf "/js/loadJS.min.%s.js" $.Site.Params.version | absURL ) }}{{ else }}{{ "/js/loadJS.js" | absURL }}{{ end }}"></script>
 		<script>
 			if ('querySelector' in document && 'addEventListener' in window && 'classList' in document.createElement('_')) {
-				loadJS('{{ if eq $.Site.Params.cacheBust true }}{{ ( printf "/js/main.min.%s.js" $.Site.Params.version | absURL ) }}{{ else }}{{ "/js/main.js" | absURL }}{{ end }}');
-				if (document.querySelector('#form-search')) {
-					loadJS('{{ if eq $.Site.Params.cacheBust true }}{{ ( printf "/js/lunr.min.%s.js" $.Site.Params.version | absURL ) }}{{ else }}{{ "/js/lunr.js" | absURL }}{{ end }}');
-				}
+				{{ if eq $.Site.Params.minify true }}{{ readFile "/themes/vanillajs/static/js/main.min.js" | safeJS }}{{ else }}{{ readFile "/themes/vanillajs/static/js/main.js" | safeJS }}{{ end }}
 			}
 			// Analytics
 			var _paq = _paq || [];

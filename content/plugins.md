@@ -13,9 +13,7 @@ As a result, the list is a lot shorter than some of the bigger "plugin repositor
 
 *__Note:__ Plugins with a 👋 next to them are ones that I wrote or manage.*
 
-<div class="callout">
-🚀 <strong>Want to learn how to write your own plugins?</strong> Check out my <em>Writing Plugins</em> <a href="https://gomakethings.com/guides/web-apps/">Pocket Guide</a> or <a href="https://gomakethings.com/courses/web-apps/">Mini Course</a>.
-</div>
+{{<cta for="toolkit-plugins">}}
 
 {{<toc>}}
 

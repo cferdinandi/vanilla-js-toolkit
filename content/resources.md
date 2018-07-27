@@ -9,6 +9,8 @@ anchors: true
 
 Let's make {{<year>}} the year that you master&nbsp;JavaScript! You can do this. I can help.
 
+{{<cta for="toolkit-learning">}}
+
 <div class="list-spaced">
 {{%md%}}
 - **[Daily Developer Tips.](https://gomakethings.com/articles/)** I send out a short email each weekday with code snippets, tools, techniques, and interesting stuff from around the web.

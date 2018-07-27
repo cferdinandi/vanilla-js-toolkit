@@ -9,6 +9,4 @@ anchors: true
 
 A set of templates to help you kick-start your next JavaScript project.
 
-<div class="callout">
-🚀 <strong>Want to learn more about when and how to use these?</strong> Check out my <em>Writing Plugins</em> <a href="https://gomakethings.com/guides/web-apps/">Pocket Guide</a> or <a href="https://gomakethings.com/courses/web-apps/">Mini Course</a>.
-</div>
+{{<cta for="toolkit-boilerplates">}}

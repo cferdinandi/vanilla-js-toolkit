@@ -6,8 +6,7 @@ params:
   description: "A growing collection of vanilla JavaScript code snippets, helper functions, polyfills, plugins, and learning resources."
   rssURL: ""
   rssLimit: 7
-  cacheBust: true
-  version: "1.5.0"
+  minify: true
 
 # The language code for the site
 languageCode: "en-us"

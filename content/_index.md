@@ -10,6 +10,8 @@ fullWidth: false
 
 <p class="text-large">{{%md%}}A growing collection of JavaScript [code snippets](/code-snippets), [helper functions](/helpers), [boilerplates](/boilerplates), [polyfills](/polyfills), [plugins](/plugins), [project ideas](/projects), and [learning resources](/resources), by [Chris&nbsp;Ferdinandi](https://gomakethings.com).{{%/md%}}</p>
 
+{{<cta for="toolkit-home">}}
+
 **What's Vanilla JS?** Vanilla JS is a term for native JavaScript features and browser APIs. In other words, coding *without* a framework or library.
 
 {{<mailchimp intro>}}

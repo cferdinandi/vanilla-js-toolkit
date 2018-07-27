@@ -8,3 +8,5 @@ weight: 20
 ---
 
 A revealing module pattern allows you to keep most of your variables and functions out of the global scope, but make some of them publicly available.
+
+{{<cta for="toolkit-boilerplates">}}
