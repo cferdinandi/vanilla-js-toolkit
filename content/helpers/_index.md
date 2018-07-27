@@ -8,6 +8,6 @@ fullWidth: false
 
 Helper functions make complicated or repetitive tasks a bit easier.
 
-{{<cta for="toolkit-helprs">}}
+{{<cta for="toolkit-helpers">}}
 
 ## The Functions
