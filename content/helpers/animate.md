@@ -7,7 +7,7 @@ weight: 10
 noIndex: false
 ---
 
-Apply a CSS animation to an element. {{<learn-more url="https://gomakethings.com/a-vanilla-js-animation-helper-function/">}}
+Apply a CSS animation to an element. {{<learn-how url="https://gomakethings.com/a-vanilla-js-animation-helper-function/">}}
 
 ```js
 /*!
