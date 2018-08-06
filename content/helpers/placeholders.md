@@ -7,7 +7,7 @@ weight: 10
 noIndex: false
 ---
 
-Replace placeholder variables with real content. <!-- {{<learn-how url="https://gomakethings.com/a-vanilla-js-animation-helper-function/">}} -->
+Replace placeholder variables with real content. {{<learn-how url="https://gomakethings.com/a-vanilla-js-alternative-to-handlebarsjs-and-mustachejs/">}}
 
 ```js
 /*!
@@ -18,6 +18,8 @@ Replace placeholder variables with real content. <!-- {{<learn-how url="https://
  */
 var placeholders = function (template, data) {
 
+	'use strict';
+
 	// Check if the template is a string or a function
 	template = typeof (template) === 'function' ? template() : template;
 	if (['string', 'number'].indexOf(typeof template) === -1) throw 'PlaceholdersJS: please provide a valid template';
@@ -26,7 +28,7 @@ var placeholders = function (template, data) {
 	if (!data) return template;
 
 	// Replace our curly braces with data
-	var template = template.replace(/\{\{([^}]+)\}\}/g, function (match) {
+	template = template.replace(/\{\{([^}]+)\}\}/g, function (match) {
 
 		// Remove the wrapping curly braces
 		match = match.slice(2, -2);
