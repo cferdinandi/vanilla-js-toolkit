@@ -17,8 +17,8 @@ Let's make {{<year>}} the year that you master&nbsp;JavaScript! You can do this.
 - **[Podcast.](https://vanillajspodcast.com)** A show about JavaScript for people who hate the complexity of modern front‑end web development.
 - **[Pocket Guides.](https://vanillajsguides.com/)** Short, focused ebooks and video courses made for beginners. Start building real JavaScript projects in under an hour.
 - **[Vanilla JS Academy.](https://vanillajsacademy.com/)** A project-based online JavaScript training program for beginners.
-{{%/md%}}
 - **[Vanilla JS Conference.](https://vanillajsconf.com/)** A free online conference for people who want to build a leaner, faster, and more resilient web.
+{{%/md%}}
 </div>
 
 I'm also available for [speaking engagements, team training, and JavaScript consulting](https://gomakethings.com/talks/).
