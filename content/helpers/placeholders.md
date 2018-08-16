@@ -59,7 +59,7 @@ var placeholders = function (template, data) {
 
 		// Otherwise, return the item
 		else {
-			if (!data[match]) return '{{' + match + '}}';
+			if (!data.hasOwnProperty(match)) return '{{' + match + '}}';
 			return data[match];
 		}
 
