@@ -31,6 +31,7 @@ As a result, the list is a lot shorter than some of the bigger "plugin repositor
 - 👋 **[Gumshoe.](https://github.com/cferdinandi/gumshoe/)** A framework agnostic scrollspy script.
 - 👋 **[Astro.](https://github.com/cferdinandi/astro/)** A responsive, mobile-first navigation menu.
 - 👋 **[Drop.](https://github.com/cferdinandi/drop/)** Mobile-friendly dropdown menus.
+- **[Offside.js.](https://github.com/toomuchdesign/offside)** Simple off-canvas navigation menus.
 
 
 ## Design & Layout
