@@ -468,9 +468,9 @@ Replace a portion of text in a string with something else.
 
 ```javascript
 var text = 'I love Cape Cod potato chips!';
-var lays = text.replace( 'Cape Cod', 'Lays' );
-var soda = text.replace( 'Cape Cod potato chips', 'soda' );
-var extend = text.replace( 'Cape Cod', 'Cape Cod salt and vinegar' );
+var lays = text.replace('Cape Cod', 'Lays');
+var soda = text.replace('Cape Cod potato chips', 'soda');
+var extend = text.replace('Cape Cod', 'Cape Cod salt and vinegar');
 ```
 
 **Works back to least IE6.**
@@ -1189,12 +1189,12 @@ var xhr = new XMLHttpRequest();
 // Setup our listener to process compeleted requests
 xhr.onreadystatechange = function () {
 	// Only run if the request is complete
-	if ( xhr.readyState !== 4 ) return;
+	if (xhr.readyState !== 4) return;
 
 	// Process our return data
-	if ( xhr.status === 200 ) {
+	if (xhr.status === 200) {
 		// What do when the request is successful
-		console.log( xhr );
+		console.log(xhr);
 	} else {
 		// What do when the request fails
 		console.log('The request failed!');
@@ -1207,7 +1207,7 @@ xhr.onreadystatechange = function () {
 // Create and send a GET request
 // The first argument is the post type (GET, POST, PUT, DELETE, etc.)
 // The second argument is the endpoint URL
-xhr.open( 'GET', 'https://jsonplaceholder.typicode.com/posts' );
+xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts');
 xhr.send();
 ```
 
@@ -1277,11 +1277,11 @@ Use [the `getJSONP()` helper method](/helpers/getjsonp/) to setup your JSONP req
 
 ```js
 // Callback function
-var logAPI = function ( data ) {
-	console.log( data );
+var logAPI = function (data) {
+	console.log(data);
 }
 
-getJSONP( 'http://jsfiddle.net/echo/jsonp/?text=something&par1=another&par2=one-more', 'logAPI' );
+getJSONP('http://jsfiddle.net/echo/jsonp/?text=something&par1=another&par2=one-more', 'logAPI');
 ```
 
 **Works back to at least IE6.**
@@ -1299,7 +1299,7 @@ xhr.onreadystatechange = function () {
 };
 
 // Create and send a GET request
-xhr.open( 'GET', '/page-url' );
+xhr.open('GET', '/page-url');
 xhr.responseType = 'document'
 xhr.send();
 ```
