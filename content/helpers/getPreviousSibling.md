@@ -1,5 +1,5 @@
 ---
-title: "getNextSiblings.js"
+title: "getPreviousSiblings.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Get the previous sibling of an element that matches a selector."
