@@ -19,6 +19,7 @@ Get the URL parameters from a query string. {{<learn-how hash="get-all-query-str
 var getParams = function (url) {
 	var params = {};
 	var parser = document.createElement('a');
+	url = url || window.location.href;
 	parser.href = url;
 	var query = parser.search.substring(1);
 	var vars = query.split('&');
