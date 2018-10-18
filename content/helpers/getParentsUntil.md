@@ -29,12 +29,14 @@ var getParentsUntil = function (elem, parent, filter) {
 	var parents = [];
 
 	// Get matching parent elements
-	for (; elem && elem !== document; elem = elem.parentNode) {
+	while (elem && elem !== document) {
 
+		// If there's a parent and the element matches, break
 		if (parent) {
 			if (elem.matches(parent)) break;
 		}
 
+		// If there's a filter and the element matches, push it to the array
 		if (filter) {
 			if (elem.matches(filter)) {
 				parents.push(elem);
@@ -42,7 +44,10 @@ var getParentsUntil = function (elem, parent, filter) {
 			continue;
 		}
 
+		// Otherwise, just add it to the array
 		parents.push(elem);
+
+		elem = elem.parentNode;
 
 	}
 

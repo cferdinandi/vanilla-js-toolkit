@@ -21,27 +21,17 @@ var getParents = function (elem, selector) {
 
 	// Element.matches() polyfill
 	if (!Element.prototype.matches) {
-		Element.prototype.matches =
-			Element.prototype.matchesSelector ||
-			Element.prototype.mozMatchesSelector ||
-			Element.prototype.msMatchesSelector ||
-			Element.prototype.oMatchesSelector ||
-			Element.prototype.webkitMatchesSelector ||
-			function(s) {
-				var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-					i = matches.length;
-				while (--i >= 0 && matches.item(i) !== this) {}
-				return i > -1;
-			};
+		Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
 	}
 
 	// Setup parents array
 	var parents = [];
 
 	// Get matching parent elements
-	for (; elem && elem !== document; elem = elem.parentNode) {
+	while (elem && elem !== document) {
 
-		// Add matching parents to array
+		// If using a selector, add matching parents to array
+		// Otherwise, add all parents
 		if (selector) {
 			if (elem.matches(selector)) {
 				parents.push(elem);
@@ -49,6 +39,9 @@ var getParents = function (elem, selector) {
 		} else {
 			parents.push(elem);
 		}
+
+		// Jump to the next parent node
+		elem = elem.parentNode;
 
 	}
 

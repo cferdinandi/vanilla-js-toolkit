@@ -7,7 +7,7 @@ weight: 10
 noIndex: false
 ---
 
-Merge two or more objects together. {{<learn-how hash="getting-a-cookie-value">}}
+Merge two or more objects together. {{<learn-how hash="merge-two-or-more-objects-together">}}
 
 ```js
 /*!

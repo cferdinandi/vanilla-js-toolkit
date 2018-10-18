@@ -19,10 +19,10 @@ Get an element's distance from the top of the Document. {{<learn-how hash="get-a
 var getOffsetTop = function (elem) {
 	var location = 0;
 	if (elem.offsetParent) {
-		do {
+		while (elem) {
 			location += elem.offsetTop;
 			elem = elem.offsetParent;
-		} while (elem);
+		}
 	}
 	return location >= 0 ? location : 0;
 };
