@@ -46,8 +46,7 @@ var extend = function () {
 
 	// Loop through each object and conduct a merge
 	for (; i < arguments.length; i++) {
-		var obj = arguments[i];
-		merge(obj);
+		merge(arguments[i]);
 	}
 
 	return extended;
