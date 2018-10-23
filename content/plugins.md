@@ -75,6 +75,7 @@ As a result, the list is a lot shorter than some of the bigger "plugin repositor
 ## Micro-Libraries
 
 - 👋 **[Bin.](https://github.com/cferdinandi/bin)** A tiny `localStorage` and `sessionStorage` library.
+- 👋 **[jar.](https://github.com/cferdinandi/jar)** A tiny helper library that makes working with cookies easier.
 - 👋 **[atomic.](https://github.com/cferdinandi/atomic)** Easily make Ajax/HTTP requests.
 - 👋 **[validate.](https://github.com/cferdinandi/validate)** A lightweight form validation script that augments native HTML5 form validation elements and attributes.
 - **[Dinero.js.](https://sarahdayan.github.io/dinero.js/)** A library for working with monetary values in JavaScript.
