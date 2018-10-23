@@ -12,6 +12,7 @@ Create an expiration date timestamp for use with cookies. Pass in an expiration 
 ```js
 /*!
  * Create an expiration date timestamp for use with cookies.
+ * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {Number} time  The amount of time in the future to set the expiration date for
  * @return {String}       The expiration date
  */
