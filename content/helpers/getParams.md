@@ -23,6 +23,7 @@ var getParams = function (url) {
 	parser.href = url;
 	var query = parser.search.substring(1);
 	var vars = query.split('&');
+	if (vars.length < 2) return params;
 	for (var i=0; i < vars.length; i++) {
 		var pair = vars[i].split("=");
 		params[pair[0]] = decodeURIComponent(pair[1]);
