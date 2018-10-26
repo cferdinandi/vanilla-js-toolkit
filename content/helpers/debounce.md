@@ -10,6 +10,11 @@ noIndex: false
 Debounce functions for better performance. {{<learn-how url="https://gomakethings.com/debouncing-your-javascript-events/">}}
 
 ```js
+/**
+ * Debounce functions for better performance
+ * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * @param  {Function} fn The function to debounce
+ */
 var debounce = function (fn) {
 
 	// Setup a timer
