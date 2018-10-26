@@ -7,27 +7,32 @@ weight: 10
 noIndex: false
 ---
 
-Debounce functions for better performance. {{<learn-how url="https://davidwalsh.name/javascript-debounce-function">}}
+Debounce functions for better performance. {{<learn-how url="https://gomakethings.com/debouncing-your-javascript-events/">}}
 
 ```js
-/**
- * Debounce functions for better performance
- * https://davidwalsh.name/javascript-debounce-function
- * @param  {Function} func The function to debounce
- * @param  {Integer}  wait Amount of delay to wait for
- */
-var debounce = function (func, wait, immediate) {
+var debounce = function (fn) {
+
+	// Setup a timer
 	var timeout;
-	return function() {
-		var context = this, args = arguments;
-		var later = function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
-		var callNow = immediate && !timeout;
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-		if (callNow) func.apply(context, args);
-	};
+
+	// Return a function to run debounced
+	return function () {
+
+		// Setup the arguments
+		var context = this;
+		var args = arguments;
+
+		// If there's a timer, cancel it
+		if (timeout) {
+			window.cancelAnimationFrame(timeout);
+		}
+
+		// Setup the new requestAnimationFrame()
+		timeout = window.requestAnimationFrame(function () {
+			fn.apply(this, args);
+		});
+
+	}
+
 };
 ```
