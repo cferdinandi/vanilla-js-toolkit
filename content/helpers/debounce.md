@@ -24,7 +24,6 @@ var debounce = function (fn) {
 	return function () {
 
 		// Setup the arguments
-		var context = this;
 		var args = arguments;
 
 		// If there's a timer, cancel it
