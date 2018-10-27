@@ -24,6 +24,7 @@ var debounce = function (fn) {
 	return function () {
 
 		// Setup the arguments
+		var context = this;
 		var args = arguments;
 
 		// If there's a timer, cancel it
@@ -33,7 +34,7 @@ var debounce = function (fn) {
 
 		// Setup the new requestAnimationFrame()
 		timeout = window.requestAnimationFrame(function () {
-			fn.apply(this, args);
+			fn.apply(context, args);
 		});
 
 	}
