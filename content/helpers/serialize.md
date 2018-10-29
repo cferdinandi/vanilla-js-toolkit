@@ -34,7 +34,7 @@ var serialize = function (form, arr) {
 		if ((field.type !== 'checkbox' && field.type !== 'radio') || field.checked) {
 			if (arr) {
 				var obj = {};
-				obj[field.nam] = field.value;
+				obj[field.name] = field.value;
 				serialized.push(obj);
 			} else {
 				serialized.push(encodeURIComponent(field.name) + "=" + encodeURIComponent(field.value));
