@@ -1,22 +1,22 @@
 ---
-title: "serialize.js"
+title: "serializeArray.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
-description: "Serialize all form data into a query string."
+description: "Serialize all form data into an array of objects."
 weight: 10
 noIndex: false
 ---
 
-Serialize all form data into a query string. {{<learn-how url="https://gomakethings.com/how-to-serialize-form-data-with-vanilla-js/">}}
+Serialize all form data into an array of objects.
 
 ```js
 /*!
- * Serialize all form data into a query string
+ * Serialize all form data into an array
  * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {Node}   form The form to serialize
  * @return {String}      The serialized form data
  */
- var serialize = function (form) {
+ var serializeArray = function (form) {
 
  	// Setup our serialized data
  	var serialized = [];
@@ -33,17 +33,23 @@ Serialize all form data into a query string. {{<learn-how url="https://gomakethi
  		if (field.type === 'select-multiple') {
  			for (var n = 0; n < field.options.length; n++) {
  				if (!field.options[n].selected) continue;
- 				serialized.push(encodeURIComponent(field.name) + "=" + encodeURIComponent(field.options[n].value));
+ 				serialized.push({
+ 					name: field.name,
+ 					value: field.options[n].value
+ 				});
  			}
  		}
 
  		// Convert field data to a query string
  		else if ((field.type !== 'checkbox' && field.type !== 'radio') || field.checked) {
- 			serialized.push(encodeURIComponent(field.name) + "=" + encodeURIComponent(field.value));
+ 			serialized.push({
+ 				name: field.name,
+ 				value: field.value
+ 			});
  		}
  	}
 
- 	return serialized.join('&');
+ 	return serialized;
 
  };
 ```
