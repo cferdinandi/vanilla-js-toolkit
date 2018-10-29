@@ -13,11 +13,10 @@ Serialize all form data into a query string.
 /*!
  * Serialize all form data into a query string
  * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
- * @param  {Node}    form  The form to serialize
- * @param  {Boolean} arr   If true, return an array instead of a string
- * @return {String|Array}  The serialized form data
+ * @param  {Node}   form The form to serialize
+ * @return {String}      The serialized form data
  */
-var serialize = function (form, arr) {
+var serialize = function (form) {
 
 	// Setup our serialized data
 	var serialized = [];
@@ -32,17 +31,11 @@ var serialize = function (form, arr) {
 
 		// Convert field data to a query string
 		if ((field.type !== 'checkbox' && field.type !== 'radio') || field.checked) {
-			if (arr) {
-				var obj = {};
-				obj[field.name] = field.value;
-				serialized.push(obj);
-			} else {
-				serialized.push(encodeURIComponent(field.name) + "=" + encodeURIComponent(field.value));
-			}
+			serialized.push(encodeURIComponent(field.name) + "=" + encodeURIComponent(field.value));
 		}
 	}
 
-	return arr ? serialized : serialized.join('&');
+	return serialized.join('&');
 
 };
 ```
