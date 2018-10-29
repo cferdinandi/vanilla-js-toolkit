@@ -32,7 +32,13 @@ var serialize = function (form, arr) {
 
 		// Convert field data to a query string
 		if ((field.type !== 'checkbox' && field.type !== 'radio') || field.checked) {
-			serialized.push(encodeURIComponent(field.name) + "=" + encodeURIComponent(field.value));
+			if (arr) {
+				var obj = {};
+				obj[field.nam] = field.value;
+				serialized.push(obj);
+			} else {
+				serialized.push(encodeURIComponent(field.name) + "=" + encodeURIComponent(field.value));
+			}
 		}
 	}
 
