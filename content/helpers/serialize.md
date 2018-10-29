@@ -13,10 +13,11 @@ Serialize all form data into a query string.
 /**
  * Serialize all form data into a query string
  * https://stackoverflow.com/a/30153391/1293256
- * @param  {Node}   form The form to serialize
- * @return {String}      The serialized form data
+ * @param  {Node}    form  The form to serialize
+ * @param  {Boolean} arr   If true, return an array instead of a string
+ * @return {String|Array}  The serialized form data
  */
-var serialize = function (form) {
+var serialize = function (form, arr) {
 
 	// Setup our serialized data
 	var serialized = [];
@@ -35,7 +36,7 @@ var serialize = function (form) {
 		}
 	}
 
-	return serialized.join('&');
+	return arr ? serialized : serialized.join('&');
 
 };
 ```
