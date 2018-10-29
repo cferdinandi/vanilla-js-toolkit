@@ -10,9 +10,9 @@ noIndex: false
 Serialize all form data into a query string.
 
 ```js
-/**
+/*!
  * Serialize all form data into a query string
- * https://stackoverflow.com/a/30153391/1293256
+ * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {Node}    form  The form to serialize
  * @param  {Boolean} arr   If true, return an array instead of a string
  * @return {String|Array}  The serialized form data
