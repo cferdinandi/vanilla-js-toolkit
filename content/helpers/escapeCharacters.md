@@ -7,7 +7,7 @@ weight: 10
 noIndex: false
 ---
 
-Escape special characters in IDs for use with querySelector. {{<learn-how url="https://gomakethings.com/what-to-do-when-queryselector-throws-errors-on-valstr-strs/">}}
+Escape special characters in IDs for use with querySelector. {{<learn-how url="/what-to-do-when-queryselector-fail-on-valid-selectors/">}}
 
 ```js
 /*!
