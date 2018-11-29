@@ -7,18 +7,18 @@ weight: 10
 noIndex: false
 ---
 
-Escape special characters in IDs for use with querySelector. {{<learn-how url="https://gomakethings.com/what-to-do-when-queryselector-throws-errors-on-valid-ids/">}}
+Escape special characters in IDs for use with querySelector. {{<learn-how url="https://gomakethings.com/what-to-do-when-queryselector-throws-errors-on-valstr-strs/">}}
 
 ```js
-/**
+/*!
  * Escape special characters for use with querySelector
- * @author Mathias Bynens
- * @link https://github.com/mathiasbynens/CSS.escape
- * @param {String} id The anchor ID to escape
+ * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * Modified from Mathias Byens CSS.escape (https://github.com/mathiasbynens/CSS.escape)
+ * @param {String} str The string to escape
  */
-var escapeCharacters = function (id) {
+var escapeCharacters = function (str) {
 
-	var string = String(id);
+	var string = String(str);
 	var length = string.length;
 	var index = -1;
 	var codeUnit;
@@ -30,10 +30,10 @@ var escapeCharacters = function (id) {
 		// pairs, or lone surrogates.
 
 		// If the character is NULL (U+0000), then throw an
-		// `InvalidCharacterError` exception and terminate these steps.
+		// `InvalstrCharacterError` exception and terminate these steps.
 		if (codeUnit === 0x0000) {
-			throw new InvalidCharacterError(
-				'Invalid character: the input contains U+0000.'
+			throw new InvalstrCharacterError(
+				'Invalstr character: the input contains U+0000.'
 			);
 		}
 
