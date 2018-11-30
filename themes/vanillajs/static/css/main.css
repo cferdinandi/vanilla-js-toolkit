@@ -1,9 +1,9 @@
 /*!
- * vanillajs v1.5.0: The theme for vanillajstoolkit.com
+ * vanillajs v1.5.0
+ * The theme for vanillajstoolkit.com
  * (c) 2018 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/vanilla-js-toolkit
- * Open Source Credits: https://github.com/toddmotto/fluidvids, http://prismjs.com, https://github.com/filamentgroup/loadJS/, https://github.com/filamentgroup/loadCSS, https://github.com/bramstein/fontfaceobserver
  */
 
 /**
@@ -65,7 +65,8 @@ summary {
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /**
@@ -78,6 +79,7 @@ html {
   overflow-y: scroll;
   /* 1 */
   -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
           text-size-adjust: 100%;
   /* 2 */
@@ -564,7 +566,8 @@ hr {
   border: 0;
   border-top: 1px solid #e5e5e5;
   border-bottom: 0 solid transparent;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   margin: 2em auto;
   overflow: visible;
@@ -609,7 +612,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -904,7 +908,8 @@ a.btn, .btn.link-block-styled {
 /* line 73, src/sass/components/_buttons.scss */
 .btn:active,
 .btn.active {
-  box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 1px 0.15625em rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 1px 0.15625em rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 1px 0.15625em rgba(0, 0, 0, 0.05);
   outline: 0;
 }
 
@@ -914,7 +919,8 @@ a.btn, .btn.link-block-styled {
 /* line 83, src/sass/components/_buttons.scss */
 .btn.disabled,
 .btn[disabled] {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   cursor: not-allowed;
   opacity: 0.5;
   pointer-events: none;
@@ -1107,7 +1113,8 @@ textarea {
 input:focus,
 textarea:focus {
   border-color: rgba(82, 168, 236, 0.8);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0.5em rgba(82, 168, 236, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0.5em rgba(82, 168, 236, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0.5em rgba(82, 168, 236, 0.6);
   outline: 0;
   outline: thin dotted \9;
 }
@@ -1201,6 +1208,7 @@ button:-moz-focusring,
   padding-left: 0.9375em;
   padding-right: 2.5em;
   border-radius: 1.3125em;
+  -webkit-transition: width 300ms ease-in;
   transition: width 300ms ease-in;
 }
 
@@ -1766,8 +1774,11 @@ td {
 }
 
 /* line 261, src/sass/components/_overrides.scss */
-.clearfix:after, .container:after,
-.row:after, .nav-wrap:after {
+
+.clearfix:after,
+.container:after,
+.row:after,
+.nav-wrap:after {
   clear: both;
 }
 
@@ -1785,7 +1796,8 @@ td {
   * {
     background: transparent !important;
     color: #000 !important;
-    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
     text-shadow: none !important;
   }
   /**
@@ -1798,23 +1810,21 @@ td {
 	 * Underline all links
 	 */
   /* line 30, src/sass/components/_print.scss */
-  a, .link-block-styled,
-  a:visited,
-  .link-block-styled:visited {
+  a, .link-block-styled, a:visited, .link-block-styled:visited {
     text-decoration: underline;
   }
   /**
 	 * Show URL after links
 	 */
   /* line 38, src/sass/components/_print.scss */
-  a[href]:after, [href].link-block-styled:after {
+  a[href]:after, .link-block-styled[href]:after {
     content: " (" attr(href) ")";
   }
   /**
 	 * Don't show URL for internal links
 	 */
   /* line 45, src/sass/components/_print.scss */
-  a[href^="#"]:after, [href^="#"].link-block-styled:after {
+  a[href^="#"]:after, .link-block-styled[href^="#"]:after {
     content: "";
   }
   /**

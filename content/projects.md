@@ -29,3 +29,5 @@ The best way to learn JavaScript is by writing lots of code, but coming up with 
 0. A countdown timer
 0. A todo list app
 0. An app to randomly choose from a list
+
+{{<mailchimp intro="true">}}

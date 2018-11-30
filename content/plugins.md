@@ -84,4 +84,4 @@ As a result, the list is a lot shorter than some of the bigger "plugin repositor
 - **[Dinero.js.](https://sarahdayan.github.io/dinero.js/)** A library for working with monetary values in JavaScript.
 - **[Day.js.](https://github.com/xx45/dayjs)** A 2kB alternative to Moment.js with the same modern API. Parse, validate, manipulate, and display dates and times in JavaScript.
 
-{{<mailchimp intro>}}
+{{<mailchimp intro="true">}}

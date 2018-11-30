@@ -1312,4 +1312,4 @@ The `XMLHttpRequest()` syntax is a bit verbose.
 
 [Atomic](https://github.com/cferdinandi/atomic) is an insanely useful Ajax/HTTP micro-library originally created by [Todd Motto](https://toddmotto.com) and now managed by me. It weighs just 1.5kb minified, and makes working with Ajax/HTTP and JSONP absurdly easy.
 
-{{<mailchimp intro>}}
+{{<mailchimp intro="true">}}

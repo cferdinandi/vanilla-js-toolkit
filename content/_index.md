@@ -14,7 +14,7 @@ fullWidth: false
 
 **What's Vanilla JS?** Vanilla JS is a term for native JavaScript features and browser APIs. In other words, coding *without* a framework or library.
 
-{{<mailchimp intro>}}
+{{<mailchimp intro="true">}}
 
 ## Hi, I'm Chris Ferdinandi. 👋
 
