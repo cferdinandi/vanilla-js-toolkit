@@ -7,7 +7,7 @@ weight: 10
 noIndex: false
 ---
 
-Create a new object composed of properties picked from another object.
+Create a new object composed of properties picked from another object. {{<learn-how href="https://codepen.io/cferdinandi/pen/MzxMeE">}}
 
 ```js
 /*!
