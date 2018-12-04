@@ -7,7 +7,7 @@ weight: 10
 noIndex: false
 ---
 
-Create a new object composed of properties that meet specific criteria. {{<learn-how href="https://codepen.io/cferdinandi/pen/MzxMeE">}}
+Create a new object composed of properties that meet specific criteria. {{<learn-how href="https://codepen.io/cferdinandi/pen/mQYbKG?editors=0001">}}
 
 ```js
 /*!
