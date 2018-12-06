@@ -34,7 +34,7 @@ var get = function (obj, path, def) {
 		var output = [];
 
 		// Split to an array with dot notation
-		path.split('.').forEach(function (item, index) {
+		path.split('.').forEach(function (item) {
 
 			// Split to an array with bracket notation
 			item.split(/\[([^}]+)\]/g).forEach(function (key) {
