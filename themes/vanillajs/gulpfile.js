@@ -35,7 +35,7 @@ var paths = {
 		output: 'static/svg/'
 	},
 	copy: {
-		input: 'src/copy/*',
+		input: 'src/copy/**/*',
 		output: 'static/'
 	},
 	reload: './static/'

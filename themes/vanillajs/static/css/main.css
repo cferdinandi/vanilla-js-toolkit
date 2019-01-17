@@ -1,7 +1,7 @@
 /*!
  * vanillajs v1.5.0
  * The theme for vanillajstoolkit.com
- * (c) 2018 Chris Ferdinandi
+ * (c) 2019 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/vanilla-js-toolkit
  */

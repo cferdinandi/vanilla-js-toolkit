@@ -11,19 +11,6 @@
 			if ('querySelector' in document && 'addEventListener' in window && 'classList' in document.createElement('_')) {
 				{{ if eq $.Site.Params.minify true }}{{ readFile "/themes/vanillajs/static/js/main.min.js" | safeJS }}{{ else }}{{ readFile "/themes/vanillajs/static/js/main.js" | safeJS }}{{ end }}
 			}
-			// Analytics
-			var _paq = _paq || [];
-			/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-			_paq.push(['trackPageView']);
-			_paq.push(['enableLinkTracking']);
-			(function() {
-				var u="//analytics.gomakethings.com/";
-				_paq.push(['setTrackerUrl', u+'piwik.php']);
-				_paq.push(['setSiteId', '9']);
-				var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-				g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-			})();
 		</script>
-		<noscript><p><img src="//analytics.gomakethings.com/piwik.php?idsite=9&rec=1" style="border:0;" alt="" /></p></noscript>
 	</body>
 </html>

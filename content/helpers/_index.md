@@ -6,7 +6,7 @@ noTitle: false
 fullWidth: false
 ---
 
-Helper functions make complicated or repetitive tasks a bit easier.
+Helper functions make complicated or repetitive tasks a bit easier, and keep your code DRY (an acronym for *Don't Repeat Yourself*).
 
 {{<cta for="toolkit-helpers">}}
 
