@@ -1,18 +1,22 @@
 {{ partial "header.html" . }}
 
-{{ partial "content-page.html" . }}
+<article>
 
-<ul>
-	{{ range .Pages }}
-		<li>
-			<a href="{{ .URL }}">{{ .Title }}</a>
-		</li>
-	{{ end }}
-</ul>
+	{{ partial "content-page-no-article.html" . }}
 
-<aside>
-	{{ partial "mailchimp-intro.html" }}
-	{{ partial "mailchimp-form.html" }}
-</aside>
+	<ul>
+		{{ range .Pages }}
+			<li>
+				<a href="{{ .URL }}">{{ .Title }}</a>
+			</li>
+		{{ end }}
+	</ul>
+
+	<aside>
+		{{ partial "mailchimp-intro.html" }}
+		{{ partial "mailchimp-form.html" }}
+	</aside>
+
+</article>
 
 {{ partial "footer.html" . }}

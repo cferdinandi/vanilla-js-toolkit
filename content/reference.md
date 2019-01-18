@@ -60,7 +60,7 @@ if (elem.matches('.turkey')) {
 }
 ```
 
-*[Use with a polyfill.](https://vanillajstoolkit.com/polyfills/matches/)*
+*[Use with a polyfill.](/polyfills/matches/)*
 
 
 
@@ -161,7 +161,7 @@ if (elem.classList.contains('mayo')) {
 }
 ```
 
-*Works back to IE10. [Extend back to IE8 with a polyfill.](https://vanillajstoolkit.com/polyfills/classlist/)*
+*Works back to IE10. [Extend back to IE8 with a polyfill.](/polyfills/classlist/)*
 
 ### className
 
@@ -533,7 +533,7 @@ Create a new array from an array or array-like object (such as a `NodeList`).
 var sandwiches = Array.from(document.querySelectorAll('.sandwich'));
 ```
 
-*[Use with a polyfill.](https://vanillajstoolkit.com/polyfills/arrayfrom/)*
+*[Use with a polyfill.](/polyfills/arrayfrom/)*
 
 ### `Array.filter()`
 
@@ -623,7 +623,7 @@ var greaterThanTen = [1, 2, 4, 7, 8].find(function (item) {
 });
 ```
 
-*[Use with a polyfill.](https://vanillajstoolkit.com/polyfills/arrayfind/)*
+*[Use with a polyfill.](/polyfills/arrayfind/)*
 
 ### `Array.reverse()`
 
@@ -706,11 +706,11 @@ var object3 = {
 var mergedObjs = Object.assign(object1, object2, object3);
 ```
 
-*[Use with a polyfill.](https://vanillajstoolkit.com/polyfills/objectassign/)*
+*[Use with a polyfill.](/polyfills/objectassign/)*
 
 ### Deep Merges
 
-To support deep merges, [I wrote an `extend()` helper method](https://vanillajstoolkit.com/helpers/extend/).
+To support deep merges, [I wrote an `extend()` helper method](/helpers/extend/).
 
 ```javascript
 // Example objects
@@ -895,7 +895,7 @@ var referenceNode = document.querySelector('#some-element');
 referenceNode.before(newNode);
 ```
 
-*[Use with a polyfill.](https://vanillajstoolkit.com/polyfills/before/)*
+*[Use with a polyfill.](/polyfills/before/)*
 
 ### `after()`
 
@@ -912,7 +912,7 @@ var referenceNode = document.querySelector('#some-element');
 referenceNode.after(newNode);
 ```
 
-*[Use with a polyfill.](https://vanillajstoolkit.com/polyfills/after/)*
+*[Use with a polyfill.](/polyfills/after/)*
 
 ### `prepend()`
 
@@ -930,7 +930,7 @@ var referenceNode = document.querySelector('#some-element');
 referenceNode.prepend(newNode);
 ```
 
-*[Use with a polyfill.](https://vanillajstoolkit.com/polyfills/prepend/)*
+*[Use with a polyfill.](/polyfills/prepend/)*
 
 ### `append()`
 
@@ -948,7 +948,7 @@ var referenceNode = document.querySelector('#some-element');
 referenceNode.append(newNode);
 ```
 
-*[Use with a polyfill.](https://vanillajstoolkit.com/polyfills/append/)*
+*[Use with a polyfill.](/polyfills/append/)*
 
 ### `appendChild()`
 
@@ -987,7 +987,7 @@ var elem = document.querySelector('#some-element');
 elem.remove();
 ```
 
-*[Use with a polyfill.](https://vanillajstoolkit.com/polyfills/remove/)*
+*[Use with a polyfill.](/polyfills/remove/)*
 
 
 
@@ -1019,7 +1019,7 @@ var elem = document.querySelector('#some-elem');
 var closestSandwich = elem.closest('[data-sandwich]');
 ```
 
-*[Use with a polyfill.](https://vanillajstoolkit.com/polyfills/closest/)*
+*[Use with a polyfill.](/polyfills/closest/)*
 
 ### Child elements by selector
 
@@ -1057,7 +1057,7 @@ var descendants = wrapper.childNodes;
 
 ### Get sibling elements
 
-[`getSiblings()` is a helper method](https://vanillajstoolkit.com/helpers/getsiblings/) I wrote that gets the siblings of an element in the DOM. For example: if you had a list item (`<li>`) and wanted to grab all of the other items in the list.
+[`getSiblings()` is a helper method](/helpers/getsiblings/) I wrote that gets the siblings of an element in the DOM. For example: if you had a list item (`<li>`) and wanted to grab all of the other items in the list.
 
 ```javascript
 var elem = document.querySelector('#some-element');
@@ -1090,7 +1090,7 @@ var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
 ### Check if an element is in the viewport
 
-[`isInViewport()` is a helper method](https://vanillajstoolkit.com/helpers/isinviewport/) I wrote to check if any part of an element is in the viewport. It returns `true` if any part of the element is in the viewport, and `false` if it's not.
+[`isInViewport()` is a helper method](/helpers/isinviewport/) I wrote to check if any part of an element is in the viewport. It returns `true` if any part of the element is in the viewport, and `false` if it's not.
 
 ```javascript
 var elem = document.querySelector('#some-element');
@@ -1111,7 +1111,7 @@ var distance = window.pageYOffset;
 
 ### Get an element's distance from the top of the page
 
-[`getOffsetTop()` is a helper method](https://vanillajstoolkit.com/helpers/getoffsettop/) I wrote to get an element's distance from the top of the document.
+[`getOffsetTop()` is a helper method](/helpers/getoffsettop/) I wrote to get an element's distance from the top of the document.
 
 ```javascript
 var elem = document.querySelector('#some-element');

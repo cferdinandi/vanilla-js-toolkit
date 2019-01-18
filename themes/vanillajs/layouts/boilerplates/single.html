@@ -1,10 +1,22 @@
 {{ partial "header.html" . }}
 
-{{ partial "content-page.html" . }}
+<article>
 
-<aside>
-	{{ partial "mailchimp-intro.html" }}
-	{{ partial "mailchimp-form.html" }}
-</aside>
+	{{ if not .Params.noTitle }}
+	<h1>{{ ( .Title | htmlUnescape ) }}</h1>
+	{{ end }}
+
+	<p>{{ .Description | markdownify }}</p>
+
+	{{- if isset .Params "example" -}}<p><em><strong>Example: </strong>{{ .Params.example | markdownify }}</em></p>{{- end -}}
+
+	{{ .Content }}
+
+	<aside>
+		{{ partial "mailchimp-intro.html" }}
+		{{ partial "mailchimp-form.html" }}
+	</aside>
+
+</article>
 
 {{ partial "footer.html" . }}

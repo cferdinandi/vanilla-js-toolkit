@@ -1,10 +1,11 @@
 ---
 title: "Revealing Module Pattern"
-date: 2018-01-14T21:38:44-05:00
+date: 2018-01-24T12:16:26-05:00
+description: "Allows you to keep most of your variables and functions out of the global scope, but make some of them publicly available."
+example: "a helper library like lodash."
 draft: false
-noTitle: false
-fullWidth: false
-weight: 10
+weight: 20
+noIndex: false
 ---
 
 Change `myPlugin` to whatever namespace you’d like to use for your plugin.
@@ -58,7 +59,6 @@ var myPlugin = (function () {
 	 */
 	publicAPIs.init = function (options) {
 		// Code goes here...
-
 	};
 
 

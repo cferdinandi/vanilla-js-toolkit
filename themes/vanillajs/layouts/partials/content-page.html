@@ -1,9 +1,3 @@
-{{ if lt (now.Format "20060102") 20180515 }}
-<aside>
-	<p><mark>🔥 <em><strong>NEW:</strong> The <strong><a href="https://vanillajsacademy.com">Vanilla JS Academy</a></strong> is a project-based online JavaScript training program for beginners. The next session starts {{ if eq (now.Format "20060102") 20180513 }}tomorrow{{ else if gt (now.Format "20060102") 20180508 }}on Monday{{ else }}on May 14{{ end }}. Don't wait!</em></mark></p>
-</aside>
-{{ end }}
-
 <article>
 
 	{{ if not .Params.noTitle }}

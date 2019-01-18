@@ -1,21 +1,22 @@
 {{ partial "header.html" . }}
 
-{{ partial "content-page.html" . }}
+<article>
 
-{{ range .Sections }}
-	<h2 class="margin-bottom-small" id="{{ replace .Title " " "-" }}">{{ .Title }}</h2>
-	<p class="margin-bottom-small">{{ .Summary }}</p>
+	{{ partial "content-page-no-article.html" . }}
 
-	<ul>
-	{{ range .Pages }}
-		<li><a href="{{ .URL }}">{{ .Title }}</a></li>
-	{{ end }}
+	<ul class="list-spaced">
+		{{ range .Pages }}
+			<li>
+				<strong><a href="{{ .URL }}">{{ .Title }}.</a></strong> {{ .Description | markdownify }} {{ if isset .Params "example" }}<em><strong>Example:</strong> {{ .Params.example | markdownify }}</em>{{ end }}
+			</li>
+		{{ end }}
 	</ul>
-{{ end }}
 
-<aside>
-	{{ partial "mailchimp-intro.html" }}
-	{{ partial "mailchimp-form.html" }}
-</aside>
+	<aside>
+		{{ partial "mailchimp-intro.html" }}
+		{{ partial "mailchimp-form.html" }}
+	</aside>
+
+</article>
 
 {{ partial "footer.html" . }}
