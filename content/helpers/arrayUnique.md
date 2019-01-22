@@ -3,11 +3,11 @@ title: "arrayUnique.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Remove duplicates from an array."
+how: "https://gomakethings.com/removing-duplicates-from-an-array-with-vanilla-javascript/"
+demo: https://codepen.io/cferdinandi/pen/MLWdBg
 weight: 10
 noIndex: false
 ---
-
-Remove duplicates from an array. {{<learn-how url="https://gomakethings.com/removing-duplicates-from-an-array-with-vanilla-javascript/">}}
 
 ```js
 /*!

@@ -3,11 +3,11 @@ title: "getParams.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Get the URL parameters from a query string."
+how: "https://gomakethings.com/getting-all-query-string-values-from-a-url-with-vanilla-js/"
+demo: "https://codepen.io/cferdinandi/pen/PVwwpZ"
 weight: 10
 noIndex: false
 ---
-
-Get the URL parameters from a query string. {{<learn-how hash="get-all-query-string-parameters">}}
 
 ```js
 /**

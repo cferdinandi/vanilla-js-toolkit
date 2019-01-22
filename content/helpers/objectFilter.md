@@ -3,11 +3,10 @@ title: "objectFilter.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Create a new object composed of properties that meet specific criteria."
+demo: "https://codepen.io/cferdinandi/pen/mQYbKG"
 weight: 10
 noIndex: false
 ---
-
-Create a new object composed of properties that meet specific criteria. {{<learn-how url="https://codepen.io/cferdinandi/pen/mQYbKG?editors=0001">}}
 
 ```js
 /*!

@@ -3,11 +3,11 @@ title: "get.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Get an object value from a specific path."
+how: "https://gomakethings.com/how-to-get-the-value-of-an-object-from-a-specific-path-with-vanilla-js/"
+demo: "https://codepen.io/cferdinandi/pen/ZmgGmz"
 weight: 10
 noIndex: false
 ---
-
-Get an object value from a specific path. {{<learn-how url="https://gomakethings.com/how-to-get-the-value-of-an-object-from-a-specific-path-with-vanilla-js/">}}
 
 ```js
 /*!

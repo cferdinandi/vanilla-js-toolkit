@@ -188,6 +188,19 @@ dt {
 	}
 }
 
+/**
+ * @bugfix Prevent webkit from removing list semantics
+ * 1. Add a non-breaking space
+ * 2. Make sure it doesn't mess up the DOM flow
+ */
+.list-unstyled,
+.list-inline {
+	li:before {
+		content: "\200B"; /* 1 */
+		position: absolute; /* 2 */
+	}
+}
+
 
 /**
  * Heading styling for h1 through h6 elements.

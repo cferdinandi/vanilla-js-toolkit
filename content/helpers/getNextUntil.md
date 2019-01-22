@@ -3,11 +3,12 @@ title: "getNextUntil.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Get all next siblings of an element until a selector is found."
+how: "https://gomakethings.com/how-to-get-all-siblings-of-an-element-until-a-selector-is-found-with-vanilla-js/"
+demo: "https://codepen.io/cferdinandi/pen/LqEENq"
+polyfills: "[Requires the `matches()` polyfill.](https://vanillajstoolkit.com/polyfills/matches/)"
 weight: 10
 noIndex: false
 ---
-
-Get all next siblings of an element until a selector is found. {{<learn-how url="https://gomakethings.com/how-to-get-all-siblings-of-an-element-until-a-selector-is-found-with-vanilla-js/">}}
 
 ```js
 /*!

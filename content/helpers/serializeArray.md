@@ -3,11 +3,10 @@ title: "serializeArray.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Serialize all form data into an array of objects."
+demo: "https://codepen.io/cferdinandi/pen/wNBMVr"
 weight: 10
 noIndex: false
 ---
-
-Serialize all form data into an array of objects.
 
 ```js
 /*!

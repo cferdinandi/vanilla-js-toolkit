@@ -3,11 +3,11 @@ title: "toTitleCase.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Convert a string to title case."
+how: "https://gomakethings.com/converting-a-string-to-title-case-with-vanilla-javascript/"
+demo: "https://codepen.io/cferdinandi/pen/aXzNbe"
 weight: 10
 noIndex: false
 ---
-
-Convert a string to title case. {{<learn-how hash="title-case">}}
 
 ```js
 /*!

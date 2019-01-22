@@ -3,11 +3,11 @@ title: "isInViewport.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Determine if an element is in the viewport."
+how: "https://gomakethings.com/how-to-test-if-an-element-is-in-the-viewport-with-vanilla-javascript/"
+demo: "https://codepen.io/cferdinandi/pen/WPbQVx"
 weight: 10
 noIndex: false
 ---
-
-Determine if an element is in the viewport. {{<learn-how hash="check-if-an-element-is-in-the-viewport-or-not">}}
 
 ```js
 /*!

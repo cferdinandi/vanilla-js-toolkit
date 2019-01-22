@@ -3,11 +3,11 @@ title: "serialize.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Serialize all form data into a query string."
+how: "https://gomakethings.com/how-to-serialize-form-data-with-vanilla-js/"
+demo: "https://codepen.io/cferdinandi/pen/XOJXvG"
 weight: 10
 noIndex: false
 ---
-
-Serialize all form data into a query string. {{<learn-how url="https://gomakethings.com/how-to-serialize-form-data-with-vanilla-js/">}}
 
 ```js
 /*!

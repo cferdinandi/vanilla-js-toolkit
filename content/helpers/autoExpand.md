@@ -3,13 +3,13 @@ title: "autoExpand.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Automatically expand a textarea as the user types."
+how: "https://gomakethings.com/automatically-expand-a-textarea-as-the-user-types-using-vanilla-javascript/"
+demo: "https://codepen.io/cferdinandi/pen/ZwENVY"
 weight: 10
 noIndex: false
 ---
 
-Automatically expand a textarea as the user types. I would recommend pairing with some light CSS (included below). {{<learn-how url="https://gomakethings.com/automatically-expand-a-textarea-as-the-user-types-using-vanilla-javascript/">}}
-
-**JavaScript**
+## JavaScript
 
 ```js
 /*!
@@ -37,7 +37,7 @@ var autoExpand = function (field) {
 };
 ```
 
-**CSS**
+## CSS
 
 ```css
 textarea {

@@ -3,11 +3,12 @@ title: "emitEvent.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Emit a custom event."
+how: "https://gomakethings.com/adding-event-details-to-custom-events-with-vanilla-javascript/"
+demo: "https://codepen.io/cferdinandi/pen/QYwWxy"
+polyfills: "Works in all modern browsers, but requires [the `CustomEvent` polyfill for IE support](https://vanillajstoolkit.com/polyfills/customevent/)."
 weight: 10
 noIndex: false
 ---
-
-Emit a custom event. [Use with the `CustomEvent` polyfill.](https://vanillajstoolkit.com/polyfills/customevent/)
 
 ```js
 /*!

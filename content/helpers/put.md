@@ -3,11 +3,11 @@ title: "put.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Add items to an object at a specific path."
+how: "https://gomakethings.com/adding-items-to-an-object-at-a-specific-path-with-vanilla-js/"
+demo: "https://codepen.io/cferdinandi/pen/zyOKqE"
 weight: 10
 noIndex: false
 ---
-
-Add items to an object at a specific path. {{<learn-how url="https://gomakethings.com/adding-items-to-an-object-at-a-specific-path-with-vanilla-js/">}}
 
 ```js
 /*!

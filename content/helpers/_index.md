@@ -8,6 +8,8 @@ fullWidth: false
 
 Helper functions make complicated or repetitive tasks a bit easier, and keep your code DRY (an acronym for *Don't Repeat Yourself*).
 
+*Unless otherwise noted, all helper functions work back to at least IE9.*
+
 {{<cta for="toolkit-helpers">}}
 
 ## The Functions

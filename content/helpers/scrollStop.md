@@ -3,11 +3,11 @@ title: "scrollStop.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Run a callback function after scrolling has stopped."
+how: "https://gomakethings.com/detecting-when-a-visitor-has-stopped-scrolling-with-vanilla-javascript/"
+demo: "https://codepen.io/cferdinandi/pen/BGpPoo"
 weight: 10
 noIndex: false
 ---
-
-Run a callback function after scrolling has stopped. {{<learn-how url="https://gomakethings.com/detecting-when-a-visitor-has-stopped-scrolling-with-vanilla-javascript/">}}
 
 ```js
 /*!

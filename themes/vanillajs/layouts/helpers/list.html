@@ -5,7 +5,7 @@
 <ul class="list-spaced">
 	{{ range .Pages }}
 		<li>
-			<a href="{{ .URL }}"><strong>{{ .Title }}.</strong></a> {{ .Description }}
+			<a href="{{ .URL }}"><strong>{{ .Title }}.</strong></a> {{ markdownify .Description }}
 		</li>
 	{{ end }}
 </ul>

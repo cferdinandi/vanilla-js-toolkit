@@ -7,12 +7,10 @@ weight: 10
 noIndex: false
 ---
 
-Run a callback after a click or tap, without running duplicate callbacks for the same event.
-
 ```js
-/*! onClickOrTap.js | (c) 2017 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/onClickOrTap */
-/**
+/*!
  * Run a callback after a click or tap, without running duplicate callbacks for the same event
+ * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {Node}   elem       The element to listen for clicks and taps on
  * @param  {Function} callback The callback function to run on a click or tap
  */

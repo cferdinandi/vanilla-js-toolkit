@@ -3,11 +3,11 @@ title: "isOutOfViewport.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Check if any part of an element is out of the viewport."
+how: "https://gomakethings.com/how-to-check-if-any-part-of-an-element-is-out-of-the-viewport-with-vanilla-js/"
+demo: "https://codepen.io/cferdinandi/pen/JxoGja"
 weight: 10
 noIndex: false
 ---
-
-Check if any part of an element is out of the viewport. {{<learn-how href="https://gomakethings.com/how-to-check-if-any-part-of-an-element-is-out-of-the-viewport-with-vanilla-js">}}
 
 ```js
 /*!

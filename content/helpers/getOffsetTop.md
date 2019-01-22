@@ -3,11 +3,11 @@ title: "getOffsetTop.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Get an element's distance from the top of the Document."
+how: "https://gomakethings.com/how-to-get-an-elements-distance-from-the-top-of-the-page-with-vanilla-javascript/"
+demo: "https://codepen.io/cferdinandi/pen/zexxKL"
 weight: 10
 noIndex: false
 ---
-
-Get an element's distance from the top of the Document. {{<learn-how hash="get-an-element-s-distance-from-the-top-of-the-page">}}
 
 ```js
 /*!

@@ -1,10 +1,27 @@
 {{ partial "header.html" . }}
 
-{{ partial "content-page.html" . }}
+<article>
 
-<aside>
-	{{ partial "mailchimp-intro.html" }}
-	{{ partial "mailchimp-form.html" }}
-</aside>
+	<h1>{{ ( .Title | htmlUnescape ) }}</h1>
+
+	<p>{{ markdownify .Params.description }}</p>
+
+	{{- if isset .Params "polyfills" -}}<p><em>{{ markdownify .Params.polyfills }}</em></p>{{- end -}}
+
+	{{ if or (isset .Params "demo") (isset .Params "how") }}
+	<ul class="list-inline">
+		{{ if and (isset .Params "demo") (ne .Params.demo "") }}<li><a href="{{ .Params.demo }}">Demo on CodePen</a></li>{{ end }}
+		{{ if and (isset .Params "how")  (ne .Params.how "") }}<li><a href="{{ .Params.how }}">How It Works</a></li>{{ end }}
+	</ul>
+	{{ end }}
+
+	{{ .Content }}
+
+	<aside>
+		{{ partial "mailchimp-intro.html" }}
+		{{ partial "mailchimp-form.html" }}
+	</aside>
+
+</article>
 
 {{ partial "footer.html" . }}

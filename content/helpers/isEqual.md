@@ -3,11 +3,11 @@ title: "isEqual.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Check if two objects or arrays are equal."
+how: "https://gomakethings.com/check-if-two-arrays-or-objects-are-equal-with-javascript/"
+demo: "https://codepen.io/cferdinandi/pen/Gzgpeb"
 weight: 10
 noIndex: false
 ---
-
-Check if two objects or arrays are equal. {{<learn-how hash="compare-arrays-or-objects">}}
 
 ```js
 /*!

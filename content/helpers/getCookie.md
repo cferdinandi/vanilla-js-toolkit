@@ -3,11 +3,10 @@ title: "getCookie.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Get the value of a cookie."
+demo: "https://codepen.io/cferdinandi/pen/exmYwG"
 weight: 10
 noIndex: false
 ---
-
-Get the value of a cookie. {{<learn-how hash="getting-a-cookie-value">}}
 
 ```js
 /**

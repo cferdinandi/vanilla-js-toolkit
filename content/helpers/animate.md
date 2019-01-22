@@ -3,11 +3,12 @@ title: "animate.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Apply a CSS animation to an element."
+how: "https://gomakethings.com/a-vanilla-js-animation-helper-function/"
+demo: "https://codepen.io/cferdinandi/pen/RBQvZe"
+polyfills: "Works in all modern browsers, and back to IE10. [Push support back to IE9 with the classList polyfill.](https://vanillajstoolkit.com/polyfills/classlist/)"
 weight: 10
 noIndex: false
 ---
-
-Apply a CSS animation to an element. {{<learn-how url="https://gomakethings.com/a-vanilla-js-animation-helper-function/">}}
 
 ```js
 /*!

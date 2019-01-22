@@ -3,11 +3,11 @@ title: "addToObject.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Add a key/value pair to an object at a specific position."
+demo: "https://codepen.io/cferdinandi/pen/mzaWeE"
+how: "https://gomakethings.com/how-to-add-a-new-item-to-an-object-at-a-specific-position-with-vanilla-js/"
 weight: 10
 noIndex: false
 ---
-
-Add a key/value pair to an object at a specific position. {{<learn-how href="https://gomakethings.com/how-to-add-a-new-item-to-an-object-at-a-specific-position-with-vanilla-js/">}}
 
 ```js
 /*!

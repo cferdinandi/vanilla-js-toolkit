@@ -3,11 +3,11 @@ title: "placeholders.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Replace placeholder variables with real content."
+how: "https://gomakethings.com/a-vanilla-js-alternative-to-handlebarsjs-and-mustachejs/"
+demo: "https://codepen.io/cferdinandi/pen/ejrEGQ"
 weight: 10
 noIndex: false
 ---
-
-Replace placeholder variables with real content. {{<learn-how url="https://gomakethings.com/a-vanilla-js-alternative-to-handlebarsjs-and-mustachejs/">}}
 
 ```js
 /*!

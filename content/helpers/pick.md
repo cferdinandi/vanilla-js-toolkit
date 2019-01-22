@@ -3,11 +3,11 @@ title: "pick.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Create a new object composed of properties picked from another object."
+how: "https://gomakethings.com/how-to-create-a-new-object-with-only-a-subject-of-properties-using-vanilla-js/"
+demo: "https://codepen.io/cferdinandi/pen/MzxMeE"
 weight: 10
 noIndex: false
 ---
-
-Create a new object composed of properties picked from another object. {{<learn-how url="https://gomakethings.com/how-to-create-a-new-object-with-only-a-subject-of-properties-using-vanilla-js/">}}
 
 ```js
 /*!

@@ -3,26 +3,22 @@ title: "getParents.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Get all of an element's parent elements up the DOM tree."
+how: "https://gomakethings.com/how-to-get-all-parent-elements-with-vanilla-javascript/"
+demo: "https://codepen.io/cferdinandi/pen/qgEEXw"
+polyfills: "[Requires the `matches()` polyfill.](https://vanillajstoolkit.com/polyfills/matches/)"
 weight: 10
 noIndex: false
 ---
 
-Get all of an element's parent elements up the DOM tree. {{<learn-how hash="get-all-parent-elements">}}
-
 ```js
 /*!
  * Get all of an element's parent elements up the DOM tree
- * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * (c) 2019 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {Node}   elem     The element
  * @param  {String} selector Selector to match against [optional]
  * @return {Array}           The parent elements
  */
 var getParents = function (elem, selector) {
-
-	// Element.matches() polyfill
-	if (!Element.prototype.matches) {
-		Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
-	}
 
 	// Setup parents array
 	var parents = [];

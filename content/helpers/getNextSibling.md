@@ -3,11 +3,12 @@ title: "getNextSiblings.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Get the next sibling of an element that matches a selector."
+how: "https://gomakethings.com/finding-the-next-and-previous-sibling-elements-that-match-a-selector-with-vanilla-js/"
+demo: "https://codepen.io/cferdinandi/pen/mGBOpX"
+polyfills: "[Requires the `matches()` polyfill.](https://vanillajstoolkit.com/polyfills/matches/)"
 weight: 10
 noIndex: false
 ---
-
-Get the next sibling of an element that matches a selector. {{<learn-how url="https://gomakethings.com/finding-the-next-and-previous-sibling-elements-that-match-a-selector-with-vanilla-js/">}}
 
 ```js
 /*!
