@@ -6,7 +6,7 @@
 
 	<p>{{ markdownify .Params.description }}</p>
 
-	{{- if isset .Params "polyfills" -}}<p><em>{{ markdownify .Params.polyfills }}</em></p>{{- end -}}
+	<p><em>{{ if isset .Params "polyfills" }}{{ markdownify .Params.polyfills }}{{ else }}Works in all modern browsers, and at least back to IE9.{{ end }}</em></p>
 
 	{{ if or (isset .Params "demo") (isset .Params "how") }}
 	<ul class="list-inline">
