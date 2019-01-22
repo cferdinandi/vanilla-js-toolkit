@@ -60,7 +60,7 @@ if (elem.matches('.turkey')) {
 }
 ```
 
-*[Use with a polyfill.](/polyfills/matches/)*
+*Implemented with vendor prefixes in a handful of browsers. [Use with a polyfill.](/polyfills/matches/)*
 
 
 
@@ -533,7 +533,7 @@ Create a new array from an array or array-like object (such as a `NodeList`).
 var sandwiches = Array.from(document.querySelectorAll('.sandwich'));
 ```
 
-*[Use with a polyfill.](/polyfills/arrayfrom/)*
+*Works in all modern browsers, included Edge, but not IE. [Use with a polyfill.](/polyfills/arrayfrom/)*
 
 ### `Array.filter()`
 
@@ -623,7 +623,7 @@ var greaterThanTen = [1, 2, 4, 7, 8].find(function (item) {
 });
 ```
 
-*[Use with a polyfill.](/polyfills/arrayfind/)*
+*Works in all modern browsers, including Edge, but not IE. [Use with a polyfill.](/polyfills/arrayfind/)*
 
 ### `Array.reverse()`
 
@@ -706,7 +706,7 @@ var object3 = {
 var mergedObjs = Object.assign(object1, object2, object3);
 ```
 
-*[Use with a polyfill.](/polyfills/objectassign/)*
+*Works in all modern browsers, including Edge, but not IE. [Use with a polyfill.](/polyfills/objectassign/)*
 
 ### Deep Merges
 
@@ -895,7 +895,7 @@ var referenceNode = document.querySelector('#some-element');
 referenceNode.before(newNode);
 ```
 
-*[Use with a polyfill.](/polyfills/before/)*
+*Works in all modern browsers, including Edge, but not IE. [Use with a polyfill.](/polyfills/before/)*
 
 ### `after()`
 
@@ -912,7 +912,7 @@ var referenceNode = document.querySelector('#some-element');
 referenceNode.after(newNode);
 ```
 
-*[Use with a polyfill.](/polyfills/after/)*
+*Works in all modern browsers, including Edge, but not IE. [Use with a polyfill.](/polyfills/after/)*
 
 ### `prepend()`
 
@@ -930,7 +930,7 @@ var referenceNode = document.querySelector('#some-element');
 referenceNode.prepend(newNode);
 ```
 
-*[Use with a polyfill.](/polyfills/prepend/)*
+*Works in all modern browsers, including Edge, but not IE. [Use with a polyfill.](/polyfills/prepend/)*
 
 ### `append()`
 
@@ -948,7 +948,7 @@ var referenceNode = document.querySelector('#some-element');
 referenceNode.append(newNode);
 ```
 
-*[Use with a polyfill.](/polyfills/append/)*
+*Works in all modern browsers, including Edge, but not IE. [Use with a polyfill.](/polyfills/append/)*
 
 ### `appendChild()`
 
@@ -987,7 +987,7 @@ var elem = document.querySelector('#some-element');
 elem.remove();
 ```
 
-*[Use with a polyfill.](/polyfills/remove/)*
+*Works in all modern browsers, including Edge, but not IE. [Use with a polyfill.](/polyfills/remove/)*
 
 
 
@@ -1019,7 +1019,7 @@ var elem = document.querySelector('#some-elem');
 var closestSandwich = elem.closest('[data-sandwich]');
 ```
 
-*[Use with a polyfill.](/polyfills/closest/)*
+*Implemented with vendor prefixes in a handful of browsers. [Use with a polyfill.](/polyfills/closest/)*
 
 ### Child elements by selector
 
