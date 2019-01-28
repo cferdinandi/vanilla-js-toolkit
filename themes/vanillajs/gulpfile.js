@@ -10,7 +10,7 @@ var settings = {
 	styles: true,
 	svgs: true,
 	copy: true,
-	reload: false
+	reload: true
 };
 
 
@@ -87,7 +87,6 @@ var optimizejs = require('gulp-optimize-js');
 
 // Styles
 var sass = require('gulp-sass');
-var prefix = require('gulp-autoprefixer');
 var minify = require('gulp-cssnano');
 
 // SVGs
@@ -204,11 +203,6 @@ var buildStyles = function (done) {
 		.pipe(sass({
 			outputStyle: 'expanded',
 			sourceComments: true
-		}))
-		.pipe(prefix({
-			browsers: ['last 2 version', '> 0.25%'],
-			cascade: true,
-			remove: true
 		}))
 		.pipe(header(banner.full, { package : package }))
 		.pipe(dest(paths.styles.output))
