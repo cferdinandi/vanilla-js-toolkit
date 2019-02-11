@@ -4,7 +4,7 @@
 {{- $testimonial := index $testimonials (.Get "for") -}}
 {{- if ne (.Get "photo") "true" -}}
 <blockquote>
-	{{ index $testimonial "quote" }}
+	{{ index $testimonial "quote" | safeHTML }}
 	{{- if isset $testimonial "url" -}}
 	<cite>- <a href="{{ index $testimonial "url" }}">{{ index $testimonial "name" }}</a></cite>
 	{{- else -}}
@@ -18,7 +18,7 @@
 	</div>
 	<div class="grid-two-thirds">
 		<blockquote>
-			{{ index $testimonial "quote" }}
+			{{ index $testimonial "quote" | safeHTML }}
 			{{- if isset $testimonial "url" -}}
 			<cite>- <a href="{{ index $testimonial "url" }}">{{ index $testimonial "name" }}</a></cite>
 			{{- else -}}
