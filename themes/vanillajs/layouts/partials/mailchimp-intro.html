@@ -1,3 +1,6 @@
+{{- $data := getJSON $.Site.Params.api -}}
+{{- $ctas := index $data "ctas" -}}
+
 <h2>Get Daily Developer Tips</h2>
 
-<p>I send out a short email each weekday with code snippets, tools, techniques, and interesting stuff from around the web. <span data-cta="mc-subscribers"></span></p>
+<p>I send out a short email each weekday with code snippets, tools, techniques, and interesting stuff from around the web. {{ if isset $ctas "mc-subscribers" }}{{ index $ctas "mc-subscribers" | safeHTML }}{{ end }}</p>

@@ -4,9 +4,15 @@ baseURL: "https://vanillajstoolkit.com"
 # Customer parameters
 params:
   description: "A growing collection of vanilla JavaScript code snippets, helper functions, polyfills, plugins, and learning resources."
+  api: "https://gomakethings.com/api/data.json"
   rssURL: ""
   rssLimit: 7
   minify: true
+
+# Caches
+caches:
+  getjson:
+    maxAge: "10m"
 
 # The language code for the site
 languageCode: "en-us"

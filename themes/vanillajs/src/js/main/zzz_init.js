@@ -26,6 +26,3 @@ if (document.querySelector('#table-of-contents')) {
 if (document.body.matches('.js-anchors')) {
 	addHeadingLinks('h2, h3, h4, h5, h6', '#', 'link-no-underline');
 }
-
-// API for CTAs
-api();
