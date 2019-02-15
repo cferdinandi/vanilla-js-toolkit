@@ -27,6 +27,7 @@ theme: "vanillajs"
 # See "content-management/permalinks"
 permalinks:
   articles: /:title/
+  reference: /:sections/:filename/
 
 # Allows you to disable all page types and will render nothing related to 'kind';
 # values = "page", "home", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"

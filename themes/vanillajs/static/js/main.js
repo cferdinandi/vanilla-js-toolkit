@@ -346,7 +346,7 @@ var tableOfContents = function (navSelector, headingsSelector, heading, styles, 
 	// Loop through each heading
 	for (var i = 0; i < headings.length; i++) {
 		if (!headings[i].id) continue;
-		navList += '<li><a href="#' + headings[i].id + '">' + headings[i].innerHTML + '</a></li>';
+		navList += '<li><a href="#' + headings[i].id + '">' + headings[i].textContent + '</a></li>';
 	}
 
 	// Make sure a navList exists
@@ -380,7 +380,7 @@ if (document.querySelector('#mailchimp-form')) {
 
 // Add table of contents
 if (document.querySelector('#table-of-contents')) {
-	tableOfContents('#table-of-contents', 'h2', '<h2>Table of Contents</h2>', null, 'ol');
+	tableOfContents('#table-of-contents', 'h2', '<h2 class="h5">On this page</h2>', null, 'ul');
 }
 
 // Anchor links on posts

@@ -25,7 +25,7 @@ var tableOfContents = function (navSelector, headingsSelector, heading, styles, 
 	// Loop through each heading
 	for (var i = 0; i < headings.length; i++) {
 		if (!headings[i].id) continue;
-		navList += '<li><a href="#' + headings[i].id + '">' + headings[i].innerHTML + '</a></li>';
+		navList += '<li><a href="#' + headings[i].id + '">' + headings[i].textContent + '</a></li>';
 	}
 
 	// Make sure a navList exists

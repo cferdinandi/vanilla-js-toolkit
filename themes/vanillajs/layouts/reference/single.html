@@ -1,0 +1,20 @@
+{{ partial "header.html" . }}
+
+<article>
+
+	<h1>{{ ( .Title | htmlUnescape ) }}</h1>
+
+	<p><em>Unless otherwise noted, these work in all modern browsers, and IE9+. You can extend support back further with <a href="/polyfills">polyfills</a>.</em></p>
+
+	<div id="table-of-contents"></div>
+
+	{{ .Content }}
+
+	<aside>
+		{{ partial "mailchimp-intro.html" . }}
+		{{ partial "mailchimp-form.html" }}
+	</aside>
+
+</article>
+
+{{ partial "footer.html" . }}
