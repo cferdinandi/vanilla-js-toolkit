@@ -23,12 +23,4 @@ fullWidth: false
 
 {{<mailchimp intro="true">}}
 
-## Hi, I'm Chris Ferdinandi. 👋
-
-<div class="clearfix">
-{{%md%}}
-<img src="/img/chris-ferdinandi-high-res.jpg" alt="Chris Ferdinandi" width="150" height="150" class="img-circle alignleft margin-bottom">**I help people learn JavaScript.** If you have a question about something or need JavaScript help, [get&nbsp;in&nbsp;touch](https://gomakethings.com/about).
-
-I also write [daily articles](https://gomakethings.com/articles/), create [pocket guides and video courses](https://vanillajsguides.com), run a [training program](https://vanillajsacademy.com), and [have a bunch of other resources](https://gomakethings.com/resources/) to help you master JavaScript.
-{{%/md%}}
-</div>
+{{<about-me>}}
