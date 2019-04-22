@@ -144,6 +144,68 @@ console.log(names);
 
 
 
+## `Array.reduce()`
+
+Take the content of an array and return a single value. That value can be anything: a string, number, object, or even another array.
+
+Accepts two arguments: a callback method to run against each item in the array, and a starting value. The callback also accepts two arguments: the `accumulator`, which is the current combined value, and the `current` item in the loop.
+
+Whatever you return is used as the accumulator for the next item in the loop. On the very first loop, that starting value is used instead.
+
+```javascript
+/**
+ * Add all of the numbers in an array
+ */
+
+var total = [1, 2, 3].reduce(function (sum, current) {
+	return sum + current;
+}, 0);
+
+// Logs 6
+console.log(total);
+
+
+/**
+ * Create a new array with only the names of wizards in Huffepuff
+ */
+
+var wizards = [
+	{
+		name: 'Harry Potter',
+		house: 'Gryfindor'
+	},
+	{
+		name: 'Cedric Diggory',
+		house: 'Hufflepuff'
+	},
+	{
+		name: 'Tonks',
+		house: 'Hufflepuff'
+	},
+	{
+		name: 'Ronald Weasley',
+		house: 'Gryfindor'
+	},
+	{
+		name: 'Hermione Granger',
+		house: 'Gryfindor'
+	}
+];
+
+// This combines what you would otherwise do with map() and filter() into one step
+var hufflepuff = wizards.reduce(function (newArr, wizard) {
+	if (wizard.house === 'Hufflepuff') {
+		newArr.push(wizard.name);
+	}
+	return newArr;
+}, []);
+
+// Logs ["Cedric Diggory", "Tonks"]
+console.log(hufflepuff);
+```
+
+
+
 ## `Array.find()`
 
 The `Array.find()` method returns the first element in an array that satisfies the conditions you specify in a callback function. If no match is found, it returns `undefined`.
