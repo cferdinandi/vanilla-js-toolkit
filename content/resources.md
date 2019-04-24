@@ -11,13 +11,6 @@ Let's make {{<year>}} the year that you master&nbsp;JavaScript! You can do this.
 
 {{<cta for="toolkit-learning">}}
 
-<div class="list-spaced">
-{{%md%}}
-- **[Daily Developer Tips.](/articles/)** I send out a short email each weekday with code snippets, tools, techniques, and interesting stuff from around the web.
-- **[Guides & Courses.](https://vanillajsguides.com/)** Short, focused ebooks and video courses made for beginners. Start building real JavaScript projects in under an hour.
-- **[Office Hours.](https://vanillajsofficehours.com)** Skip the outdated blog posts and hostile web forums. Get friendly, real-time advice from an experienced JavaScript developer.
-- **[Vanilla JS Academy.](https://vanillajsacademy.com/)** A project-based online JavaScript training program for beginners.
-{{%/md%}}
-</div>
+{{<cta for="products">}}
 
 **Want more?** I also created a [vanilla JS learning roadmap](https://learnvanillajs.com) and host the [Vanilla JS Podcast](https://vanillajspodcast.com).
