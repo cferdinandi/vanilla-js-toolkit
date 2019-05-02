@@ -2,9 +2,9 @@
 title: "placeholders.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
-description: "Replace placeholder variables with real content."
+description: "Replace placeholder variables with real content. Requires [the `get()` helper function](/helpers/get/) as a dependency."
 how: "https://gomakethings.com/a-vanilla-js-alternative-to-handlebarsjs-and-mustachejs/"
-demo: "https://codepen.io/cferdinandi/pen/ejrEGQ"
+demo: "https://codepen.io/cferdinandi/pen/yrmPGx"
 weight: 10
 noIndex: false
 ---
@@ -12,7 +12,8 @@ noIndex: false
 ```js
 /*!
  * Replaces placeholders with real content
- * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * Requires get() - https://vanillajstoolkit.com/helpers/get/
+ * (c) 2019 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param {String} template The template string
  * @param {String} local    A local placeholder to use, if any
  */
@@ -33,35 +34,12 @@ var placeholders = function (template, data) {
 		// Remove the wrapping curly braces
 		match = match.slice(2, -2);
 
-		// Check if the item has sub-properties
-		var sub = match.split('.');
+		// Get the value
+		var val = get(data, match);
 
-		// If the item has a sub-property, loop through until you get it
-		if (sub.length > 1) {
-
-			var temp = data;
-
-			sub.forEach(function (item) {
-
-				// Make sure the item exists
-				if (!temp[item]) {
-					temp = '{{' + match + '}}';
-					return;
-				}
-
-				// Update temp
-				temp = temp[item];
-			});
-
-			return temp;
-
-		}
-
-		// Otherwise, return the item
-		else {
-			if (!data.hasOwnProperty(match)) return '{{' + match + '}}';
-			return data[match];
-		}
+		// Replace
+		if (!val) return '{{' + match + '}}';
+		return val;
 
 	});
 
