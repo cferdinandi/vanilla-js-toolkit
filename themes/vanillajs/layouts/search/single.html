@@ -3,9 +3,15 @@
 	{{ partial "content-page.html" . }}
 
 	{{- $.Scratch.Add "index" slice -}}
-	{{- range where .Site.Pages "Type" "not in"  (slice "page" "search") -}}
+	{{- range .Site.Pages -}}
 		{{- if ne .Params.noSearch true -}}
-			{{- $.Scratch.Add "index" (dict "title" .Title "url" .Permalink "categories" .Params.categories "content" (.Content | plainify) "summary" (.Summary | plainify) ) -}}
+			{{- $.Scratch.Set "content" (.Content | plainify) -}}
+			{{- if or (eq .Type "boilerplates") (eq .Type "helpers") -}}
+				{{- $.Scratch.Set "content" .Params.description -}}
+			{{- else if eq .Type "polyfills" -}}
+				{{- $.Scratch.Set "content" .Title -}}
+			{{- end -}}
+			{{- $.Scratch.Add "index" (dict "title" .Title "url" .Permalink "content" ($.Scratch.Get "content") "type" .Type ) -}}
 		{{- end -}}
 	{{- end -}}
 	<script>

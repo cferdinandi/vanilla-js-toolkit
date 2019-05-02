@@ -7,7 +7,7 @@ params:
   api: "https://gomakethings.com/api/data.json"
   rssURL: ""
   rssLimit: 7
-  minify: true
+  minify: false
 
 # Caches
 caches:

@@ -13,6 +13,16 @@
 }
 
 
+
+/**
+ * Font styles
+ */
+
+.text-capitalize {
+	text-transform: capitalize;;
+}
+
+
 /**
  * Font weights
  */
@@ -111,8 +121,10 @@
 	margin-right: auto;
 }
 
-// .float-right {
-// 	float: right;
+// @media (min-width: $bp-large) {
+// 	.float-right-large {
+// 		float: right;
+// 	}
 // }
 
 
@@ -139,6 +151,11 @@
 .margin-bottom-small {
 	margin-bottom: calc-em(8px);
 }
+
+.margin-bottom-medium {
+	margin-bottom: calc-em(19px);
+}
+
 
 .margin-bottom-large {
 	margin-bottom: calc-em(32px);
