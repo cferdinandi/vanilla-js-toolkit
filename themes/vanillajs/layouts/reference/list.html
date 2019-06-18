@@ -2,13 +2,27 @@
 
 {{ partial "content-page.html" . }}
 
-<ol>
-	{{ range .Pages }}
-		<li>
-			<a href="{{ .URL }}">{{ .Title }}</a>
-		</li>
+{{ if ne (len .Sections) 0 }}
+
+	{{ range .Sections }}
+		<h2 class="margin-bottom-small" id="{{ replace .Title " " "-" }}">{{ .Title }}</h2>
+
+		<ul>
+		{{ range .Pages }}
+			<li><a href="{{ .URL }}">{{ .Title | htmlUnescape }}</a></li>
+		{{ end }}
+		</ul>
 	{{ end }}
-</ol>
+
+{{ else }}
+
+	<ul>
+	{{ range .Pages }}
+		<li><a href="{{ .URL }}">{{ .Title | htmlUnescape }}</a></li>
+	{{ end }}
+	</ul>
+
+{{ end }}
 
 <aside>
 	{{ partial "mailchimp-intro.html" . }}

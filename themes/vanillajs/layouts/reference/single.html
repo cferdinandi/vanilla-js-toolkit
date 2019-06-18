@@ -2,13 +2,12 @@
 
 <article>
 
-	<h1>{{ ( .Title | htmlUnescape ) }}</h1>
-
-	<p><em>Unless otherwise noted, these work in all modern browsers, and IE9+. You can extend support back further with <a href="/polyfills">polyfills</a>.</em></p>
-
-	<div id="table-of-contents"></div>
+	<p class="no-margin-bottom"><strong><a href="/reference#{{ replace .Page.Parent.Title " " "-" }}">{{ .Page.Parent.Title }}</a></strong></p>
+	<h1 class="no-padding-top">{{ ( .Title | htmlUnescape ) }}</h1>
 
 	{{ .Content }}
+
+	<p><em>{{ if isset .Params "polyfills" }}{{ markdownify .Params.polyfills }}{{ else }}Works in all modern browsers, and IE9+. You can extend support back further with <a href="/polyfills">polyfills</a>.{{ end }}</em></p>
 
 	<aside>
 		{{ partial "mailchimp-intro.html" . }}

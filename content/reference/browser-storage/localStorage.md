@@ -1,0 +1,23 @@
+---
+title: "localStorage"
+date: 2018-01-14T21:38:44-05:00
+draft: false
+noTitle: false
+fullWidth: false
+polyfills: "Works back to IE8.<br><br>For more complex `localStorage` management, I wrote [a small helper library](https://github.com/cferdinandi/bin)."
+weight: 20
+---
+
+Use the local storage API to store data locally that the browser can access later. Data is stored indefinitely, and must be a string.
+
+```javascript
+// Store data
+var someData = 'The data that I want to store for later.';
+localStorage.setItem('myDataKey', someData);
+
+// Get data
+var data = localStorage.getItem('myDataKey');
+
+// Remove data
+localStorage.removeItem('myDatakey');
+```
