@@ -4,6 +4,7 @@ date: 2018-01-14T21:38:44-05:00
 draft: false
 noTitle: false
 fullWidth: false
+description: "Add, remove, toggle, and check for classes on an element."
 polyfills: "Works back to IE10. [Extend back to IE8 with a polyfill.](/polyfills/classlist/)"
 weight: 10
 ---

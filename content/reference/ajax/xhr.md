@@ -4,6 +4,7 @@ date: 2018-01-14T21:38:44-05:00
 draft: false
 noTitle: false
 fullWidth: false
+description: "Make an asynchronous HTTP request."
 polyfills: "Works back to IE7.<br><br>XHR is verbose and a bit clunky to work with. I maintain [Atomic, a promise-based Ajax/XHR helper library](https://github.com/cferdinandi/atomic)."
 weight: 160
 ---

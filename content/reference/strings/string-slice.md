@@ -4,6 +4,7 @@ date: 2018-01-14T21:38:44-05:00
 draft: false
 noTitle: false
 fullWidth: false
+description: "Get a portion of a string starting and ending at specific characters."
 polyfills: "Works back to at least IE6."
 weight: 70
 ---

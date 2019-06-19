@@ -4,6 +4,7 @@ date: 2018-01-14T21:38:44-05:00
 draft: false
 noTitle: false
 fullWidth: false
+description: "Check if an element would be selected by a particular selector or set of selectors."
 polyfills: Implemented with vendor prefixes in a handful of browsers. [Use with a polyfill.](/polyfills/matches/)
 weight: 30
 ---

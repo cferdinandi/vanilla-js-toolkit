@@ -9,7 +9,7 @@
 
 		<ul>
 		{{ range .Pages }}
-			<li><a href="{{ .URL }}">{{ .Title | htmlUnescape }}</a></li>
+			<li><a href="{{ .URL }}">{{ .Title | htmlUnescape }}</a>{{ if ne .Description "" }} - {{ .Description | markdownify }}{{ end }}</li>
 		{{ end }}
 		</ul>
 	{{ end }}
@@ -18,7 +18,7 @@
 
 	<ul>
 	{{ range .Pages }}
-		<li><a href="{{ .URL }}">{{ .Title | htmlUnescape }}</a></li>
+		<li><a href="{{ .URL }}">{{ .Title | htmlUnescape }}</a>{{ if ne .Description "" }} - {{ .Description | markdownify }}{{ end }}</li>
 	{{ end }}
 	</ul>
 

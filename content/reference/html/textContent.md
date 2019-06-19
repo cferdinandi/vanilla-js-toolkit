@@ -4,10 +4,11 @@ date: 2018-01-14T21:38:44-05:00
 draft: false
 noTitle: false
 fullWidth: false
+description: "Get and set the text of an element (without markup)."
 weight: 20
 ---
 
-Get the text of an element without its markup.
+Get and set the text of an element without its markup.
 
 ```javascript
 var elem = document.querySelector('#some-elem');

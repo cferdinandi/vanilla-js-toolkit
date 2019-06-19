@@ -4,6 +4,7 @@ date: 2018-01-14T21:38:44-05:00
 draft: false
 noTitle: false
 fullWidth: false
+description: "Create an expand-and-collapse disclosure element."
 polyfills: "Works in Chrome, Firefox, and Safari, but not Edge or IE. It defaults to fully visible content in unsupported browsers. Edge will support this once they move over to webkit."
 weight: 10
 ---

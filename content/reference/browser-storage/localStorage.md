@@ -4,6 +4,7 @@ date: 2018-01-14T21:38:44-05:00
 draft: false
 noTitle: false
 fullWidth: false
+description: "Store data locally in the browser for later use."
 polyfills: "Works back to IE8.<br><br>For more complex `localStorage` management, I wrote [a small helper library](https://github.com/cferdinandi/bin)."
 weight: 20
 ---
