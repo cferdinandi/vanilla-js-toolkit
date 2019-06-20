@@ -36,16 +36,10 @@ var crowsNest = function () {
 	 */
 	var createHTML = function (article, id) {
 		var html =
-			'<div class="margin-bottom" id="search-result-' + id + '">' +
-				'<a class="link-block" href="' + article.url + '">' +
-					'<aside class="text-muted text-small">' +
-						'<time datetime="' + article.datetime + '" pubdate>' + article.date + '</time>' +
-					'</aside>' +
-					'<h2 class="h3 link-block-styled link-no-underline no-padding-top no-margin-bottom">' + article.title + '</h2>' +
-					article.summary.slice(0, 150) + '...<br>' +
-					'<span class="link-block-styled link-no-underline">' + article.url + '</span>' +
-				'</a>' +
-			'</div>';
+			'<li class="margin-bottom-medium">' +
+				'<strong><a href="' + article.url + '">' + article.title + '</a></strong>' +
+				'<div class="text-capitalize text-muted text-small">' + article.type.replace('page', 'reference') + '</div>' +
+			'</li>';
 		return html;
 	};
 
@@ -64,9 +58,9 @@ var crowsNest = function () {
 	 */
 	var createResultsHTML = function (results) {
 		var html = '<p>Found ' + results.length + ' matching articles</p>';
-		html += results.map(function (article, index) {
+		html += '<ul class="list-unstyled">' + results.map(function (article, index) {
 			return createHTML(article.article, index);
-		}).join('');
+		}).join('') + '</ul>';
 		return html;
 	};
 
@@ -90,7 +84,6 @@ var crowsNest = function () {
 		var regMap = query.split(' ').map(function (word) {
 			return new RegExp(word, 'gi');
 		});
-		console.log(regMap);
 
 		// Get and sort the results
 		var results = searchIndex.reduce(function (results, article, index) {
@@ -100,7 +93,7 @@ var crowsNest = function () {
 
 			// Assign priority
 			regMap.forEach(function (reg) {
-				if (reg.test(article.title)) { priority += 20; console.log(priority, article.title); }
+				if (reg.test(article.title)) { priority += 20; }
 				if (reg.test(article.content)) { priority += 1; }
 			});
 
@@ -117,8 +110,6 @@ var crowsNest = function () {
 		}, []).sort(function (article1, article2) {
 			return article2.priority - article1.priority;
 		});
-
-		console.log(results);
 
 		// Display the results
 		resultList.innerHTML = results.length < 1 ? createNoResultsHTML() : createResultsHTML(results);
