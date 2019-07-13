@@ -42,7 +42,7 @@ xhr.onreadystatechange = function () {
 };
 
 // Create and send a GET request
-// The first argument is the post type (GET, POST, PUT, DELETE, etc.)
+// The first argument is the request type (GET, POST, PUT, DELETE, etc.)
 // The second argument is the endpoint URL
 xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts');
 xhr.send();
