@@ -4,7 +4,7 @@ date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Get the contrasting color for any hex color."
 how: "https://gomakethings.com/dynamically-changing-the-text-color-based-on-background-color-contrast-with-vanilla-js/"
-demo: "https://codepen.io/cferdinandi/pen/yWdZmr"
+demo: "https://codepen.io/cferdinandi/pen/Yomroj"
 weight: 10
 noIndex: false
 ---
