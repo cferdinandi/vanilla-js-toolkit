@@ -12,7 +12,7 @@ noIndex: false
 ```js
 /*!
  * Create a random color value.
- * (c) 2009 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * (c) 2019 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @return {String} A random six-digit color hexcode
  */
 var createColor = function () {
