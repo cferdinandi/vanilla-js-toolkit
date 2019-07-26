@@ -24,8 +24,8 @@ As a result, the list is a lot shorter than some of the bigger "plugin repositor
 ## Hide & Show Content
 
 - 👋 **[Houdini.](https://github.com/cferdinandi/houdini/)** A progressively enhanced expand-and-collapse and accordion widget.
-- 👋 **[Modals.](https://github.com/cferdinandi/modals/)** Simple, mobile-friendly modal dialogue windows.
 - 👋 **[Tabby.](https://github.com/cferdinandi/tabby/)** Lightweight toggle tabs.
+- **[A11Y Modal Dialog.](https://github.com/scottaohara/accessible_modal_window)** An accessible modal dialogue script.
 - **[ScrollReveal.](https://scrollrevealjs.org/)** Easy scroll animations.
 
 
