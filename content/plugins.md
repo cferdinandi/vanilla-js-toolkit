@@ -64,7 +64,7 @@ As a result, the list is a lot shorter than some of the bigger "plugin repositor
 ## Touch, Gesture, and Keyboard Support
 
 - **[Hammer.](http://hammerjs.github.io/)** A complex touch gesture support library.
-- **[Sortable.](http://rubaxa.github.io/Sortable/)** Create sortable, interactive lists.
+- **[Sortable.](https://github.com/SortableJS/Sortable/)** Create sortable, interactive lists.
 - **[Egg.js.](http://thatmikeflynn.com/egg.js/)** Add hidden easter eggs to your site with keystroke combinations.
 
 
