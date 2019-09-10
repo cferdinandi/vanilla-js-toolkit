@@ -5,8 +5,8 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Make an asynchronous HTTP request."
-polyfills: "Works back to IE7.<br><br>XHR is verbose and a bit clunky to work with. I maintain [Atomic, a promise-based Ajax/XHR helper library](https://github.com/cferdinandi/atomic)."
-weight: 160
+polyfills: "Works back to IE7. XHR is verbose and a bit clunky to work with. You might want to [use fetch() instead](/reference/ajax/fetch/)."
+weight: 170
 ---
 
 XHR requests are a three step process:
