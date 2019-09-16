@@ -44,7 +44,7 @@ var addToObject = function (obj, key, value, index) {
 	}
 
 	// If no index, add to the end
-	if (!index && key && value) {
+	if (!index && key) {
 		temp[key] = value;
 	}
 
