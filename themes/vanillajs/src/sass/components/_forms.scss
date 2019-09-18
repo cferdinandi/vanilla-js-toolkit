@@ -36,6 +36,11 @@ textarea {
 	font: inherit; /* 2 */
 	margin: 0; /* 3 */
 	padding: calc-em(5px);
+
+	@media (prefers-color-scheme: dark) {
+		background-color: $color-gray-light;
+		color: $color-black;
+	}
 }
 
 /**
@@ -68,6 +73,10 @@ select {
 	@media (min-width: $bp-medium) {
 		line-height: 1.5625;
 	}
+
+	@media (prefers-color-scheme: dark) {
+		border-color: $color-gray-dark;
+	}
 }
 
 /**
@@ -97,6 +106,11 @@ textarea {
 	margin-bottom: calc-em(5px);
 	padding: 0;
 	width: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+	margin-right: 0.25em;
 }
 
 /**
@@ -232,6 +246,10 @@ button:-moz-focusring,
 
 	svg {
 		fill: $color-gray-dark;
+
+		@media (prefers-color-scheme: dark) {
+			fill: $color-black;
+		}
 	}
 
 	&:hover {
@@ -239,6 +257,10 @@ button:-moz-focusring,
 
 		svg {
 			fill: darken( $color-gray-dark, 15% );
+
+			@media (prefers-color-scheme: dark) {
+				fill: $color-black-dark;
+			}
 		}
 	}
 }

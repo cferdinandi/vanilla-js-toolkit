@@ -23,6 +23,28 @@
 	&,
 	&:visited {
 		color: $color-white;
+
+		@media (prefers-color-scheme: dark) {
+			background-color: lighten( $color-secondary, 20% );
+			border-color: lighten( $color-secondary, 20% );
+			color: $color-black-dark;
+		}
+	}
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active {
+		background-color: darken( $color-secondary, 30% );
+		border-color: darken( $color-secondary, 30% );
+		color: $color-white;
+		// text-decoration: none;
+
+		@media (prefers-color-scheme: dark) {
+			background-color: lighten( $color-secondary, 15% );
+			border-color: lighten( $color-secondary, 15% );
+			color: $color-black-dark;
+		}
 	}
 
 	del {
@@ -32,38 +54,6 @@
 
 a.btn {
 	text-decoration: none;
-}
-
-.btn:hover,
-.btn:focus,
-.btn:active,
-.btn.active {
-	background-color: darken( $color-secondary, 30% );
-	border-color: darken( $color-secondary, 30% );
-	color: $color-white;
-	// text-decoration: none;
-}
-
-
-/**
- * Secondary buttons
- */
-.btn-secondary {
-	background-color: $color-gray-dark;
-	border-color: $color-gray-dark;
-	// color: $color-white;
-
-	// del {
-	// 	@extend .text-muted-light;
-	// }
-}
-
-.btn-secondary:hover,
-.btn-secondary:focus,
-.btn-secondary:active,
-.btn-secondary.active {
-	background-color: darken( $color-gray-dark, 30% );
-	border-color: darken( $color-gray-dark, 30% );
 }
 
 

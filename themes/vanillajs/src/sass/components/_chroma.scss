@@ -21,6 +21,10 @@
 		.il,	// LiteralNumberIntegerLong
 		.mo { 	// LiteralNumberOct
 			color: #905;
+
+			@media (prefers-color-scheme: dark) {
+				color: #bfbfbf;
+			}
 		}
 
 		.k, 	// Keyword
@@ -32,6 +36,10 @@
 		.nb,	// NameBuiltin
 		.s {	// LiteralString
 			color: #07a;
+
+			@media (prefers-color-scheme: dark) {
+				color: lighten( $color-primary-dark, 7% );
+			}
 		}
 
 		.n,		// Name
@@ -51,6 +59,10 @@
 		.si,	// LiteralStringInterpol
 		.sx {	// LiteralStringOther
 			color: #690;
+
+			@media (prefers-color-scheme: dark) {
+				color: #c5d99c;
+			}
 		}
 
 		.bp, 	// NameBuiltinPseudo
@@ -66,12 +78,21 @@
 		.cp,	// CommentPreproc
 		.cpf {	// CommentPreprocFile
 			color: slategray;
+
+			@media (prefers-color-scheme: dark) {
+				color: $color-gray-light;
+			}
 		}
 
 		.ni, 	// NameEntity
 		.o {	// Operator
 			color: #a67f59;
 			background: hsla(0, 0%, 100%, .5);
+
+			@media (prefers-color-scheme: dark) {
+				background: transparent;
+				color: $color-gray-light;
+			}
 		}
 
 		.nf, 	// NameFunction
@@ -79,6 +100,10 @@
 		// .nx,	// NameOther
 		.ow { 	// OperatorWord
 			color: #dd4a68;
+
+			@media (prefers-color-scheme: dark) {
+				color: #deb6be;
+			}
 		}
 
 		.nv,	// NameVariable
@@ -87,7 +112,11 @@
 		.vi,	// NameVariableInstance
 		.vm,	// NameVariableMagic
 		.sr { 	// LiteralStringRegex
-			color: #e90
+			color: #e90;
+
+			@media (prefers-color-scheme: dark) {
+				color: #ede1ca;
+			}
 		}
 
 		// NameNamespace

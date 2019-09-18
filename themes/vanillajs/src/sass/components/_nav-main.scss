@@ -15,12 +15,6 @@
 	@media (min-width: $bp-large) {
 		text-align: left;
 	}
-
-	// @media (max-width: $bp-large) {
-	// 	.js-astro & {
-	// 		text-align: left;
-	// 	}
-	// }
 }
 
 
@@ -49,6 +43,10 @@
 	&,
 	&:visited {
 		color: $color-black;
+
+		@media (prefers-color-scheme: dark) {
+			color: $color-white;
+		}
 	}
 
 	&:active,
@@ -56,6 +54,10 @@
 	&:hover {
 		color: $color-primary;
 		// text-decoration: none;
+
+		@media (prefers-color-scheme: dark) {
+			color: $color-primary-dark;
+		}
 	}
 
 	.icon {
@@ -107,6 +109,10 @@
 	a {
 		color: $color-gray-dark;
 		text-decoration: none;
+
+		@media (prefers-color-scheme: dark) {
+			color: $color-gray-light;
+		}
 	}
 
 	/**
@@ -119,57 +125,9 @@
 		border-bottom: calc-em(2px) solid $color-secondary;
 		color: $color-black;
 		// text-decoration: none;
+
+		@media (prefers-color-scheme: dark) {
+			color: $color-white;
+		}
 	}
 }
-
-
-// /**
-//  * Small screen navigation toggle
-//  */
-// .nav-toggle {
-// 	@extend [hidden];
-// 	color: $color-gray-dark;
-
-// 	&:hover,
-// 	&:active,
-// 	&:focus {
-// 		color: $color-primary;
-// 		text-decoration: none;
-// 	}
-
-// 	@media (max-width: $bp-large) {
-// 		.js-astro & {
-// 			display: block;
-// 			visibility: visible;
-// 			float: right;
-// 		}
-// 	}
-
-// 	.nav-toggle-icon {
-// 		display: inline-block;
-// 		font-weight: bold;
-// 		transition-duration: 150ms;
-// 		transition-property: transform;
-// 	}
-
-// 	&.active .nav-toggle-icon{
-// 		transform: rotate(45deg);
-// 	}
-// }
-
-
-// /**
-//  * Nav menu wrapper
-//  */
-// .js-astro .nav-menu {
-// 	@media (max-width: $bp-large) {
-// 		clear: left;
-// 		display: none;
-// 		padding-top: calc-em(8px);
-// 		width: 100%;
-
-// 		&.active {
-// 			display: block;
-// 		}
-// 	}
-// }

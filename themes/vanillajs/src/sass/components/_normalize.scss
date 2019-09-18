@@ -147,6 +147,10 @@ template {
 img {
 	border-style: none; /* 1 */
 	-ms-interpolation-mode: bicubic; /* 2 */
+
+	@media (prefers-color-scheme: dark) {
+		opacity: 0.8;
+	}
 }
 
 /**

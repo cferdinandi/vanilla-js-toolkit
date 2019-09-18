@@ -13,20 +13,28 @@ samp {
 
 code {
 	color: $color-code;
-	padding: calc-em(4px);
+	// padding: calc-em(4px);
 	word-wrap: break-word;
+
+	@media (prefers-color-scheme: dark) {
+		color: $color-code-dark;
+	}
 }
 
 pre {
 	background-color: lighten( $color-gray-light, 7% );
 	display: block;
 	line-height: 1.5;
-	margin-bottom: $spacing;
+	margin: 0 0 $spacing;
 	overflow: auto;
 	padding: calc-em(13px);
 	tab-size: 4;
 	white-space: pre-wrap;
 	word-break: break-all;
+
+	@media (prefers-color-scheme: dark) {
+		background-color: lighten( $color-black, 7% );
+	}
 
 	code {
 		background-color: transparent;

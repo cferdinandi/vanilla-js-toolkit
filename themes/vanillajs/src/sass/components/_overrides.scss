@@ -67,6 +67,10 @@
 
 .text-muted {
 	color: $color-gray-dark;
+
+	@media (prefers-color-scheme: dark) {
+		color: $color-gray-light;
+	}
 }
 
 .text-muted-light {

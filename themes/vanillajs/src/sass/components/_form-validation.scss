@@ -6,10 +6,18 @@
 .error {
 	@extend .margin-bottom-small;
 	border-color: darken( $color-secondary, 25% );
+
+	@media (prefers-color-scheme: dark) {
+		border-color: ighten( $color-secondary, 15% );
+	}
 }
 
 .error-message {
 	color: darken( $color-secondary, 25% );
 	font-style: italic;
 	margin-bottom: 1em;
+
+	@media (prefers-color-scheme: dark) {
+		color: lighten( $color-secondary, 15% );
+	}
 }
