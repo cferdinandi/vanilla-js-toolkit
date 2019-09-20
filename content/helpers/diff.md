@@ -84,7 +84,7 @@ var diff = function (obj1, obj2) {
         // If an object, compare recursively
         if (type1 === '[object Object]') {
             var objDiff = diff(item1, item2);
-            if (Object.keys(objDiff).length > 1) {
+            if (Object.keys(objDiff).length > 0) {
                 diffs[key] = objDiff;
             }
             return;
