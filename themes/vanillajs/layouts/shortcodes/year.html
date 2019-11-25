@@ -1,1 +1,10 @@
+{{- $.Scratch.Set "year" ( dateFormat "2006" now ) -}}
+{{- if ge ( int (dateFormat "0121" now) ) 1115 -}}
+	{{- $.Scratch.Set "year" ( add (int (dateFormat "2006" now)) 1 ) -}}
+{{- end -}}
+
+{{- if eq (.Get "noround") "true" -}}
 {{ dateFormat "2006" now }}
+{{- else -}}
+{{ $.Scratch.Get "year" }}
+{{- end -}}
