@@ -16,5 +16,13 @@ var btn = document.querySelector('#click-me');
 btn.addEventListener('click', function (event) {
 	console.log(event); // The event details
 	console.log(event.target); // The clicked element
-}, false);
+});
+```
+
+If an event does not bubble and you're trying to use event delegation, pass in `true` for the third argument, `useCapture`.
+
+```js
+document.addEventListener('focus', function (event) {
+	console.log('The following element just came into focus: ' + event.target);
+}, true);
 ```
