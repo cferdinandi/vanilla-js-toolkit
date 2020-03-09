@@ -6,7 +6,7 @@ weight: 10
 noIndex: false
 ---
 
-Pushes support back to IE6.
+Pushes support back to at least IE6.
 
 ```js
 /**
