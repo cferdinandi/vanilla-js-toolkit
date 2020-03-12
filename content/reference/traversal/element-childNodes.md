@@ -13,5 +13,5 @@ Get the immediate descendants of an element, including text fragments and other 
 
 ```javascript
 var elem = document.querySelector('#some-elem');
-var descendants = wrapper.childNodes;
+var descendants = elem.childNodes;
 ```
