@@ -1,5 +1,5 @@
 {{- $.Scratch.Set "year" ( dateFormat "2006" now ) -}}
-{{- if ge ( int (dateFormat "0121" now) ) 1115 -}}
+{{- if ge ( int ( strings.TrimLeft "0" (dateFormat "0102" now) ) ) 1115 -}}
 	{{- $.Scratch.Set "year" ( add (int (dateFormat "2006" now)) 1 ) -}}
 {{- end -}}
 
