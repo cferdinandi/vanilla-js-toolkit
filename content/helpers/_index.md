@@ -10,6 +10,6 @@ Helper functions make complicated or repetitive tasks a bit easier, and keep you
 
 *Unless otherwise noted, all helper functions work back to at least IE9.*
 
-{{<cta for="toolkit-helpers">}}
+{{<cta for="funnel">}}
 
 ## The Functions

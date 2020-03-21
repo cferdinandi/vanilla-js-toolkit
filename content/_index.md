@@ -12,7 +12,7 @@ fullWidth: false
 
 *__Vanilla JS__ is a term for coding with native JavaScript features and browser APIs instead of frameworks and libraries.*
 
-{{<cta for="toolkit-home">}}
+{{<cta for="funnel">}}
 
 <div class="padding-top-large padding-bottom-large">
 	{{<testimonial for="edRivas" photo="true">}}

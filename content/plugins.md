@@ -13,7 +13,7 @@ As a result, the list is a lot shorter than some of the bigger "plugin repositor
 
 *__Note:__ Plugins with a <svg xmlns="http://www.w3.org/2000/svg" style="height:.8em;width:.8em" height="1em" width="1em" viewBox="0 0 16 16"><title>(By Chris)</title><path fill="currentColor" d="M14 9v2.066c-1.258 1.285-3.016 2.526-5 2.852V8.001h3v-1L9 5.83A3.001 3.001 0 0 0 8 .001 3 3 0 0 0 7 5.83L4 7.001v1h3v5.917c-1.984-.326-3.742-1.567-5-2.852V9H0v1c0 2 4 6 8 6s8-4 8-6V9h-2zM9 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path></svg> next to them are ones that I wrote or manage.*
 
-{{<cta for="toolkit-plugins">}}
+{{<cta for="funnel">}}
 
 {{<toc>}}
 

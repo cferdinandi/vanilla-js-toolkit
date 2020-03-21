@@ -9,7 +9,7 @@ anchors: true
 
 The best way to learn JavaScript is by writing lots of code, but coming up with ideas for projects can be hard. Here's a short list to get you started.
 
-{{<cta for="toolkit-projects">}}
+{{<cta for="funnel">}}
 
 **Need help?** [Check out my vanilla JS learning resources.](/resources)
 

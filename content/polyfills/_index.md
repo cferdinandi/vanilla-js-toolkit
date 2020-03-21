@@ -10,7 +10,7 @@ A polyfill is [a term coined by Remy Sharp](https://remysharp.com/2010/10/08/wha
 
 They let you provide deeper backwards compatibility and browser support without having to use a clunky preprocessor or command line tool.
 
-{{<cta for="toolkit-polyfills">}}
+{{<cta for="funnel">}}
 
 ## How to use a polyfill
 

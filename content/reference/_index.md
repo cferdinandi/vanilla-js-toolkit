@@ -11,6 +11,6 @@ A quick reference for commonly used JavaScript methods and browser APIs.
 
 *Unless otherwise noted, these work in all modern browsers, and IE9+. You can extend support back further with [polyfills](/polyfills).*
 
-{{<cta for="toolkit-snippets">}}
+{{<cta for="funnel">}}
 
 <div id="table-of-contents"></div>
