@@ -47,4 +47,6 @@ Fortunately, users in some browsers/operating systems can express their preferen
 }
 ```
 
+*If you're using a fixed or sticky header, you can prevent anchor links from scrolling behind it with [the `scroll-margin-top` property](https://gomakethings.com/how-to-prevent-anchor-links-from-scrolling-behind-a-sticky-header-with-one-line-of-css/).*
+
 [Smooth Scroll Demo &rarr;](https://codepen.io/cferdinandi/pen/LqGZrb)
