@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+		<meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
+		{{ if .Params.noIndex }}<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">{{ end }}
+
+		<!-- Mobile Screen Resizing -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Twitter Cards -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@ChrisFerdinandi">
+		<meta property="og:url" content="{{ .URL }}">
+		<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+		<meta property="og:description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
+		{{ if .Params.image }}<meta property="og:image" content="{{ .Params.image }}">{{ end }}
+
+		<!-- Icons: place in the root directory -->
+		<!-- https://github.com/audreyr/favicon-cheat-sheet -->
+		<link rel="shortcut icon" href="{{ "/img/favicon.ico" | absURL }}">
+		<link rel="icon" sizes="16x16 24x24 32x32 64x64" href="{{ "/img/favicon.ico" | absURL }}">
+
+		<!-- Stylesheet -->
+		<style type="text/css">
+			{{ if eq $.Site.Params.minify true }}{{ readFile "/themes/gmt/static/css/main.min.css" | safeCSS }}{{ else }}{{ readFile "/themes/gmt/static/css/main.css" | safeCSS }}{{ end }}
+		</style>
+		{{- if ne $.Site.Params.font "" -}}<link href="{{ $.Site.Params.font }}" rel="stylesheet">{{- end -}}
+
+		<!-- Font Loading -->
+		{{- if ne $.Site.Params.font "" -}}
+		<script>
+			(function () {
+				var font = '{{ $.Site.Params.font }}';
+				{{ if eq $.Site.Params.minify true }}{{ readFile "/themes/gmt/static/js/fonts.min.js" | safeJS }}{{ else }}{{ readFile "/themes/gmt/static/js/fonts.js" | safeJS }}{{ end }}
+			})();
+		</script>
+		{{- end -}}
+	</head>
+
+	<body class="type-{{ .Type }} {{ if .IsPage }}page-single{{ else }}page-list{{ end }}{{ if .Params.anchors }} js-anchors{{ end }}" id="page-{{ .UniqueID }}">
+
+		{{ partial "nav-a11y.html" }}
+
+		{{ partial "nav-main.html" . }}
+
+		<main id="main" tabindex="-1">
+
+			<div class="container">

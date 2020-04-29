@@ -1,0 +1,15 @@
+			</div>
+		</main>
+
+		<footer class="container container-large">
+			<hr class="margin-bottom">
+			{{ partial "nav-secondary.html" }}
+			<p class="text-small">Made with ❤️ in Massachusetts by <a href="https://gomakethings.com">Chris Ferdinandi</a>. Unless otherwise noted, all code is free to use under the <a href="/mit">MIT License</a>.</p>
+		</footer>
+
+		<script>
+			{{ if eq $.Site.Params.minify true }}{{ readFile "/themes/gmt/static/js/main.min.js" | safeJS }}{{ else }}{{ readFile "/themes/gmt/static/js/main.js" | safeJS }}{{ end }}
+			{{ if eq .Type "search" }}{{ if eq $.Site.Params.minify true }}{{ readFile "/themes/gmt/static/js/search.min.js" | safeJS }}{{ else }}{{ readFile "/themes/gmt/static/js/search.js" | safeJS }}{{ end }}{{ end }}
+		</script>
+	</body>
+</html>

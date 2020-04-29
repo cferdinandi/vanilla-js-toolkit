@@ -8,7 +8,7 @@ params:
   font: "https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&display=swap"
   rssURL: ""
   rssLimit: 7
-  minify: false
+  minify: true
 
 # Caches
 caches:
@@ -22,7 +22,7 @@ languageCode: "en-us"
 title: "The Vanilla JS Toolkit"
 
 # theme to use (located by default in /themes/THEMENAME/)
-theme: "vanillajs"
+theme: "gmt"
 
 # Permalinks
 # See "content-management/permalinks"
