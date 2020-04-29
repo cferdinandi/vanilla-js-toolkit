@@ -27,7 +27,6 @@
 		<style type="text/css">
 			{{ if eq $.Site.Params.minify true }}{{ readFile "/themes/gmt/static/css/main.min.css" | safeCSS }}{{ else }}{{ readFile "/themes/gmt/static/css/main.css" | safeCSS }}{{ end }}
 		</style>
-		{{- if ne $.Site.Params.font "" -}}<link href="{{ $.Site.Params.font }}" rel="stylesheet">{{- end -}}
 
 		<!-- Font Loading -->
 		{{- if ne $.Site.Params.font "" -}}
