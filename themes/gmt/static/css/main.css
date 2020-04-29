@@ -345,6 +345,15 @@ dt {
 	margin-right: 1.3125em;
 }
 
+.list-inline-compact {
+	margin-left: -0.25em;
+	margin-right: -0.25em;
+}
+.list-inline-compact li {
+	margin-left: 0.25em;
+	margin-right: 0.25em;
+}
+
 /**
  * Heading styling for h1 through h6 elements.
  * Heading class lets you use one heading type for semantics, but style it as another heading type.
