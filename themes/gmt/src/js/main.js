@@ -1,7 +1,7 @@
-import './main-components/_matches-polyfill.js';
-import addHeadingLinks from './main-components/heading-links.js';
-import mailchimp from './main-components/mailchimp.js';
-import tableOfContents from './main-components/table-of-contents.js';
+import '../../../../../gmt-theme/dist/js/_matches.polyfill.js';
+import addHeadingLinks from '../../../../../gmt-theme/dist/js/heading-links.js';
+import mailchimp from '../../../../../gmt-theme/dist/js/mailchimp.js';
+import tableOfContents from '../../../../../gmt-theme/dist/js/tableOfContents.js';
 
 // Mailchimp form
 if (document.querySelector('#mailchimp-form')) {

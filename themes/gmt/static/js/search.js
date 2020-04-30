@@ -2,7 +2,7 @@
 (function () {
 	'use strict';
 
-	var crowsNest = function () {
+	var crowsNest = function (template) {
 
 		//
 		// Variables
@@ -31,21 +31,6 @@
 		};
 
 		/**
-		 * Create the HTML for each result
-		 * @param  {Object} article The article
-		 * @param  {Number} id      The result index
-		 * @return {String}         The markup
-		 */
-		var createHTML = function (article, id) {
-			var html =
-				'<li class="margin-bottom-medium">' +
-					'<strong><a href="' + article.url + '">' + article.title + '</a></strong>' +
-					'<div class="text-capitalize text-muted text-small">' + article.type.replace('page', 'reference') + '</div>' +
-				'</li>';
-			return html;
-		};
-
-		/**
 		 * Create the markup when no results are found
 		 * @return {String} The markup
 		 */
@@ -60,9 +45,9 @@
 		 */
 		var createResultsHTML = function (results) {
 			var html = '<p>Found ' + results.length + ' matching articles</p>';
-			html += '<ul class="list-unstyled">' + results.map(function (article, index) {
-				return createHTML(article.article);
-			}).join('') + '</ul>';
+			html += results.map(function (article, index) {
+				return template(article.article, index);
+			}).join('');
 			return html;
 		};
 
@@ -130,7 +115,7 @@
 		};
 
 		var clearInput = function () {
-			input.value = input.value.replace(' site:gomakethings.com', '');
+			input.value = input.value.replace(' site:' + window.location.host, '');
 		};
 
 		/**
@@ -150,7 +135,7 @@
 		//
 
 		// Make sure required content exists
-		if (!form || !input || !resultList || !searchIndex) return;
+		if (!template || typeof template !== 'function' || !form || !input || !resultList || !searchIndex) return;
 
 		// Clear the input field
 		clearInput();
@@ -163,6 +148,13 @@
 
 	};
 
-	crowsNest();
+	crowsNest(function (article, id) {
+		var html =
+			'<li class="margin-bottom-medium">' +
+				'<strong><a href="' + article.url + '">' + article.title + '</a></strong>' +
+				'<div class="text-capitalize text-muted text-small">' + article.type.replace('page', 'reference') + '</div>' +
+			'</li>';
+		return html;
+	});
 
 }());
