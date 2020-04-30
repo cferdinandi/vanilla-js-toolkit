@@ -107,8 +107,8 @@ audio {
 @media (min-width: 38em) {
 	.row {
 		display: flex;
-		margin-left: -0.4375em;
-		margin-right: -0.4375em;
+		margin-left: -1.4%;
+		margin-right: -1.4%;
 		justify-content: space-between;
 	}
 
@@ -122,8 +122,8 @@ audio {
 .grid-two-thirds,
 .grid-half,
 .grid-three-fourths {
-		margin-left: 0.4375em;
-		margin-right: 0.4375em;
+		margin-left: 1.4%;
+		margin-right: 1.4%;
 	}
 
 	.grid-auto {
@@ -983,16 +983,6 @@ textarea {
 input:focus,
 textarea:focus {
 	border-color: rgba(82, 168, 236, 0.8);
-	outline: 0;
-	outline: thin dotted \9 ;
-}
-
-[type=file]:focus,
-[type=checkbox]:focus,
-select:focus {
-	outline: thin dotted;
-	outline: 0.3125em auto -webkit-focus-ring-color;
-	outline-offset: -0.125em;
 }
 
 /**
