@@ -741,11 +741,11 @@ pre code {
 	margin-bottom: 0.3125em;
 	padding: 0.5em 0.6875em;
 }
-.btn, .btn:visited {
+.btn, .btn:focus, .btn:visited {
 	color: #ffffff;
 }
 @media (prefers-color-scheme: dark) {
-	.btn, .btn:visited {
+	.btn, .btn:focus, .btn:visited {
 		background-color: #fdd4d5;
 		border-color: #fdd4d5;
 		color: #000000;
@@ -781,12 +781,12 @@ a.btn {
 		color: #000000;
 	}
 }
-.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active {
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary.active {
 	background-color: #15191f;
 	border-color: #15191f;
 }
 @media (prefers-color-scheme: dark) {
-	.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active {
+	.btn-secondary:hover, .btn-secondary:active, .btn-secondary.active {
 		background-color: #c3cad6;
 		border-color: #c3cad6;
 		color: #000000;
@@ -807,12 +807,12 @@ a.btn {
 		color: #000000;
 	}
 }
-.btn-tertiary:hover, .btn-tertiary:focus, .btn-tertiary:active, .btn-tertiary.active {
+.btn-tertiary:hover, .btn-tertiary:active, .btn-tertiary.active {
 	background-color: #005580;
 	border-color: #005580;
 }
 @media (prefers-color-scheme: dark) {
-	.btn-tertiary:hover, .btn-tertiary:focus, .btn-tertiary:active, .btn-tertiary.active {
+	.btn-tertiary:hover, .btn-tertiary:active, .btn-tertiary.active {
 		background-color: #b3e6ff;
 		border-color: #b3e6ff;
 		color: #000000;
