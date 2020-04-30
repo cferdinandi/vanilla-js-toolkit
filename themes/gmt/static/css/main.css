@@ -732,7 +732,6 @@ pre code {
 .btn {
 	background-color: #f7272f;
 	border: 0.125em solid #f7272f;
-	color: #ffffff;
 	display: inline-block;
 	font-size: 0.9375em;
 	font-weight: normal;
@@ -1248,19 +1247,19 @@ td {
 		margin-bottom: 0;
 	}
 }
-.logo, .logo:visited {
+.logo, .logo:focus, .logo:visited {
 	color: #272727;
 }
 @media (prefers-color-scheme: dark) {
-	.logo, .logo:visited {
+	.logo, .logo:focus, .logo:visited {
 		color: #ffffff;
 	}
 }
-.logo:active, .logo:focus, .logo:hover {
+.logo:active, .logo:hover {
 	color: #0088cc;
 }
 @media (prefers-color-scheme: dark) {
-	.logo:active, .logo:focus, .logo:hover {
+	.logo:active, .logo:hover {
 		color: #73cffa;
 	}
 }
