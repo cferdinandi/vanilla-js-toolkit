@@ -2,7 +2,7 @@
 title: "serialize.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
-description: "Serialize all form data into a query string."
+description: "Serialize all form data into a query string. Fields must have a `name` property."
 demo: "https://codepen.io/cferdinandi/pen/dyYVKLK"
 polyfills: "Works in all modern browsers, and back to IE10."
 weight: 10

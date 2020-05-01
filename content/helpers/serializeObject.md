@@ -2,7 +2,7 @@
 title: "serializeObject.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
-description: "Serialize all form data into an object of key/value pairs."
+description: "Serialize all form data into an object of key/value pairs. Fields must have a `name` property."
 demo: "https://codepen.io/cferdinandi/pen/wvKrXVw"
 polyfills: "Works in all modern browsers, and back to IE10."
 weight: 10
