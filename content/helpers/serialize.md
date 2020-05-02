@@ -4,7 +4,6 @@ date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Serialize all form data into a query string. Fields must have a `name` property."
 demo: "https://codepen.io/cferdinandi/pen/dyYVKLK"
-polyfills: "Works in all modern browsers, and back to IE10."
 weight: 10
 noIndex: false
 ---
@@ -18,10 +17,18 @@ noIndex: false
  */
 var serialize = function (form) {
 	var arr = [];
-	var formData = new FormData(form);
-	for (var key of formData.keys()) {
-		arr.push(encodeURIComponent(key) + '=' + encodeURIComponent(formData.get(key)));
-	}
+	Array.prototype.slice.call(form.elements).forEach(function (field) {
+		if (!field.name || field.disabled || ['file', 'reset', 'submit', 'button'].indexOf(field.type) > -1) return;
+		if (field.type === 'select-multiple') {
+			Array.prototype.slice.call(field.options).forEach(function (option) {
+				if (!option.selected) return;
+				arr.push(encodeURIComponent(field.name) + '=' + encodeURIComponent(option.value));
+			});
+			return;
+		}
+		if (['checkbox', 'radio'].indexOf(field.type) >-1 && !field.checked) return;
+		arr.push(encodeURIComponent(field.name) + '=' + encodeURIComponent(field.value));
+	});
 	return arr.join('&');
 };
 ```

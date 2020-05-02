@@ -4,7 +4,6 @@ date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Serialize all form data into an array of key/value pairs. Fields must have a `name` property."
 demo: "https://codepen.io/cferdinandi/pen/VwvMdOG"
-polyfills: "Works in all modern browsers, and back to IE10."
 weight: 10
 noIndex: false
 ---
@@ -18,13 +17,24 @@ noIndex: false
  */
 var serializeArray = function (form) {
 	var arr = [];
-	var formData = new FormData(form);
-	for (var key of formData.keys()) {
+	Array.prototype.slice.call(form.elements).forEach(function (field) {
+		if (!field.name || field.disabled || ['file', 'reset', 'submit', 'button'].indexOf(field.type) > -1) return;
+		if (field.type === 'select-multiple') {
+			Array.prototype.slice.call(field.options).forEach(function (option) {
+				if (!option.selected) return;
+				arr.push({
+					name: field.name,
+					value: option.value
+				});
+			});
+			return;
+		}
+		if (['checkbox', 'radio'].indexOf(field.type) >-1 && !field.checked) return;
 		arr.push({
-			name: key,
-			value: formData.get(key)
+			name: field.name,
+			value: field.value
 		});
-	}
+	});
 	return arr;
 };
 ```
