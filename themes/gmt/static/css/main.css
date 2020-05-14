@@ -1280,7 +1280,7 @@ td {
 .nav a:active,
 .nav a:focus,
 .nav .active a,
-.nav [active-current=page] {
+.nav [aria-current=page] {
 	border-bottom: 0.125em solid #fa7176;
 	color: #272727;
 }
@@ -1289,7 +1289,7 @@ td {
 .nav a:active,
 .nav a:focus,
 .nav .active a,
-.nav [active-current=page] {
+.nav [aria-current=page] {
 		color: #ffffff;
 	}
 }
