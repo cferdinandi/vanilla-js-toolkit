@@ -508,9 +508,14 @@ pre {
 	margin: 0 0 1.5625em;
 	overflow: auto;
 	padding: 0.8125em;
-	tab-size: 4;
+	tab-size: 2;
 	white-space: pre-wrap;
 	word-break: break-all;
+}
+@media (min-width: 38em) {
+	pre {
+		tab-size: 4;
+	}
 }
 @media (prefers-color-scheme: dark) {
 	pre {
