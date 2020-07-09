@@ -1,4 +1,4 @@
-/*! gmt-theme v2.0.0 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
+/*! gmt-theme v2.0.1 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
 @charset "UTF-8";
 /**
  * @section CSS Reset
@@ -831,7 +831,8 @@ a.btn {
 /**
  * Disabled state
  */
-.btn[disabled] {
+.btn[disabled],
+[data-submitting] .btn {
 	box-shadow: none;
 	cursor: not-allowed;
 	opacity: 0.5;
