@@ -29,14 +29,10 @@
 		</style>
 
 		<!-- Font Loading -->
-		{{- if ne $.Site.Params.font "" -}}
+		<link rel="stylesheet" href="https://gomakethings.com/css/fonts.min.css" media="print" onload="this.media='all'">
 		<script>
-			(function () {
-				var font = '{{ $.Site.Params.font }}';
-				{{ if eq $.Site.Params.minify true }}{{ readFile "/themes/gmt/static/js/fonts.min.js" | safeJS }}{{ else }}{{ readFile "/themes/gmt/static/js/fonts.js" | safeJS }}{{ end }}
-			})();
+			{{ if eq $.Site.Params.minify true }}{{ readFile "/themes/gmt/static/js/fonts.min.js" | safeJS }}{{ else }}{{ readFile "/themes/gmt/static/js/fonts.js" | safeJS }}{{ end }}
 		</script>
-		{{- end -}}
 	</head>
 
 	<body class="type-{{ .Type }} {{ if .IsPage }}page-single{{ else }}page-list{{ end }}{{ if .Params.anchors }} js-anchors{{ end }}" id="page-{{ .UniqueID }}">
