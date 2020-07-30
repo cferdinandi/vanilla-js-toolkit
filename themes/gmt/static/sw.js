@@ -1,6 +1,6 @@
-/*! GMT Service Worker v2.2.0 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
+/*! GMT Service Worker v2.2.4 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
 
-var version = 'gmt_2.2.0';
+var version = 'gmt_2.2.4';
 // Cache IDs
 var coreID = version + '_core';
 var pageID = version + '_pages';
@@ -15,7 +15,6 @@ var limits = {
 
 // Font files
 var fontFiles = [
-	'https://gomakethings.com/css/fonts.min.css',
 	'https://gomakethings.com/fonts/pt-serif-v11-latin-regular.woff',
 	'https://gomakethings.com/fonts/pt-serif-v11-latin-regular.woff2',
 	'https://gomakethings.com/fonts/pt-serif-v11-latin-italic.woff',
@@ -56,11 +55,12 @@ var trimCache = function (key, max) {
 // On install, cache some stuff
 addEventListener('install', function (event) {
 	event.waitUntil(caches.open(coreID).then(function (cache) {
-		cache.add('/offline/');
-		cache.add('/img/favicon.ico');
+		cache.add(new Request('/offline/'));
+		cache.add(new Request('/img/favicon.ico'));
 		fontFiles.forEach(function (file) {
-			cache.add(file);
+			cache.add(new Request(file));
 		});
+		return;
 	}));
 });
 
@@ -111,41 +111,26 @@ addEventListener('fetch', function (event) {
 		return;
 	}
 
-	// Image files
+	// Other files
 	// Offline-first
-	if (request.headers.get('Accept').includes('image')) {
-		event.respondWith(
-			caches.match(request).then(function (response) {
-				return response || fetch(request).then(function (response) {
+	event.respondWith(
+		caches.match(request).then(function (response) {
+			return response || fetch(request).then(function (response) {
 
-					// Stash a copy of this image in the images cache
+				// If an image, stash a copy of this image in the images cache
+				if (request.headers.get('Accept').includes('image')) {
 					var copy = response.clone();
 					event.waitUntil(caches.open(imgID).then(function (cache) {
 						return cache.put(request, copy);
 					}));
+				}
 
+				// Return the requested file
+				return response;
 
-					// Return the requested file
-					return response;
-
-				});
-			})
-		);
-		return;
-	}
-
-	// Font assets
-	// Offline-first
-	if (fontFiles.includes(request.url)) {
-		event.respondWith(
-			caches.match(request).then(function (response) {
-				return response || fetch(request).then(function (response) {
-					return response;
-				});
-			})
-		);
-		return;
-	}
+			});
+		})
+	);
 
 });
 
