@@ -5,7 +5,7 @@
 	font-family: "PT Serif";
 	font-style: normal;
 	font-weight: 400;
-	src: local("PT Serif"), local("PTSerif-Regular"), url("https://cdn.gomakethings.com/fonts/pt-serif-v11-latin-regular.woff2") format("woff2"), url("https://cdn.gomakethings.com/fonts/pt-serif-v11-latin-regular.woff") format("woff");
+	src: local("PT Serif"), local("PTSerif-Regular"), url("https://gomakethings.com/fonts/pt-serif-v11-latin-regular.woff2") format("woff2"), url("https://gomakethings.com/fonts/pt-serif-v11-latin-regular.woff") format("woff");
 	/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* pt-serif-italic - latin */
@@ -13,7 +13,7 @@
 	font-family: "PT Serif";
 	font-style: italic;
 	font-weight: 400;
-	src: local("PT Serif Italic"), local("PTSerif-Italic"), url("https://cdn.gomakethings.com/fonts/pt-serif-v11-latin-italic.woff2") format("woff2"), url("https://cdn.gomakethings.com/fonts/pt-serif-v11-latin-italic.woff") format("woff");
+	src: local("PT Serif Italic"), local("PTSerif-Italic"), url("https://gomakethings.com/fonts/pt-serif-v11-latin-italic.woff2") format("woff2"), url("https://gomakethings.com/fonts/pt-serif-v11-latin-italic.woff") format("woff");
 	/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* pt-serif-700 - latin */
@@ -21,7 +21,7 @@
 	font-family: "PT Serif";
 	font-style: normal;
 	font-weight: 700;
-	src: local("PT Serif Bold"), local("PTSerif-Bold"), url("https://cdn.gomakethings.com/fonts/pt-serif-v11-latin-700.woff2") format("woff2"), url("https://cdn.gomakethings.com/fonts/pt-serif-v11-latin-700.woff") format("woff");
+	src: local("PT Serif Bold"), local("PTSerif-Bold"), url("https://gomakethings.com/fonts/pt-serif-v11-latin-700.woff2") format("woff2"), url("https://gomakethings.com/fonts/pt-serif-v11-latin-700.woff") format("woff");
 	/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* pt-serif-700italic - latin */
@@ -29,7 +29,7 @@
 	font-family: "PT Serif";
 	font-style: italic;
 	font-weight: 700;
-	src: local("PT Serif Bold Italic"), local("PTSerif-BoldItalic"), url("https://cdn.gomakethings.com/fonts/pt-serif-v11-latin-700italic.woff2") format("woff2"), url("https://cdn.gomakethings.com/fonts/pt-serif-v11-latin-700italic.woff") format("woff");
+	src: local("PT Serif Bold Italic"), local("PTSerif-BoldItalic"), url("https://gomakethings.com/fonts/pt-serif-v11-latin-700italic.woff2") format("woff2"), url("https://gomakethings.com/fonts/pt-serif-v11-latin-700italic.woff") format("woff");
 	/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /**
