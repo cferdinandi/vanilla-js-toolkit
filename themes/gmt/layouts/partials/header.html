@@ -29,7 +29,6 @@
 		</style>
 
 		<!-- Font Loading -->
-		<link rel="stylesheet" href="https://gomakethings.com/css/fonts.min.css" media="print" onload="this.media='all'">
 		<script>
 			{{ if eq $.Site.Params.minify true }}{{ readFile "/themes/gmt/static/js/fonts.min.js" | safeJS }}{{ else }}{{ readFile "/themes/gmt/static/js/fonts.js" | safeJS }}{{ end }}
 		</script>
