@@ -15,7 +15,7 @@ var limits = {
 
 // Font files
 var fontFiles = [
-	'https://gomakethings.com/fonts.min.css',
+	'https://gomakethings.com/css/fonts.min.css',
 	'https://gomakethings.com/fonts/pt-serif-v11-latin-regular.woff',
 	'https://gomakethings.com/fonts/pt-serif-v11-latin-regular.woff2',
 	'https://gomakethings.com/fonts/pt-serif-v11-latin-italic.woff',
