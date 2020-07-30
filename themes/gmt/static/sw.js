@@ -1,14 +1,30 @@
-/*! GMT Service Worker v2.0.1 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
+/*! GMT Service Worker v2.1.1 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
 
-var version = 'gmt_2.0.1';
+var version = 'gmt_2.1.1';
+// Cache IDs
 var coreID = version + '_core';
 var pageID = version + '_pages';
 var imgID = version + '_img';
 var cacheIDs = [coreID, pageID, imgID];
+
+// Max number of files in cache
 var limits = {
 	pages: 30,
 	imgs: 10
 };
+
+// Font files
+var fontFiles = [
+	'https://gomakethings.com/fonts.min.css',
+	'https://gomakethings.com/fonts/pt-serif-v11-latin-regular.woff',
+	'https://gomakethings.com/fonts/pt-serif-v11-latin-regular.woff2',
+	'https://gomakethings.com/fonts/pt-serif-v11-latin-italic.woff',
+	'https://gomakethings.com/fonts/pt-serif-v11-latin-italic.woff2',
+	'https://gomakethings.com/fonts/pt-serif-v11-latin-700.woff',
+	'https://gomakethings.com/fonts/pt-serif-v11-latin-700.woff2',
+	'https://gomakethings.com/fonts/pt-serif-v11-latin-700italic.woff',
+	'https://gomakethings.com/fonts/pt-serif-v11-latin-700italic.woff2'
+];
 
 
 //
@@ -32,6 +48,7 @@ var trimCache = function (key, max) {
 	});
 };
 
+
 //
 // Event Listeners
 //
@@ -41,6 +58,9 @@ addEventListener('install', function (event) {
 	event.waitUntil(caches.open(coreID).then(function (cache) {
 		cache.add('/offline/');
 		cache.add('/img/favicon.ico');
+		fontFiles.forEach(function (file) {
+			cache.add(file);
+		});
 	}));
 });
 
@@ -91,26 +111,41 @@ addEventListener('fetch', function (event) {
 		return;
 	}
 
-	// Other assets
+	// Image files
 	// Offline-first
-	event.respondWith(
-		caches.match(request).then(function (response) {
-			return response || fetch(request).then(function (response) {
+	if (request.headers.get('Accept').includes('image')) {
+		event.respondWith(
+			caches.match(request).then(function (response) {
+				return response || fetch(request).then(function (response) {
 
-				// If the request is for an image, stash a copy of this image in the images cache
-				if (request.headers.get('Accept').includes('image')) {
+					// Stash a copy of this image in the images cache
 					var copy = response.clone();
 					event.waitUntil(caches.open(imgID).then(function (cache) {
 						return cache.put(request, copy);
 					}));
-				}
 
-				// Return the requested file
-				return response;
 
-			});
-		})
-	);
+					// Return the requested file
+					return response;
+
+				});
+			})
+		);
+		return;
+	}
+
+	// Font assets
+	// Offline-first
+	if (fontFiles.includes(request.url)) {
+		event.respondWith(
+			caches.match(request).then(function (response) {
+				return response || fetch(request).then(function (response) {
+					return response;
+				});
+			})
+		);
+		return;
+	}
 
 });
 
