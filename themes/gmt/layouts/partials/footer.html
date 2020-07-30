@@ -10,6 +10,7 @@
 		<script>
 			{{ if eq $.Site.Params.minify true }}{{ readFile "/themes/gmt/static/js/main.min.js" | safeJS }}{{ else }}{{ readFile "/themes/gmt/static/js/main.js" | safeJS }}{{ end }}
 			{{ if eq .Type "search" }}{{ if eq $.Site.Params.minify true }}{{ readFile "/themes/gmt/static/js/search.min.js" | safeJS }}{{ else }}{{ readFile "/themes/gmt/static/js/search.js" | safeJS }}{{ end }}{{ end }}
+			{{ if eq $.Site.Params.minify true }}{{ readFile "/themes/gmt/static/js/swInit.min.js" | safeJS }}{{ else }}{{ readFile "/themes/gmt/static/js/swInit.js" | safeJS }}{{ end }}
 		</script>
 	</body>
 </html>

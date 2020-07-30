@@ -1,0 +1,1 @@
+import '../../../../../gmt-theme/dist/js/swInit.js';

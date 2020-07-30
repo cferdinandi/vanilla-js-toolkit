@@ -5,7 +5,7 @@ import pkg from './package.json';
 
 // Configs
 var configs = {
-	files: ['main.js', 'fonts.js', 'search.js'],
+	files: ['main.js', 'fonts.js', 'search.js', 'swInit.js'],
 	formats: ['iife'],
 	default: 'iife',
 	pathIn: 'src/js',
