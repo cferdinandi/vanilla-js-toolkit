@@ -1,6 +1,6 @@
-/*! GMT Service Worker v2.2.6 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
+/*! GMT Service Worker v2.2.7 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
 
-var version = 'gmt_2.2.6';
+var version = 'gmt_2.2.7';
 // Cache IDs
 var coreID = version + '_core';
 var pageID = version + '_pages';
@@ -111,26 +111,28 @@ addEventListener('fetch', function (event) {
 		return;
 	}
 
-	// Other files
+	// Images & Fonts
 	// Offline-first
-	event.respondWith(
-		caches.match(request).then(function (response) {
-			return response || fetch(request).then(function (response) {
+	if (request.headers.get('Accept').includes('image') || request.url.includes('pt-serif-v11')) {
+		event.respondWith(
+			caches.match(request).then(function (response) {
+				return response || fetch(request).then(function (response) {
 
-				// If an image, stash a copy of this image in the images cache
-				if (request.headers.get('Accept').includes('image')) {
-					var copy = response.clone();
-					event.waitUntil(caches.open(imgID).then(function (cache) {
-						return cache.put(request, copy);
-					}));
-				}
+					// If an image, stash a copy of this image in the images cache
+					if (request.headers.get('Accept').includes('image')) {
+						var copy = response.clone();
+						event.waitUntil(caches.open(imgID).then(function (cache) {
+							return cache.put(request, copy);
+						}));
+					}
 
-				// Return the requested file
-				return response;
+					// Return the requested file
+					return response;
 
-			});
-		})
-	);
+				});
+			})
+		);
+	}
 
 });
 
