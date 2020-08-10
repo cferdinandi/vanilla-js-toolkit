@@ -46,6 +46,7 @@ var trimCache = function (key, max) {
 
 // On install, cache some stuff
 self.addEventListener('install', function (event) {
+	self.skipWaiting();
 	event.waitUntil(caches.open(coreID).then(function (cache) {
 		cache.add(new Request('/offline/'));
 		cache.add(new Request('/img/favicon.ico'));
@@ -53,9 +54,7 @@ self.addEventListener('install', function (event) {
 			cache.add(new Request(file));
 		});
 		return cache;
-	})).then(function () {
-		self.skipWaiting();
-	});
+	}));
 });
 
 // On version update, remove old cached files
@@ -67,7 +66,7 @@ self.addEventListener('activate', function (event) {
 			return caches.delete(key);
 		}));
 	}).then(function () {
-		return clients.claim();
+		return self.clients.claim();
 	}));
 });
 
