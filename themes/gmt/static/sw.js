@@ -1,17 +1,11 @@
-/*! GMT Service Worker v2.2.7 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
+/*! GMT Service Worker v2.3.0 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
 
-var version = 'gmt_2.2.7';
+var version = 'gmt_2.3.0';
 // Cache IDs
 var coreID = version + '_core';
 var pageID = version + '_pages';
 var imgID = version + '_img';
 var cacheIDs = [coreID, pageID, imgID];
-
-// Max number of files in cache
-var limits = {
-	pages: 30,
-	imgs: 10
-};
 
 // Font files
 var fontFiles = [
@@ -37,13 +31,11 @@ var fontFiles = [
  */
 var trimCache = function (key, max) {
 	caches.open(key).then(function (cache) {
-		return cache.keys();
-	}).then(function (keys) {
-		if (keys.length > max) {
+		cache.keys().then(function (keys) {
 			cache.delete(keys[0]).then(function () {
-				trimCache(key, max);
+				trimCache(key);
 			});
-		}
+		});
 	});
 };
 
@@ -53,19 +45,21 @@ var trimCache = function (key, max) {
 //
 
 // On install, cache some stuff
-addEventListener('install', function (event) {
+self.addEventListener('install', function (event) {
 	event.waitUntil(caches.open(coreID).then(function (cache) {
 		cache.add(new Request('/offline/'));
 		cache.add(new Request('/img/favicon.ico'));
 		fontFiles.forEach(function (file) {
 			cache.add(new Request(file));
 		});
-		return;
-	}));
+		return cache;
+	})).then(function () {
+		self.skipWaiting();
+	});
 });
 
 // On version update, remove old cached files
-addEventListener('activate', function (event) {
+self.addEventListener('activate', function (event) {
 	event.waitUntil(caches.keys().then(function (keys) {
 		return Promise.all(keys.filter(function (key) {
 			return !cacheIDs.includes(key);
@@ -78,7 +72,7 @@ addEventListener('activate', function (event) {
 });
 
 // listen for requests
-addEventListener('fetch', function (event) {
+self.addEventListener('fetch', function (event) {
 
 	// Get the request
 	var request = event.request;
@@ -137,8 +131,8 @@ addEventListener('fetch', function (event) {
 });
 
 // Trim caches over a certain size
-addEventListener('message', function (event) {
+self.addEventListener('message', function (event) {
 	if (event.data !== 'cleanUp') return;
-	trimCache(pageID, limits.pages);
-	trimCache(imgID, limits.imgs);
+	trimCache(pageID);
+	trimCache(imgID);
 });
