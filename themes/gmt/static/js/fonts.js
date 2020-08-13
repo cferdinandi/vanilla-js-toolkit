@@ -2,6 +2,7 @@
 (function () {
 	'use strict';
 
+	// Detect when font files are fully loaded before using them in the UI
 	if ('fonts' in document) {
 		Promise.all([
 			document.fonts.load('1em PT Serif'),
