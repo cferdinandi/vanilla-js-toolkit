@@ -1,11 +1,17 @@
-/*! GMT Service Worker v2.4.2 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
+/*! GMT Service Worker v2.4.3 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
 
-var version = 'gmt_2.4.2';
+var version = 'gmt_2.4.3';
 // Cache IDs
 var coreID = version + '_core';
 var pageID = version + '_pages';
 var imgID = version + '_img';
 var cacheIDs = [coreID, pageID, imgID];
+
+// Max number of files in cache
+var limits = {
+	pages: 35,
+	imgs: 20
+};
 
 // Font files
 var fontFiles = [
@@ -32,8 +38,9 @@ var fontFiles = [
 var trimCache = function (key, max) {
 	caches.open(key).then(function (cache) {
 		cache.keys().then(function (keys) {
+			if (keys.length <= max) return;
 			cache.delete(keys[0]).then(function () {
-				trimCache(key);
+				trimCache(key, max);
 			});
 		});
 	});
@@ -132,6 +139,6 @@ self.addEventListener('fetch', function (event) {
 // Trim caches over a certain size
 self.addEventListener('message', function (event) {
 	if (event.data !== 'cleanUp') return;
-	trimCache(pageID);
-	trimCache(imgID);
+	trimCache(pageID, limits.pages);
+	trimCache(imgID, limits.imgs);
 });
