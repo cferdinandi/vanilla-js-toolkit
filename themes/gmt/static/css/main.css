@@ -1,4 +1,4 @@
-/*! gmt-theme v2.2.4 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
+/*! gmt-theme v2.5.0 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
 @charset "UTF-8";
 /**
  * @section CSS Reset
@@ -195,7 +195,7 @@ body {
 	}
 }
 .fonts-loaded body {
-	font-family: "PT Serif", serif;
+	font-family: "PT Sans", sans-serif;
 }
 
 p {
@@ -363,6 +363,9 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 1em;
 	padding: 1em 0 0;
 	word-wrap: break-word;
+}
+.fonts-loaded h1, .fonts-loaded h2, .fonts-loaded h3, .fonts-loaded h4, .fonts-loaded h5, .fonts-loaded h6 {
+	font-family: "PT Serif", serif;
 }
 
 h1,
@@ -1276,6 +1279,9 @@ td {
 		color: #73cffa;
 	}
 }
+.fonts-loaded .logo {
+	font-family: "PT Serif", serif;
+}
 
 /**
  * The navigation menu
@@ -1370,6 +1376,10 @@ td {
 
 .text-capitalize {
 	text-transform: capitalize;
+}
+
+.fonts-loaded .text-sans {
+	font-family: "PT Sans", sans-serif;
 }
 
 /**
