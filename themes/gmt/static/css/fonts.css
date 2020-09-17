@@ -1,18 +1,6 @@
-/*! gmt-theme v2.2.4 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
+/*! gmt-theme v2.5.0 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
 /* pt-serif-regular - latin */
-@font-face {
-	font-family: "PT Serif";
-	font-style: normal;
-	font-weight: 400;
-	src: local("PT Serif"), local("PTSerif-Regular"), url("https://gomakethings.com/fonts/pt-serif-v11-latin-regular.woff2") format("woff2"), url("https://gomakethings.com/fonts/pt-serif-v11-latin-regular.woff") format("woff");
-}
 /* pt-serif-italic - latin */
-@font-face {
-	font-family: "PT Serif";
-	font-style: italic;
-	font-weight: 400;
-	src: local("PT Serif Italic"), local("PTSerif-Italic"), url("https://gomakethings.com/fonts/pt-serif-v11-latin-italic.woff2") format("woff2"), url("https://gomakethings.com/fonts/pt-serif-v11-latin-italic.woff") format("woff");
-}
 /* pt-serif-700 - latin */
 @font-face {
 	font-family: "PT Serif";
@@ -26,4 +14,32 @@
 	font-style: italic;
 	font-weight: 700;
 	src: local("PT Serif Bold Italic"), local("PTSerif-BoldItalic"), url("https://gomakethings.com/fonts/pt-serif-v11-latin-700italic.woff2") format("woff2"), url("https://gomakethings.com/fonts/pt-serif-v11-latin-700italic.woff") format("woff");
+}
+/* pt-sans-regular - latin */
+@font-face {
+	font-family: "PT Sans";
+	font-style: normal;
+	font-weight: 400;
+	src: local("PT Sans"), local("PTSerif-Regular"), url("https://gomakethings.com/fonts/pt-sans-v12-latin-regular.woff2") format("woff2"), url("https://gomakethings.com/fonts/pt-sans-v12-latin-regular.woff") format("woff");
+}
+/* pt-sans-italic - latin */
+@font-face {
+	font-family: "PT Sans";
+	font-style: italic;
+	font-weight: 400;
+	src: local("PT Sans Italic"), local("PTSerif-Italic"), url("https://gomakethings.com/fonts/pt-sans-v12-latin-italic.woff2") format("woff2"), url("https://gomakethings.com/fonts/pt-sans-v12-latin-italic.woff") format("woff");
+}
+/* pt-sans-700 - latin */
+@font-face {
+	font-family: "PT Sans";
+	font-style: normal;
+	font-weight: 700;
+	src: local("PT Sans Bold"), local("PTSerif-Bold"), url("https://gomakethings.com/fonts/pt-sans-v12-latin-700.woff2") format("woff2"), url("https://gomakethings.com/fonts/pt-sans-v12-latin-700.woff") format("woff");
+}
+/* pt-sans-700italic - latin */
+@font-face {
+	font-family: "PT Sans";
+	font-style: italic;
+	font-weight: 700;
+	src: local("PT Sans Bold Italic"), local("PTSerif-BoldItalic"), url("https://gomakethings.com/fonts/pt-sans-v12-latin-700italic.woff2") format("woff2"), url("https://gomakethings.com/fonts/pt-sans-v12-latin-700italic.woff") format("woff");
 }
