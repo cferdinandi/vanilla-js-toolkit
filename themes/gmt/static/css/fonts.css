@@ -1,6 +1,18 @@
-/*! gmt-theme v2.5.0 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
+/*! gmt-theme v2.6.0 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
 /* pt-serif-regular - latin */
+@font-face {
+	font-family: "PT Serif";
+	font-style: normal;
+	font-weight: 400;
+	src: local("PT Serif"), local("PTSerif-Regular"), url("https://gomakethings.com/fonts/pt-serif-v11-latin-regular.woff2") format("woff2"), url("https://gomakethings.com/fonts/pt-serif-v11-latin-regular.woff") format("woff");
+}
 /* pt-serif-italic - latin */
+@font-face {
+	font-family: "PT Serif";
+	font-style: italic;
+	font-weight: 400;
+	src: local("PT Serif Italic"), local("PTSerif-Italic"), url("https://gomakethings.com/fonts/pt-serif-v11-latin-italic.woff2") format("woff2"), url("https://gomakethings.com/fonts/pt-serif-v11-latin-italic.woff") format("woff");
+}
 /* pt-serif-700 - latin */
 @font-face {
 	font-family: "PT Serif";
