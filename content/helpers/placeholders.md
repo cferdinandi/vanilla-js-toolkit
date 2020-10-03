@@ -35,7 +35,7 @@ var placeholders = function (template, data) {
 		match = match.slice(2, -2);
 
 		// Get the value
-		var val = get(data, match);
+		var val = get(data, match.trim());
 
 		// Replace
 		if (!val) return '{{' + match + '}}';
