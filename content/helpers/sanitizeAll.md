@@ -3,7 +3,7 @@ title: "sanitizeAll.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Sanitize and encode all HTML strings in an array or object to prevent XSS attacks."
-how: null
+how: ""
 demo: ""
 polyfills: "This removes all markup from a string. If you want to allow users to include markup, use a tool like [DOMPurify](https://github.com/cure53/DOMPurify) instead."
 weight: 10
