@@ -1,0 +1,1 @@
+git add . && git commit -a -m "Updated resource" && git push origin master
