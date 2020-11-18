@@ -49,7 +49,7 @@ You can pass in the HTTP `method` (if you don't, `GET` is used by default), the 
 fetch('https://jsonplaceholder.typicode.com/posts', {
 	method: 'POST',
 	body: 'title=' + encodeURIComponent('My awesome new article') + '&body=' + encodeURIComponent('This is the text of my article'),
-	header: {
+	headers: {
 		'Content-Type': 'application/json'
 	},
 	referrer: 'no-referrer'
