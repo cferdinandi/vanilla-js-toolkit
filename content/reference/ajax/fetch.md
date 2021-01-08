@@ -20,7 +20,7 @@ In a `then()` callback method, if the `response.ok` property is `true`, return t
 In the next `then()` callback, you can work with the JSON response `data`. Use the `catch()` method to handle errors.
 
 ```javascript
-fetch('https://jsonplaceholder.typicode.com/postses').then(function (response) {
+fetch('https://jsonplaceholder.typicode.com/posts').then(function (response) {
 
 	// The API call was successful!
 	if (response.ok) {
