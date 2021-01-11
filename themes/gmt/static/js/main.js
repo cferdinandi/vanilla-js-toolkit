@@ -1,4 +1,4 @@
-/*! vanillajs v1.5.0 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/vanilla-js-toolkit */
+/*! vanillajs v1.5.0 | (c) 2021 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/vanilla-js-toolkit */
 (function () {
 	'use strict';
 
