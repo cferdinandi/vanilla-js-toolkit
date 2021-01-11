@@ -1,4 +1,4 @@
-/*! gmt-theme v2.6.0 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
+/*! gmt-theme v2.6.0 | (c) 2021 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
 @charset "UTF-8";
 /**
  * @section CSS Reset
@@ -1154,7 +1154,7 @@ figcaption {
 .fluid-vids {
 	margin-bottom: 1.5625em;
 	max-width: 100%;
-	padding-top: 60.625%;
+	padding-top: 56.25%;
 	position: relative;
 	width: 100%;
 }
