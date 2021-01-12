@@ -12,7 +12,7 @@
 			document.fonts.load('700 1em PT Serif'),
 			document.fonts.load('italic 700 1em PT Serif')
 		]).then(function () {
-			document.documentElement.className += ' fonts-loaded';
+			document.documentElement.classList.add('fonts-loaded');
 		});
 	}
 
