@@ -1056,9 +1056,13 @@ textarea:focus {
 	}
 }
 
+.success-message,
+.error-message {
+	font-style: italic;
+}
+
 .error-message {
 	color: #e30810;
-	font-style: italic;
 	margin-bottom: 1em;
 }
 @media (prefers-color-scheme: dark) {
