@@ -25,7 +25,7 @@
 		 */
 		var getQueryString = function (key, url) {
 			var href = url ? url : window.location.href;
-			var reg = new RegExp('[?&]' + key + '=([^&#]*)', 'i');
+			var reg = new RegExp(`[?&]${key}=([^&#]*)`, 'i');
 			var string = reg.exec(href);
 			return string ? string[1] : null;
 		};
@@ -44,11 +44,11 @@
 		 * @return {String}        The results HTML
 		 */
 		var createResultsHTML = function (results) {
-			var html = '<p>Found ' + results.length + ' matching articles</p>';
-			html += results.map(function (article, index) {
+			return `
+			<p>Found ${results.length} matching articles</p>
+			${results.map(function (article, index) {
 				return template(article.article, index);
-			}).join('');
-			return html;
+			}).join('')}`;
 		};
 
 		/**
@@ -115,7 +115,7 @@
 		};
 
 		var clearInput = function () {
-			input.value = input.value.replace(' site:' + window.location.host, '');
+			input.value = input.value.replace(` site:${window.location.host}`, '');
 		};
 
 		/**
@@ -149,12 +149,11 @@
 	};
 
 	crowsNest(function (article, id) {
-		var html =
-			'<li class="margin-bottom-medium">' +
-				'<strong><a href="' + article.url + '">' + article.title + '</a></strong>' +
-				'<div class="text-capitalize text-muted text-small">' + article.type.replace('page', 'reference') + '</div>' +
-			'</li>';
-		return html;
+		return `
+		<li class="margin-bottom-medium">
+			<strong><a href="${article.url}">${article.title}</a></strong>
+			<div class="text-capitalize text-muted text-small">${article.type.replace('page', 'reference')}</div>
+		</li>`;
 	});
 
 }());
