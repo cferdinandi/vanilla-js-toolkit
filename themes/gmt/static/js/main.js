@@ -227,22 +227,19 @@
 		// Variables
 		var headings = document.querySelectorAll(headingsSelector);
 		type = type || 'ul';
-		var navList = '';
-
-		// Loop through each heading
-		for (var i = 0; i < headings.length; i++) {
-			if (!headings[i].id) continue;
-			navList += '<li><a href="#' + headings[i].id + '">' + headings[i].textContent + '</a></li>';
-		}
+		var navList = Array.from(document.querySelectorAll(headingsSelector)).map(function (heading) {
+			if (!heading.id) return '';
+			return `<li><a href="#${heading.id}">${heading.textContent}</a></li>`;
+		}).join('');
 
 		// Make sure a navList exists
 		if (navList.length < 1) return;
 
 		nav.innerHTML =
-			(heading ? heading : '') +
-			'<' + type + (styles ? ' class="' + styles + '"' : '') + '>' +
-				navList +
-			'</' + type + '>';
+			`${heading ? heading : ''}
+		<${type}${styles ? ` class="${styles}"` : ''}>
+			${navList}
+		</${type}>`;
 
 	};
 
