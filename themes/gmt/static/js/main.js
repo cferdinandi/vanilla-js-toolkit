@@ -116,7 +116,7 @@
 			}).then(function (data) {
 
 				// Show status
-				var success = data.code >= 200 && response.code < 300 ? true : false;
+				var success = data.code >= 200 && data.code < 300 ? true : false;
 				showStatus(success ? messages.success : data.message, success);
 
 				// If there's a callback, run it
