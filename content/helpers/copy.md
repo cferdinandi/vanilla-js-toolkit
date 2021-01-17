@@ -23,17 +23,21 @@ function copy (obj) {
 	// Methods
 	//
 
+	function addProps (clone) {
+		for (let key in obj) {
+			if (obj.hasOwnProperty(key)) {
+				clone[key] = copy(obj[key]);
+			}
+		}
+	}
+
 	/**
 	 * Create an immutable copy of an object
 	 * @return {Object}
 	 */
 	function cloneObj () {
 		let clone = {};
-		for (let key in obj) {
-			if (obj.hasOwnProperty(key)) {
-				clone[key] = copy(obj[key]);
-			}
-		}
+		addProps(clone);
 		return clone;
 	}
 
@@ -77,7 +81,8 @@ function copy (obj) {
 	 */
 	function cloneFunction () {
 		let clone = obj.bind(this);
-		return Object.assign(clone, obj);
+		addProps(clone);
+		return clone;
 	}
 
 
