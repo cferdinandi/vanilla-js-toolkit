@@ -23,7 +23,11 @@ function copy (obj) {
 	// Methods
 	//
 
-	function addProps (clone) {
+	/**
+	 * Copy properties from the original object to the clone
+	 * @param {Object|Function} clone The cloned object
+	 */
+	function copyProps (clone) {
 		for (let key in obj) {
 			if (obj.hasOwnProperty(key)) {
 				clone[key] = copy(obj[key]);
@@ -37,7 +41,7 @@ function copy (obj) {
 	 */
 	function cloneObj () {
 		let clone = {};
-		addProps(clone);
+		copyProps(clone);
 		return clone;
 	}
 
@@ -81,7 +85,7 @@ function copy (obj) {
 	 */
 	function cloneFunction () {
 		let clone = obj.bind(this);
-		addProps(clone);
+		copyProps(clone);
 		return clone;
 	}
 
