@@ -12,10 +12,10 @@ noIndex: false
 
 ```js
 /*!
- * Create an immutable clone of data
+ * Create an immutable clone of data (an array, object, map, set, etc.)
  * (c) 2021 Chris Ferdinandi, MIT License, https://gomakethings.com
- * @param  {Array|Object} obj The array or object to copy
- * @return {Array|Object}     The clone of the array or object
+ * @param  {*} obj The data object to copy
+ * @return {*}     The clone of the array or object
  */
 function copy (obj) {
 
