@@ -17,9 +17,9 @@ noIndex: false
  * @param  {String} str  The user-submitted string
  * @return {String} str  The sanitized string
  */
-var sanitizeHTML = function (str) {
-	return str.replace(/[^\w. ]/gi, function (c) {
+function sanitizeHTML (str) {
+	return str.replace(/[^\w-_. ]/gi, function (c) {
 		return '&#' + c.charCodeAt(0) + ';';
 	});
-};
+}
 ```
