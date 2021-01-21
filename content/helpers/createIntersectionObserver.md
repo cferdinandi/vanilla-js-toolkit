@@ -7,6 +7,7 @@ how: ""
 demo: ""
 weight: 10
 noIndex: false
+polyfills: "Only works in modern browsers."
 ---
 
 ```js
