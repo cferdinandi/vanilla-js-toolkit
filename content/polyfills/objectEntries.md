@@ -11,10 +11,10 @@ Pushes support back to at least IE6.
 ```js
 /**
  * Object.entries() polyfill
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
  */
-// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
 if (!Object.entries) {
-  Object.entries = function( obj ){
+  Object.entries = function (obj){
 	var ownProps = Object.keys( obj ),
 		i = ownProps.length,
 		resArray = new Array(i); // preallocate the Array
