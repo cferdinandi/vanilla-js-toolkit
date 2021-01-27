@@ -15,9 +15,6 @@ Pushes support back to at least IE6.
  */
 if (!Object.entries) {
 	Object.entries = function (obj){
-
-		if (!entries || !entries[Symbol.iterator]) { throw new Error('Object.fromEntries() requires a single iterable argument'); }
-
 		var ownProps = Object.keys(obj),
 			i = ownProps.length,
 			resArray = new Array(i); // preallocate the Array
