@@ -2,15 +2,15 @@
 (function () {
 	'use strict';
 
-	var crowsNest = function (template) {
+	function crowsNest (template) {
 
 		//
 		// Variables
 		//
 
-		var form = document.querySelector('#form-search');
-		var input = document.querySelector('#input-search');
-		var resultList = document.querySelector('#search-results');
+		let form = document.querySelector('#form-search');
+		let input = document.querySelector('#input-search');
+		let resultList = document.querySelector('#search-results');
 
 
 		//
@@ -20,69 +20,65 @@
 		/**
 		 * Get the value of a query string from a URL
 		 * @param  {String} key The query string key to get the value of
-		 * @param  {String} url The URL to search
 		 * @return {String}     The query string value
 		 */
-		var getQueryString = function (key, url) {
-			var href = url ? url : window.location.href;
-			var reg = new RegExp(`[?&]${key}=([^&#]*)`, 'i');
-			var string = reg.exec(href);
-			return string ? string[1] : null;
-		};
+		function getQueryString (key) {
+			return new URLSearchParams(window.location.search).get(key);
+		}
 
 		/**
 		 * Create the markup when no results are found
 		 * @return {String} The markup
 		 */
-		var createNoResultsHTML = function () {
+		function createNoResultsHTML () {
 			return '<p>Sorry, no matches were found.</p>';
-		};
+		}
 
 		/**
 		 * Create the markup for results
 		 * @param  {Array} results The results to display
 		 * @return {String}        The results HTML
 		 */
-		var createResultsHTML = function (results) {
+		function createResultsHTML (results) {
 			return `
 			<p>Found ${results.length} matching articles</p>
 			${results.map(function (article, index) {
 				return template(article.article, index);
 			}).join('')}`;
-		};
+		}
 
 		/**
 		 * Update the URL with a query string for the search string
 		 * @param  {[type]} query [description]
 		 * @return {[type]}       [description]
 		 */
-		var updateURL = function (query) {
+		function updateURL (query) {
 			if (!history.pushState) return;
 			history.pushState({}, document.title, window.location.origin + window.location.pathname + '?s=' + encodeURI(query));
-		};
+		}
 
 		/**
 		 * Search for matches
 		 * @param  {String} query The term to search for
 		 */
-		var search = function (query) {
+		function search (query) {
 
-			// var reg = new RegExp(query, 'gi');
-			var regMap = query.split(' ').map(function (word) {
-				return new RegExp(word, 'gi');
+			// Create a regex for each query
+			let regMap = query.split(' ').map(function (word) {
+				return new RegExp(word, 'i');
 			});
 
 			// Get and sort the results
-			var results = searchIndex.reduce(function (results, article, index) {
+			let results = searchIndex.reduce(function (results, article, index) {
 
 				// Setup priority count
-				var priority = 0;
+				let priority = 0;
 
 				// Assign priority
-				regMap.forEach(function (reg) {
+				for (let reg of regMap) {
 					if (reg.test(article.title)) { priority += 20; }
 					if (reg.test(article.content)) { priority += 1; }
-				});
+				}
 
 				// If any matches, push to results
 				if (priority > 0) {
@@ -104,30 +100,26 @@
 			// Update the URL
 			updateURL(query);
 
-		};
+		}
 
 		/**
 		 * Handle submit events
 		 */
-		var submitHandler = function (event) {
+		function submitHandler (event) {
 			event.preventDefault();
 			search(input.value);
-		};
-
-		var clearInput = function () {
-			input.value = input.value.replace(` site:${window.location.host}`, '');
-		};
+		}
 
 		/**
 		 * If there's a query string search term, search it on page load
 		 */
-		var onload = function () {
-			var query = getQueryString('s');
+		function onload () {
+			let query = getQueryString('s');
 			if (!query) return;
-			var decoded = decodeURI(query);
+			let decoded = decodeURI(query);
 			input.value = decoded;
 			search(decoded);
-		};
+		}
 
 
 		//
@@ -137,16 +129,13 @@
 		// Make sure required content exists
 		if (!template || typeof template !== 'function' || !form || !input || !resultList || !searchIndex) return;
 
-		// Clear the input field
-		clearInput();
-
 		// Create a submit handler
-		form.addEventListener('submit', submitHandler, false);
+		form.addEventListener('submit', submitHandler);
 
 		// Check for query strings onload
 		onload();
 
-	};
+	}
 
 	crowsNest(function (article, id) {
 		return `
