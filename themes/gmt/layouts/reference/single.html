@@ -7,7 +7,7 @@
 
 	{{ .Content }}
 
-	<p><em>{{ if isset .Params "polyfills" }}{{ markdownify .Params.polyfills }}{{ else }}Works in all modern browsers, and IE9+. You can extend support back further with <a href="/polyfills">polyfills</a>.{{ end }}</em></p>
+	{{ if isset .Params "support" }}<p><em>{{ markdownify .Params.support }}</em></p>{{ end }}
 
 	<aside>
 		{{ partial "mailchimp-intro.html" . }}

@@ -9,7 +9,7 @@ anchors: true
 
 A quick reference for commonly used JavaScript methods and browser APIs.
 
-*Unless otherwise noted, these work in all modern browsers, and IE9+. You can extend support back further with [polyfills](/polyfills).*
+*Unless otherwise noted, these work in all modern browsers on desktop and mobile. You can extend support back further with [polyfills](/polyfills).*
 
 {{<cta for="funnel">}}
 

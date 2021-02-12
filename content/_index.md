@@ -14,13 +14,6 @@ fullWidth: false
 
 {{<cta for="funnel">}}
 
-<div class="padding-top-large padding-bottom-large">
-	{{<testimonial for="edRivas" photo="true">}}
-</div>
-<div class="padding-bottom-large">
-	{{<testimonial for="andreasWik" photo="true">}}
-</div>
-
 {{<mailchimp intro="true">}}
 
 {{<about-me>}}
