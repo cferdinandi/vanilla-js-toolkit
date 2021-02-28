@@ -33,7 +33,7 @@ function freeze (obj) {
 	// If an object, recursively freeze
 	if (type === 'object') {
 		for (let key in obj) {
-			if (obj.hasOwnProperty(key)) {
+			if (Object.prototype.hasOwnProperty.call(obj, key)) {
 				if (isArrOrObj(obj[key])) {
 					freeze(obj[key]);
 				}
