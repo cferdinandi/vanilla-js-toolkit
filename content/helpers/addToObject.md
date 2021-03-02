@@ -27,7 +27,7 @@ var addToObject = function (obj, key, value, index) {
 
 	// Loop through the original object
 	for (var prop in obj) {
-		if (obj.hasOwnProperty(prop)) {
+		if (Object.prototype.hasOwnProperty.call(obj, prop)) {
 
 			// If the indexes match, add the new item
 			if (i === index && key && value) {
