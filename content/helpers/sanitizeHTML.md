@@ -18,8 +18,8 @@ noIndex: false
  * @return {String} str  The sanitized string
  */
 function sanitizeHTML (str) {
-	return str.replace(/[^\w-_. ]/gi, function (c) {
+	return str.replace(/javascript:/gi, '').replace(/[^\w-_. ]/gi, function (c) {
 		return `&#${c.charCodeAt(0)};`;
-	}).replace(/javascript:/gi, '');
+	});
 }
 ```
