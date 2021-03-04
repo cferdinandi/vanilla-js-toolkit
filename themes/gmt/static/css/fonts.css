@@ -1,6 +1,7 @@
-/*! gmt-theme v2.6.0 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
+/*! gmt-theme v2.6.0 | (c) 2021 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
 /* pt-serif-regular - latin */
 @font-face {
+	font-display: swap;
 	font-family: "PT Serif";
 	font-style: normal;
 	font-weight: 400;
@@ -8,6 +9,7 @@
 }
 /* pt-serif-italic - latin */
 @font-face {
+	font-display: swap;
 	font-family: "PT Serif";
 	font-style: italic;
 	font-weight: 400;
@@ -15,6 +17,7 @@
 }
 /* pt-serif-700 - latin */
 @font-face {
+	font-display: swap;
 	font-family: "PT Serif";
 	font-style: normal;
 	font-weight: 700;
@@ -22,6 +25,7 @@
 }
 /* pt-serif-700italic - latin */
 @font-face {
+	font-display: swap;
 	font-family: "PT Serif";
 	font-style: italic;
 	font-weight: 700;
@@ -29,6 +33,7 @@
 }
 /* pt-sans-regular - latin */
 @font-face {
+	font-display: swap;
 	font-family: "PT Sans";
 	font-style: normal;
 	font-weight: 400;
@@ -36,6 +41,7 @@
 }
 /* pt-sans-italic - latin */
 @font-face {
+	font-display: swap;
 	font-family: "PT Sans";
 	font-style: italic;
 	font-weight: 400;
@@ -43,6 +49,7 @@
 }
 /* pt-sans-700 - latin */
 @font-face {
+	font-display: swap;
 	font-family: "PT Sans";
 	font-style: normal;
 	font-weight: 700;
@@ -50,6 +57,7 @@
 }
 /* pt-sans-700italic - latin */
 @font-face {
+	font-display: swap;
 	font-family: "PT Sans";
 	font-style: italic;
 	font-weight: 700;
