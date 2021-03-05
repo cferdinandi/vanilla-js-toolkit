@@ -25,7 +25,7 @@ var objectFilter = function (obj, callback) {
 
 	// Loop through each item in the object and test it
 	for (var key in obj) {
-		if (obj.hasOwnProperty(key)) {
+		if (Object.prototype.hasOwnProperty.call(obj, key)) {
 
 			// If the callback validates true, push item to the new object
 			if (callback(obj[key], key, obj)) {

@@ -68,7 +68,7 @@ var isEqual = function (value, other) {
 		}
 	} else {
 		for (var key in value) {
-			if (value.hasOwnProperty(key)) {
+			if (Object.prototype.hasOwnProperty.call(value, key)) {
 				if (compare(value[key], other[key]) === false) return false;
 			}
 		}

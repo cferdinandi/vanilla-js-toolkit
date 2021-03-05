@@ -24,7 +24,7 @@ var groupBy = function (arr, criteria) {
 		var key = typeof criteria === 'function' ? criteria(item) : item[criteria];
 
 		// If the key doesn't exist yet, create it
-		if (!obj.hasOwnProperty(key)) {
+		if (!Object.prototype.hasOwnProperty.call(obj, key)) {
 			obj[key] = [];
 		}
 

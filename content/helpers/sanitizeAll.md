@@ -25,7 +25,7 @@ var sanitizeAll = function (obj) {
 	if (type === 'object') {
 		var sanitized = {};
 		for (var key in obj) {
-			if (obj.hasOwnProperty(key)) {
+			if (Object.prototype.hasOwnProperty.call(obj, key)) {
 				sanitized[key] = sanitizeAll(obj[key]);
 			}
 		}

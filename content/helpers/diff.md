@@ -119,14 +119,14 @@ var diff = function (obj1, obj2) {
 
     // Loop through the first object
     for (key in obj1) {
-        if (obj1.hasOwnProperty(key)) {
+        if (Object.prototype.hasOwnProperty.call(obj1, key)) {
             compare(obj1[key], obj2[key], key);
         }
     }
 
     // Loop through the second object and find missing items
     for (key in obj2) {
-        if (obj2.hasOwnProperty(key)) {
+        if (Object.prototype.hasOwnProperty.call(obj2, key)) {
             if (!obj1[key] && obj1[key] !== obj2[key] ) {
                 diffs[key] = obj2[key];
             }
