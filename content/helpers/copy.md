@@ -29,7 +29,7 @@ function copy (obj) {
 	 */
 	function copyProps (clone) {
 		for (let key in obj) {
-			if (obj.hasOwnProperty(key)) {
+			if (Object.prototype.hasOwnProperty.call(obj, key)) {
 				clone[key] = copy(obj[key]);
 			}
 		}

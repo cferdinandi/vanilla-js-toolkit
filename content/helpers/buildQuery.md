@@ -19,7 +19,7 @@ var buildQuery = function (data) {
 	if (typeof (data) === 'string') return data;
 	var query = [];
 	for (var key in data) {
-		if (data.hasOwnProperty(key)) {
+		if (Object.prototype.hasOwnProperty.call(data, key)) {
 			query.push(encodeURIComponent(key) + '=' + encodeURIComponent(data[key]));
 		}
 	}
