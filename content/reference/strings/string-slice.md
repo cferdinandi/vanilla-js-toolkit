@@ -19,7 +19,7 @@ var text = 'Cape Cod potato chips';
 // returns "Cod potato chips"
 text.slice(5);
 
-// returns "Code"
+// returns "Cod"
 text.slice(5, 8);
 
 // returns "Cape Cod potato"
