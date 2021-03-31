@@ -5,7 +5,6 @@ draft: false
 description: "Debounce functions for better performance."
 how: "https://gomakethings.com/debouncing-your-javascript-events/"
 demo: "https://codepen.io/cferdinandi/pen/VEgzVa"
-polyfills: "Works in all modern browsers, and back to IE10. [Push support back to IE6 with the `requestAnimationFrame()` polyfill.](https://vanillajstoolkit.com/polyfills/requestanimationframe/)"
 weight: 10
 noIndex: false
 ---
@@ -13,20 +12,20 @@ noIndex: false
 ```js
 /**
  * Debounce functions for better performance
- * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * (c) 2021 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {Function} fn The function to debounce
  */
-var debounce = function (fn) {
+function debounce (fn) {
 
 	// Setup a timer
-	var timeout;
+	let timeout;
 
 	// Return a function to run debounced
 	return function () {
 
 		// Setup the arguments
-		var context = this;
-		var args = arguments;
+		let context = this;
+		let args = arguments;
 
 		// If there's a timer, cancel it
 		if (timeout) {
@@ -38,7 +37,7 @@ var debounce = function (fn) {
 			fn.apply(context, args);
 		});
 
-	}
+	};
 
-};
+}
 ```

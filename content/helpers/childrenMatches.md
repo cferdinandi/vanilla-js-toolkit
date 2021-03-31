@@ -5,7 +5,6 @@ draft: false
 description: "Get all direct descendant elements that match a selector."
 how: "https://gomakethings.com/getting-direct-descendant-elements-by-selector-with-vanilla-js/"
 demo: "https://codepen.io/cferdinandi/pen/qJGLyy"
-polyfills: "[Requires the `Element.matches()` polyfill](https://vanillajstoolkit.com/polyfills/matches/)"
 weight: 10
 noIndex: false
 ---
@@ -13,15 +12,14 @@ noIndex: false
 ```js
 /*!
  * Get all direct descendant elements that match a selector
- * Dependency: the matches() polyfill: https://vanillajstoolkit.com/polyfills/matches/
- * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * (c) 2021 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {Node}   elem     The element to get direct descendants for
  * @param  {String} selector The selector to match against
  * @return {Array}           The matching direct descendants
  */
-var childrenMatches = function (elem, selector) {
-	return Array.prototype.filter.call(elem.children, function (child) {
+function childrenMatches (elem, selector) {
+	return Array.from(elem.children).filter(function (child) {
 		return child.matches(selector);
 	});
-};
+}
 ```

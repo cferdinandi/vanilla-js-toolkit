@@ -14,19 +14,19 @@ noIndex: false
 ```js
 /*!
  * Automatically expand a textarea as the user types
- * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * (c) 2021 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {Node} field The textarea
  */
-var autoExpand = function (field) {
+function autoExpand (field) {
 
 	// Reset field height
 	field.style.height = 'inherit';
 
 	// Get the computed styles for the element
-	var computed = window.getComputedStyle(field);
+	let computed = window.getComputedStyle(field);
 
 	// Calculate the height
-	var height = parseInt(computed.getPropertyValue('border-top-width'), 10)
+	let height = parseInt(computed.getPropertyValue('border-top-width'), 10)
 	             + parseInt(computed.getPropertyValue('padding-top'), 10)
 	             + field.scrollHeight
 	             + parseInt(computed.getPropertyValue('padding-bottom'), 10)
@@ -34,7 +34,7 @@ var autoExpand = function (field) {
 
 	field.style.height = height + 'px';
 
-};
+}
 ```
 
 ## CSS

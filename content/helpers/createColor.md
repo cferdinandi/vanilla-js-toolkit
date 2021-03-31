@@ -12,22 +12,22 @@ noIndex: false
 ```js
 /*!
  * Create a random color value.
- * (c) 2019 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * (c) 2021 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @return {String} A random six-digit color hexcode
  */
-var createColor = function () {
+function createColor () {
 
 	// The available hex options
-	var hex = ['a', 'b', 'c', 'd', 'e', 'f', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+	let hex = ['a', 'b', 'c', 'd', 'e', 'f', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 	/**
 	 * Randomly shuffle an array
 	 * https://stackoverflow.com/a/2450976/1293256
 	 */
-	var shuffle = function () {
+	let shuffle = function () {
 
-		var currentIndex = hex.length;
-		var temporaryValue, randomIndex;
+		let currentIndex = hex.length;
+		let temporaryValue, randomIndex;
 
 		// While there remain elements to shuffle...
 		while (0 !== currentIndex) {
@@ -46,18 +46,15 @@ var createColor = function () {
 	/**
 	 * Create a six-digit hex color
 	 */
-	var hexColor = function () {
+	let hexColor = function () {
 
-		var color = '#';
+		// Create the color
+		let color = '#';
 
-		for (var i = 0; i < 6; i++) {
-
-			// Shuffle the hex values
+		// Shuffle the hex values and append
+		for (let i = 0; i < 6; i++) {
 			shuffle(hex);
-
-			// Append first hex value to the string
 			color += hex[0];
-
 		}
 
 		return color;
@@ -67,5 +64,5 @@ var createColor = function () {
 	// Return the color string
 	return hexColor();
 
-};
+}
 ```

@@ -5,7 +5,6 @@ draft: false
 description: "Apply a CSS animation to an element."
 how: "https://gomakethings.com/a-vanilla-js-animation-helper-function/"
 demo: "https://codepen.io/cferdinandi/pen/RBQvZe"
-polyfills: "Works in all modern browsers, and back to IE10. [Push support back to IE9 with the classList polyfill.](https://vanillajstoolkit.com/polyfills/classlist/)"
 weight: 10
 noIndex: false
 ---
@@ -13,12 +12,12 @@ noIndex: false
 ```js
 /*!
  * Apply a CSS animation to an element
- * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * (c) 2021 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {Node}    elem      The element to animate
  * @param  {String}  animation The type of animation to apply
  * @param  {Boolean} hide      If true, apply the [hidden] attribute after the animation is done
  */
-var animate = function (elem, animation, hide) {
+function animate (elem, animation, hide) {
 
 	// If there's no element or animation, do nothing
 	if (!elem || !animation) return;
@@ -45,5 +44,5 @@ var animate = function (elem, animation, hide) {
 
 	}, false);
 
-};
+}
 ```
