@@ -2,6 +2,7 @@
 title: "Vanilla JS Libraries"
 date: 2018-01-24T11:48:20-05:00
 draft: false
+aliases: ["/plugins"]
 noTitle: false
 noIndex: false
 anchors: true

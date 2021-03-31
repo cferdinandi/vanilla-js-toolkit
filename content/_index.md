@@ -8,9 +8,7 @@ fullWidth: false
 
 <h1 class="text-xlarge margin-bottom-small">The Vanilla JavaScript Toolkit</h1>
 
-<p class="text-large">{{%md%}}A collection of JavaScript [methods](/reference), [helper functions](/helpers), [plugins](/plugins), [boilerplates](/boilerplates), [polyfills](/polyfills), and [learning resources](/resources).{{%/md%}}</p>
-
-*__Vanilla JS__ is a term for coding with native JavaScript features and browser APIs instead of frameworks and libraries.*
+<p class="text-large">{{%md%}}A collection of native JavaScript [methods](/reference), [helper functions](/helpers), [libraries](/libraries), [boilerplates](/boilerplates), and [learning resources](/resources).{{%/md%}}</p>
 
 {{<cta for="funnel">}}
 
