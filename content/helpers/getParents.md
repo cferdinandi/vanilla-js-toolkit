@@ -5,7 +5,6 @@ draft: false
 description: "Get all of an element's parent elements up the DOM tree."
 how: "https://gomakethings.com/how-to-get-all-parent-elements-with-vanilla-javascript/"
 demo: "https://codepen.io/cferdinandi/pen/qgEEXw"
-polyfills: "[Requires the `matches()` polyfill.](https://vanillajstoolkit.com/polyfills/matches/)"
 weight: 10
 noIndex: false
 ---

@@ -5,7 +5,6 @@ draft: false
 description: "Get all of an element's parent elements up the DOM tree until a matching parent is found."
 how: "https://gomakethings.com/climbing-up-the-dom-until-you-hit-a-match-with-vanilla-javascript/"
 demo: "https://codepen.io/cferdinandi/pen/pGvvdp"
-polyfills: "[Requires the `matches()` polyfill.](https://vanillajstoolkit.com/polyfills/matches/)"
 weight: 10
 noIndex: false
 ---

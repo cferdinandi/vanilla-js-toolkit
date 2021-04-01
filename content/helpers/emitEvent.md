@@ -17,7 +17,7 @@ noIndex: false
  * @param  {Node}   elem   The element to attach the event to
  * @param  {Object} detail Any details to pass along with the event
  */
-function emitEvent (type, elem = window, detail = {}) {
+function emitEvent (type, elem = document, detail = {}) {
 
 	// Make sure there's an event type
 	if (!type) return;

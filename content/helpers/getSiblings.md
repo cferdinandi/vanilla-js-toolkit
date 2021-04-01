@@ -12,13 +12,13 @@ noIndex: false
 ```js
 /*!
  * Get all siblings of an element
- * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * (c) 2021 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {Node}  elem The element
  * @return {Array}      The siblings
  */
- var getSiblings = function (elem) {
- 	return Array.prototype.filter.call(elem.parentNode.children, function (sibling) {
- 		return sibling !== elem;
- 	});
- };
+function getSiblings (elem) {
+	return Array.from(elem.parentNode.children).filter(function (sibling) {
+		return sibling !== elem;
+	});
+}
 ```

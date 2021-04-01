@@ -5,7 +5,6 @@ draft: false
 description: "Get the next sibling of an element that matches a selector."
 how: "https://gomakethings.com/finding-the-next-and-previous-sibling-elements-that-match-a-selector-with-vanilla-js/"
 demo: "https://codepen.io/cferdinandi/pen/mGBOpX"
-polyfills: "[Requires the `matches()` polyfill.](https://vanillajstoolkit.com/polyfills/matches/)"
 weight: 10
 noIndex: false
 ---
@@ -13,15 +12,15 @@ noIndex: false
 ```js
 /*!
  * Get next sibling of an element that matches selector
- * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * (c) 2021 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {Node}   elem     The element
  * @param  {String} selector The selector to match against
  * @return {Node}            The sibling
  */
-var getNextSibling = function (elem, selector) {
+function getNextSibling (elem, selector) {
 
 	// Get the next sibling element
-	var sibling = elem.nextElementSibling;
+	let sibling = elem.nextElementSibling;
 
 	// If there's no selector, return the first sibling
 	if (!selector) return sibling;
@@ -30,8 +29,8 @@ var getNextSibling = function (elem, selector) {
 	// If not, jump to the next sibling and continue the loop
 	while (sibling) {
 		if (sibling.matches(selector)) return sibling;
-		sibling = sibling.nextElementSibling
+		sibling = sibling.nextElementSibling;
 	}
 
-};
+}
 ```

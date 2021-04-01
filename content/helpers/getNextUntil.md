@@ -5,7 +5,6 @@ draft: false
 description: "Get all next siblings of an element until a selector is found."
 how: "https://gomakethings.com/how-to-get-all-siblings-of-an-element-until-a-selector-is-found-with-vanilla-js/"
 demo: "https://codepen.io/cferdinandi/pen/LqEENq"
-polyfills: "[Requires the `matches()` polyfill.](https://vanillajstoolkit.com/polyfills/matches/)"
 weight: 10
 noIndex: false
 ---
@@ -34,7 +33,7 @@ var getNextUntil = function (elem, selector) {
 		siblings.push(next);
 
 		// Get the next sibling
-		next = next.nextElementSibling
+		next = next.nextElementSibling;
 
 	}
 
