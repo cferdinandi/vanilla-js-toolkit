@@ -14,10 +14,10 @@ noIndex: false
  * Emit a custom event
  * (c) 2021 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {String} type   The event type
- * @param  {Node}   elem   The element to attach the event to
  * @param  {Object} detail Any details to pass along with the event
+ * @param  {Node}   elem   The element to attach the event to
  */
-function emitEvent (type, elem = document, detail = {}) {
+function emitEvent (type, detail = {}, elem = document) {
 
 	// Make sure there's an event type
 	if (!type) return;
