@@ -12,13 +12,13 @@ noIndex: false
 ```js
 /*!
  * Round to the nearest whole number
- * (c) 2019 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * (c) 2021 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {Number|String} num       The numer to round
  * @param  {Number}        precision The whole number to round to (ex. 10, 100, 1000)
  * @param  {String}        method    The rounding method (up, down, or auto - defaults to auto) [optional]
  * @return {String}                  The rounded, delimited number
  */
-var round = function (num, precision, method) {
+function round (num, precision, method = 'auto') {
 
 	// Convert string numbers to a float
 	num = parseFloat(num);
@@ -35,12 +35,10 @@ var round = function (num, precision, method) {
 
 	// Get the method function
 	var fn = methods[method];
-	if (!fn) {
-		fn = 'round';
-	}
+	if (!fn) throw `${method} is not a valid rounding method`;
 
 	// Do math!
 	return (Math[fn](num / precision) * precision).toLocaleString();
 
-};
+}
 ```

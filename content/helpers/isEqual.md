@@ -2,7 +2,7 @@
 title: "isEqual.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
-description: "Check if two objects or arrays are equal."
+description: "Check if two items are equal."
 how: "https://gomakethings.com/check-if-two-arrays-or-objects-are-equal-with-javascript/"
 demo: "https://codepen.io/cferdinandi/pen/Gzgpeb"
 weight: 10
@@ -12,70 +12,72 @@ noIndex: false
 ```js
 /*!
  * Check if two objects or arrays are equal
- * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
- * @param  {Object|Array}  value  The first object or array to compare
- * @param  {Object|Array}  other  The second object or array to compare
- * @return {Boolean}              Returns true if they're equal
+ * (c) 2021 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * @param  {*}       obj1 The first item
+ * @param  {*}       obj2 The second item
+ * @return {Boolean}       Returns true if they're equal in value
  */
-var isEqual = function (value, other) {
+function isEqual (obj1, obj2) {
 
-	// Get the value type
-	var type = Object.prototype.toString.call(value);
-
-	// If the two objects are not the same type, return false
-	if (type !== Object.prototype.toString.call(other)) return false;
-
-	// If items are not an object or array, return false
-	if (['[object Array]', '[object Object]'].indexOf(type) < 0) return false;
-
-	// Compare the length of the length of the two items
-	var valueLen = type === '[object Array]' ? value.length : Object.keys(value).length;
-	var otherLen = type === '[object Array]' ? other.length : Object.keys(other).length;
-	if (valueLen !== otherLen) return false;
-
-	// Compare two items
-	var compare = function (item1, item2) {
-
-		// Get the object type
-		var itemType = Object.prototype.toString.call(item1);
-
-		// If an object or array, compare recursively
-		if (['[object Array]', '[object Object]'].indexOf(itemType) >= 0) {
-			if (!isEqual(item1, item2)) return false;
-		}
-
-		// Otherwise, do a simple comparison
-		else {
-
-			// If the two items are not the same type, return false
-			if (itemType !== Object.prototype.toString.call(item2)) return false;
-
-			// Else if it's a function, convert to a string and compare
-			// Otherwise, just compare
-			if (itemType === '[object Function]') {
-				if (item1.toString() !== item2.toString()) return false;
-			} else {
-				if (item1 !== item2) return false;
-			}
-
-		}
-	};
-
-	// Compare properties
-	if (type === '[object Array]') {
-		for (var i = 0; i < valueLen; i++) {
-			if (compare(value[i], other[i]) === false) return false;
-		}
-	} else {
-		for (var key in value) {
-			if (Object.prototype.hasOwnProperty.call(value, key)) {
-				if (compare(value[key], other[key]) === false) return false;
-			}
-		}
+	/**
+	 * More accurately check the type of a JavaScript object
+	 * @param  {Object} obj The object
+	 * @return {String}     The object type
+	 */
+	function getType (obj) {
+		return Object.prototype.toString.call(obj).slice(8, -1).toLowerCase();
 	}
 
-	// If nothing failed, return true
-	return true;
+	function areArraysEqual () {
 
-};
+		// Check length
+		if (obj1.length !== obj2.length) return false;
+
+		// Check each item in the array
+		for (let i = 0; i < obj1.length; i++) {
+			if (!isEqual(obj1[i], obj2[i])) return false;
+		}
+
+		// If no errors, return true
+		return true;
+
+	}
+
+	function areObjectsEqual () {
+
+		if (Object.keys(obj1).length !== Object.keys(obj2).length) return false;
+
+		// Check each item in the object
+		for (let key in obj1) {
+			if (Object.prototype.hasOwnProperty.call(obj1, key)) {
+				if (!isEqual(obj1[key], obj2[key])) return false;
+			}
+		}
+
+		// If no errors, return true
+		return true;
+
+	}
+
+	function areFunctionsEqual () {
+		return obj1.toString() === obj2.toString();
+	}
+
+	function arePrimativesEqual () {
+		return obj1 === obj2;
+	}
+
+	// Get the object type
+	let type = getType(obj1);
+
+	// If the two items are not the same type, return false
+	if (type !== getType(obj2)) return false;
+
+	// Compare based on type
+	if (type === 'array') return areArraysEqual();
+	if (type === 'object') return areObjectsEqual();
+	if (type === 'function') return areFunctionsEqual();
+	return arePrimativesEqual();
+
+}
 ```

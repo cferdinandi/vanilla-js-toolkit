@@ -13,15 +13,16 @@ noIndex: false
 /*!
  * Run a callback function after scrolling has stopped
  * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
- * @param  {Function} callback The function to run after scrolling
+ * @param  {Function} callback The callback function to run after scrolling
+ * @param  {Integer}  refresh  How long to wait between scroll events [optional]
  */
-var scrollStop = function (callback) {
+function scrollStop (callback, refresh = 66) {
 
 	// Make sure a valid callback was provided
 	if (!callback || typeof callback !== 'function') return;
 
 	// Setup scrolling variable
-	var isScrolling;
+	let isScrolling;
 
 	// Listen for scroll events
 	window.addEventListener('scroll', function (event) {
@@ -30,14 +31,9 @@ var scrollStop = function (callback) {
 		window.clearTimeout(isScrolling);
 
 		// Set a timeout to run after scrolling ends
-		isScrolling = setTimeout(function() {
-
-			// Run the callback
-			callback();
-
-		}, 66);
+		isScrolling = setTimeout(callback, refresh);
 
 	}, false);
 
-};
+}
 ```

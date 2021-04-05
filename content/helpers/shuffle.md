@@ -16,10 +16,10 @@ noIndex: false
  * @param  {Array} array The array to shuffle
  * @return {String}      The first item in the shuffled array
  */
-var shuffle = function (array) {
+function shuffle (array) {
 
-	var currentIndex = array.length;
-	var temporaryValue, randomIndex;
+	let currentIndex = array.length;
+	let temporaryValue, randomIndex;
 
 	// While there remain elements to shuffle...
 	while (0 !== currentIndex) {
@@ -35,5 +35,5 @@ var shuffle = function (array) {
 
 	return array;
 
-};
+}
 ```

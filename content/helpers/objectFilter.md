@@ -11,20 +11,18 @@ noIndex: false
 ```js
 /*!
  * Create a new object composed of properties that meet specific criteria
- * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * (c) 2021 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {Object}   obj      The original object
  * @param  {Function} callback The callback test to run
  * @return {Object}            The new, filtered object
  */
-var objectFilter = function (obj, callback) {
-
-	'use strict';
+function objectFilter (obj, callback) {
 
 	// Setup a new object
-	var filtered = {};
+	let filtered = {};
 
 	// Loop through each item in the object and test it
-	for (var key in obj) {
+	for (let key in obj) {
 		if (Object.prototype.hasOwnProperty.call(obj, key)) {
 
 			// If the callback validates true, push item to the new object
@@ -38,5 +36,5 @@ var objectFilter = function (obj, callback) {
 	// Return the new object
 	return filtered;
 
-};
+}
 ```

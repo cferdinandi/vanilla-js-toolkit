@@ -18,7 +18,7 @@ noIndex: false
  * @param  {Number} max The last number in the range
  * @return {Array}      The range
  */
-var range = function (min, max) {
+function range (min, max) {
 
 	// If only one number is provided, start at one
 	if (max === undefined) {
@@ -31,5 +31,5 @@ var range = function (min, max) {
 		return num + min;
 	});
 
-};
+}
 ```

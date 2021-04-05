@@ -12,41 +12,47 @@ noIndex: false
 ```js
 /*!
  * Get all of an element's parent elements up the DOM tree until a matching parent is found
- * (c) 2019 Chris Ferdinandi, MIT License, https://gomakethings.com
- * @param  {Node}   elem     The element
- * @param  {String} parent   The selector for the parent to stop at
- * @param  {String} filter   The selector to filter against [optional]
- * @return {Array}           The parent elements
+ * (c) 2021 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * @param  {Node}   elem   The element
+ * @param  {String} stop   The test condition for the parent to stop at
+ * @param  {String} filter The test condition to filter against [optional]
+ * @return {Array}         The parent elements
  */
-var getParentsUntil = function (elem, parent, filter) {
+function getParentsUntil (elem, stop, filter) {
 
 	// Setup parents array
-	var parents = [];
+	let parents = [];
+	let parent = elem.parentNode;
+	let index = 0;
+
+	// Make sure callbacks are valid
+	if (stop && typeof stop !== 'function') { stop = null; }
+	if (filter && typeof filter !== 'function') { filter = null; }
 
 	// Get matching parent elements
-	while (elem && elem !== document) {
+	while (parent && parent !== document) {
 
-		// If there's a parent and the element matches, break
-		if (parent) {
-			if (elem.matches(parent)) break;
+		// If there's a stop test and the element matches, break
+		if (stop) {
+			if (stop(parent, index, elem)) break;
 		}
 
 		// If there's a filter and the element matches, push it to the array
+		// Otherwise, just add it to the array
 		if (filter) {
-			if (elem.matches(filter)) {
-				parents.push(elem);
+			if (filter(parent, index, elem)) {
+				parents.push(parent);
 			}
-			continue;
+		} else {
+			parents.push(parent);
 		}
 
-		// Otherwise, just add it to the array
-		parents.push(elem);
-
-		elem = elem.parentNode;
+		index++;
+		parent = parent.parentNode;
 
 	}
 
 	return parents;
 
-};
+}
 ```

@@ -12,17 +12,17 @@ noIndex: false
 ```js
 /*!
  * Run a callback after the user scrolls, calculating the distance and direction scrolled
- * (c) 2019 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * (c) 2021 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {Function} callback The callback function to run
  * @param  {Integer}  refresh  How long to wait between scroll events [optional]
  */
-var scrollDistance = function (callback, refresh) {
+function scrollDistance (callback, refresh = 66) {
 
 	// Make sure a valid callback was provided
 	if (!callback || typeof callback !== 'function') return;
 
 	// Variables
-	var isScrolling, start, end, distance;
+	let isScrolling, start, end, distance;
 
 	// Listen for scroll events
 	window.addEventListener('scroll', function (event) {
@@ -50,9 +50,9 @@ var scrollDistance = function (callback, refresh) {
 			end = null;
 			distance = null;
 
-		}, refresh || 66);
+		}, refresh);
 
 	}, false);
 
-};
+}
 ```

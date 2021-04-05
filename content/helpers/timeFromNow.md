@@ -12,22 +12,22 @@ noIndex: false
 ```js
 /*!
  * Get the amount of time from now for a date
- * (c) 2019 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * (c) 2021 Chris Ferdinandi, MIT License, https://gomakethings.com
  * @param  {String|Date} time The date to get the time from now for
  * @return {Object}           The time from now data
  */
-var timeFromNow = function (time) {
+function timeFromNow (time) {
 
 	// Get timestamps
-	var unixTime = new Date(time).getTime();
+	let unixTime = new Date(time).getTime();
 	if (!unixTime) return;
-	var now = new Date().getTime();
+	let now = new Date().getTime();
 
 	// Calculate difference
-	var difference = (unixTime / 1000) - (now / 1000);
+	let difference = (unixTime / 1000) - (now / 1000);
 
 	// Setup return object
-	var tfn = {};
+	let tfn = {};
 
 	// Check if time is in the past, present, or future
 	tfn.when = 'now';
@@ -66,5 +66,5 @@ var timeFromNow = function (time) {
 	// Return time from now data
 	return tfn;
 
-};
+}
 ```
