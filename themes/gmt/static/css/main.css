@@ -845,15 +845,10 @@ a.btn {
 /**
  * Button size
  */
-.btn-large,
-.btn-xlarge {
+.btn-large {
 	font-size: 1em;
 	line-height: normal;
 	padding: 0.6875em 0.9375em;
-}
-
-.btn-xlarge {
-	padding: 1em 1.5em;
 }
 
 /**
