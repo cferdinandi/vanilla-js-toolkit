@@ -97,8 +97,15 @@
 			status.textContent = msg;
 
 			// Set status classes
-			status.className = success ? 'success-message' : 'error-message';
-			email.className = success ? '' : 'error';
+			if (success) {
+				status.classList.add('success-message');
+				status.classList.remove('error-message');
+				email.classList.remove('error');
+			} else {
+				status.classList.add('error-message');
+				status.classList.remove('success-message');
+				email.classList.add('error');
+			}
 
 		}
 
