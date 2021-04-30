@@ -1136,6 +1136,9 @@ figcaption {
 	svg path[fill="#800080"] {
 		fill: #ff4dff;
 	}
+	svg path[fill="#ffffff"] {
+		fill: #272727;
+	}
 
 	.company-logo path {
 		fill: #ffffff;
