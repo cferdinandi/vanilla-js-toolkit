@@ -2,7 +2,7 @@
 title: "serialize.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
-description: "Serialize all form data into a query string. Fields must have a `name` property."
+description: "Serialize all form data into an object. Fields must have a `name` property."
 how: "https://gomakethings.com/how-to-serialize-form-data-with-vanilla-js/"
 demo: "https://codepen.io/cferdinandi/pen/dyYVKLK"
 weight: 10
