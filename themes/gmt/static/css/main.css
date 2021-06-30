@@ -189,7 +189,7 @@ body {
 }
 @media (prefers-color-scheme: dark) {
 	body {
-		background: #272727;
+		background: #1f252f;
 		border-top-color: #808080;
 		color: #ffffff;
 	}
@@ -210,7 +210,7 @@ a {
 a:active, a:focus, a:hover {
 	color: #005580;
 }
-a:visited {
+main a:not(.btn):visited {
 	color: #800080;
 }
 @media (prefers-color-scheme: dark) {
@@ -220,7 +220,7 @@ a:visited {
 	a:active, a:focus, a:hover {
 		color: #29b6f7;
 	}
-	a:visited {
+	main a:not(.btn):visited {
 		color: #debfde;
 	}
 }
@@ -239,8 +239,18 @@ a:visited {
 	color: #272727;
 	text-decoration: none;
 }
+@media (prefers-color-scheme: dark) {
+	.link-plain, .link-plain:visited {
+		color: #ffffff;
+	}
+}
 .link-plain:active, .link-plain:focus, .link-plain:hover {
 	color: #0088cc;
+}
+@media (prefers-color-scheme: dark) {
+	.link-plain:active, .link-plain:focus, .link-plain:hover {
+		color: #73cffa;
+	}
 }
 
 /**
@@ -433,7 +443,7 @@ hr {
 }
 @media (prefers-color-scheme: dark) {
 	.line-overlay > strong {
-		background-color: #272727;
+		background-color: #1f252f;
 	}
 }
 
@@ -517,7 +527,7 @@ pre {
 }
 @media (prefers-color-scheme: dark) {
 	pre {
-		background-color: #393939;
+		background-color: #343d4d;
 	}
 }
 pre code {
@@ -740,11 +750,11 @@ pre code {
 	margin-bottom: 0.3125em;
 	padding: 0.5em 0.6875em;
 }
-.btn, .btn:focus, .btn:visited {
+.btn, .btn:focus {
 	color: #ffffff;
 }
 @media (prefers-color-scheme: dark) {
-	.btn, .btn:focus, .btn:visited {
+	.btn, .btn:focus {
 		background-color: #fdd4d5;
 		border-color: #fdd4d5;
 		color: #000000;
@@ -1082,6 +1092,11 @@ figcaption {
 	padding-top: 0.5em;
 	text-align: center;
 }
+@media (prefers-color-scheme: dark) {
+	figcaption {
+		color: #e5e5e5;
+	}
+}
 
 /**
  * Adds a border
@@ -1132,7 +1147,7 @@ figcaption {
 		fill: #ff4dff;
 	}
 	svg path[fill="#ffffff"] {
-		fill: #272727;
+		fill: #1f252f;
 	}
 
 	.company-logo path {
@@ -1181,7 +1196,7 @@ figcaption {
 }
 @media (prefers-color-scheme: dark) {
 	.callout {
-		background-color: #272727;
+		background-color: #171b22;
 		border-color: #808080;
 	}
 }
@@ -1266,11 +1281,11 @@ td {
 		margin-bottom: 0;
 	}
 }
-.logo, .logo:focus, .logo:visited {
+.logo, .logo:focus {
 	color: #272727;
 }
 @media (prefers-color-scheme: dark) {
-	.logo, .logo:focus, .logo:visited {
+	.logo, .logo:focus {
 		color: #ffffff;
 	}
 }
