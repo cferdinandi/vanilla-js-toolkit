@@ -28,11 +28,6 @@
 			{{ readFile "/themes/gmt/static/css/fonts.css" | safeCSS }}
 			{{ if eq $.Site.Params.minify true }}{{ readFile "/themes/gmt/static/css/main.min.css" | safeCSS }}{{ else }}{{ readFile "/themes/gmt/static/css/main.css" | safeCSS }}{{ end }}
 		</style>
-
-		<!-- Font Loading -->
-		<script>
-			{{ if eq $.Site.Params.minify true }}{{ readFile "/themes/gmt/static/js/fonts.min.js" | safeJS }}{{ else }}{{ readFile "/themes/gmt/static/js/fonts.js" | safeJS }}{{ end }}
-		</script>
 	</head>
 
 	<body class="type-{{ .Type }} {{ if .IsPage }}page-single{{ else }}page-list{{ end }}{{ if .Params.anchors }} js-anchors{{ end }}" id="page-{{ .UniqueID }}">
