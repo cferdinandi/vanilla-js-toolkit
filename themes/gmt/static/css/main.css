@@ -178,7 +178,7 @@ body {
 	background: #ffffff;
 	border-top: 0.5em solid #e5e5e5;
 	color: #272727;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: "PT Sans", sans-serif;
 	font-size: 112.5%;
 	line-height: 1.5;
 }
@@ -193,9 +193,6 @@ body {
 		border-top-color: #808080;
 		color: #ffffff;
 	}
-}
-.fonts-loaded body {
-	font-family: "PT Sans", sans-serif;
 }
 
 p {
@@ -359,13 +356,11 @@ dt {
  * Heading class lets you use one heading type for semantics, but style it as another heading type.
  */
 h1, h2, h3, h4, h5, h6 {
+	font-family: "PT Serif", sans-serif;
 	line-height: 1.2;
 	margin: 0 0 1em;
 	padding: 1em 0 0;
 	word-wrap: break-word;
-}
-.fonts-loaded h1, .fonts-loaded h2, .fonts-loaded h3, .fonts-loaded h4, .fonts-loaded h5, .fonts-loaded h6 {
-	font-family: "PT Serif", serif;
 }
 
 h1,
@@ -1259,6 +1254,7 @@ td {
  */
 .logo {
 	display: inline-block;
+	font-family: "PT Serif", sans-serif;
 	font-size: 1.2em;
 	font-weight: bold;
 	line-height: 1.2;
@@ -1285,9 +1281,6 @@ td {
 	.logo:active, .logo:hover {
 		color: #73cffa;
 	}
-}
-.fonts-loaded .logo {
-	font-family: "PT Serif", serif;
 }
 
 /**
@@ -1385,12 +1378,12 @@ td {
 	text-transform: capitalize;
 }
 
-.fonts-loaded .text-sans {
+.text-sans {
 	font-family: "PT Sans", sans-serif;
 }
 
-.fonts-loaded .text-serif {
-	font-family: "PT Serif", serif;
+.text-serif {
+	font-family: "PT Serif", sans-serif;
 }
 
 /**
