@@ -570,7 +570,7 @@ pre code {
 .chroma .mi,
 .chroma .il,
 .chroma .mo {
-		color: #bfbfbf;
+		color: #cfcfcf;
 	}
 }
 @media screen {
@@ -666,7 +666,7 @@ pre code {
 .chroma .cs,
 .chroma .cp,
 .chroma .cpf {
-		color: #cfcfcf;
+		color: #e5e5e5;
 	}
 }
 @media screen {
@@ -680,7 +680,7 @@ pre code {
 	.chroma .ni,
 .chroma .o {
 		background: transparent;
-		color: #cfcfcf;
+		color: #e5e5e5;
 	}
 }
 @media screen {
