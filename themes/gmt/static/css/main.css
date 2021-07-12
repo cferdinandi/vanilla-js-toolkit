@@ -278,11 +278,11 @@ li {
 	}
 }
 .list-spaced li {
-	margin-bottom: 1em;
+	margin-bottom: 1.5625em;
 }
 @media (min-width: 38em) {
 	.list-spaced li {
-		margin-bottom: 0.6875em;
+		margin-bottom: 1em;
 	}
 }
 
