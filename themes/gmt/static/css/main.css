@@ -290,7 +290,7 @@ li {
 }
 @media (min-width: 38em) {
 	.list-spaced-small li {
-		margin-bottom: 0.8125em;
+		margin-bottom: 0.6875em;
 	}
 }
 
