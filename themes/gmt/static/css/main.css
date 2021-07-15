@@ -285,6 +285,14 @@ li {
 		margin-bottom: 1em;
 	}
 }
+.list-spaced-small li {
+	margin-bottom: 1.125em;
+}
+@media (min-width: 38em) {
+	.list-spaced-small li {
+		margin-bottom: 0.8125em;
+	}
+}
 
 dl,
 dd {
