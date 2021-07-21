@@ -3,7 +3,7 @@ title: "copy.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Create an immutable clone of an array or object."
-how: "https://gomakethings.com/a-better-way-to-create-an-immutable-copy-of-an-object-or-array-with-vanilla-js/"
+how: "https://gomakethings.com/a-better-way-to-create-an-immutable-copy-of-an-array-or-object-with-vanilla-js/"
 demo: "https://codepen.io/cferdinandi/pen/arXrpJ"
 polyfills: "Only works in modern browsers."
 weight: 10
