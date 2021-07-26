@@ -2,7 +2,7 @@
 
 {{ partial "content-page.html" . }}
 
-<ul class="list-spaced">
+<ul class="list-spaced list-spaced-small">
 	{{ range .Pages }}
 		<li>
 			<a href="{{ .URL }}"><strong>{{ .Title }}.</strong></a> {{ markdownify .Description }}

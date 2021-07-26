@@ -4,7 +4,7 @@
 
 	{{ partial "content-page-no-article.html" . }}
 
-	<ul class="list-spaced">
+	<ul class="list-spaced list-spaced-small">
 		{{ range .Pages }}
 			<li>
 				<strong><a href="{{ .URL }}">{{ .Title }}.</a></strong> {{ .Description | markdownify }} {{ if isset .Params "example" }}<em><strong>Example:</strong> {{ .Params.example | markdownify }}</em>{{ end }}
