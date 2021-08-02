@@ -95,6 +95,5 @@ function cleanHTML (str, nodes) {
 	// Otherwise, pass a sanitized string back
 	return nodes ? html.childNodes : html.innerHTML;
 
-
 }
 ```
