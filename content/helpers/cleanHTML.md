@@ -3,7 +3,7 @@ title: "cleanHTML.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Sanitize an HTML string to reduce the risk of XSS attacks."
-how: ""
+how: "https://gomakethings.com/how-to-sanitize-html-strings-with-vanilla-js-to-reduce-your-risk-of-xss-attacks/"
 demo: "https://codepen.io/cferdinandi/pen/MWmXNeN"
 weight: 10
 noIndex: false
@@ -30,6 +30,17 @@ function cleanHTML (str, nodes) {
 	}
 
 	/**
+	 * Remove <script> elements
+	 * @param  {Node} html The HTML
+	 */
+	function removeScripts (html) {
+		let scripts = html.querySelectorAll('script');
+		for (let script of scripts) {
+			script.remove();
+		}
+	}
+
+	/**
 	 * Check if the attribute is potentially dangerous
 	 * @param  {String}  name  The attribute name
 	 * @param  {String}  value The attribute value
@@ -49,10 +60,7 @@ function cleanHTML (str, nodes) {
 	 */
 	function removeAttributes (elem) {
 
-		// If the node is not an element, bail
-		if (elem.nodeType !== 1) return;
-
-		// Otherwise, loop through each attribute
+		// Loop through each attribute
 		// If it's dangerous, remove it
 		let atts = elem.attributes;
 		for (let {name, value} of atts) {
@@ -63,25 +71,14 @@ function cleanHTML (str, nodes) {
 	}
 
 	/**
-	 * Remove <script> elements
-	 * @param  {Node} html The HTML
-	 */
-	function removeScripts (html) {
-		let scripts = html.querySelectorAll('script');
-		for (let script of scripts) {
-			script.remove();
-		}
-	}
-
-	/**
 	 * Remove dangerous stuff from the HTML document's nodes
 	 * @param  {Node} html The HTML document
 	 */
-	function cleanHTML (html) {
-		let nodes = html.childNodes;
+	function clean (html) {
+		let nodes = html.children;
 		for (let node of nodes) {
 			removeAttributes(node);
-			cleanHTML(node);
+			clean(node);
 		}
 	}
 
@@ -89,8 +86,8 @@ function cleanHTML (str, nodes) {
 	let html = stringToHTML();
 
 	// Sanitize it
-	cleanHTML(html);
 	removeScripts(html);
+	clean(html);
 
 	// If the user wants HTML nodes back, return them
 	// Otherwise, pass a sanitized string back
