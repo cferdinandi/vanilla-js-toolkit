@@ -18,7 +18,7 @@ noIndex: false
  * @return {String} str  The sanitized string
  */
 function encodeHTML (str) {
-	return str.replace(/javascript:/gi, '').replace(/[^\w-_. ]/gi, function (c) {
+	return str.replace(/data:/gi, '').replace(/javascript:/gi, '').replace(/[^\w-_. ]/gi, function (c) {
 		return `&#${c.charCodeAt(0)};`;
 	});
 }
