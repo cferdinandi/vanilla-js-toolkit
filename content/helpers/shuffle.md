@@ -14,7 +14,7 @@ noIndex: false
  * Randomly shuffle an array
  * https://stackoverflow.com/a/2450976/1293256
  * @param  {Array} array The array to shuffle
- * @return {String}      The first item in the shuffled array
+ * @return {Array}       The shuffled array
  */
 function shuffle (array) {
 
