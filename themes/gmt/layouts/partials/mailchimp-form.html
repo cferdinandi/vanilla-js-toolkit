@@ -1,21 +1,18 @@
-<form action="https://gomakethings.us1.list-manage.com/subscribe/post?u=f2d244c0df42a0431bd08ddea&amp;id=aeaa9dd034" method="post" name="mc-embedded-subscribe-form" id="mailchimp-form" novalidate>
+<form action="https://gomakethings.com/api/subscribe.php" method="post" data-form="convertkit">
+	<div class="tarpit">
+		<label for="first_name">If you're human, leave this blank</label>
+		<input name="first_name" id="first_name" type="text" autocomplete="off">
+	</div>
 	<div class="row">
 		<div class="grid-two-thirds">
-			<div class="tarpit">
-				<label for="name">If you're human, leave this blank</label>
-				<input type="text" name="name" id="name" value="">
-			</div>
-			<div>
-				<label class="screen-reader" for="mailchimp-email">Enter your email address to get Daily Developer Tips emails</label>
-				<input type="email" name="email" id="mailchimp-email" placeholder="Your email address..." required>
-			</div>
-			<input type="hidden" name="TbVktzD9dNZiQyZQ3Dk64w6L" value="WqJELdqqHHFTLUrEWJLu4DspKjeoBawWdWnZVVwti7RYpCyLr8WoWtm7UozshPy6">
-			<input type="hidden" name="group[aaf6f8b9a3]" value="1"><!-- Daily Tips Group -->
-			<input type="hidden" name="tag[21917]" value="1"><!-- Signup Source -->
+			<label class="screen-reader" for="email" hidden>Enter your email address to get Daily Developer Tips emails</label>
+			<input name="email" id="email" placeholder="Your email address..." type="email">
 		</div>
+		<input type="hidden" name="form" value="newsletter">
+		<input type="hidden" name="TbVktzD9dNZiQyZQ3Dk64w6L" value="WqJELdqqHHFTLUrEWJLu4DspKjeoBawWdWnZVVwti7RYpCyLr8WoWtm7UozshPy6">
 		<div class="grid-third">
-			<button data-processing="Signing Up..." data-ready="Get Daily Developer Tips" class="btn btn-block" type="submit">Get Daily Developer Tips</button>
+			<button data-processing="Signing Up..." class="btn btn-block">Get Daily Developer Tips</button>
 		</div>
+		<div data-status role="status"></div>
 	</div>
-	<div id="mc-status" role="status"></div>
 </form>

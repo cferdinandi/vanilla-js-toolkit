@@ -1,14 +1,6 @@
-/*! vanillajs v1.5.0 | (c) 2021 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/vanilla-js-toolkit */
+/*! vanillajs v1.5.0 | (c) 2022 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/vanilla-js-toolkit */
 (function () {
 	'use strict';
-
-	/**
-	 * Element.matches() polyfill (simple version)
-	 * https://developer.mozilla.org/en-US/docs/Web/API/Element/matches#Polyfill
-	 */
-	if (!Element.prototype.matches) {
-		Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
-	}
 
 	/**
 	 * Add links to headings
@@ -39,49 +31,30 @@
 
 	}
 
-	/**
-	 *
-	 * @param {Function} callback
-	 */
-	function mailchimp (callback) {
+	function convertkit (callback) {
 
 		//
 		// Variables
 		//
 
 		// Fields
-		let form = document.querySelector('#mailchimp-form');
+		let form = document.querySelector('[data-form="convertkit"]');
 		if (!form) return;
-		let email = form.querySelector('#mailchimp-email');
+		let email = form.querySelector('#email');
 		if (!email) return;
-		let status = form.querySelector('#mc-status');
+		let status = form.querySelector('[data-status]');
 		let btn = form.querySelector('[data-processing]');
 
 		// Messages
 		let messages = {
 			empty: 'Please provide an email address.',
-			notEmail: 'Please use a valid email address.',
-			success: 'Success! Thanks for inviting me to your inbox.',
-			failed: 'Something went wrong. Please try again.'
+			notEmail: 'Please use a valid email address.'
 		};
-
-		// Endpoint
-		let endpoint = 'https://gomakethings.com/checkout/wp-json/gmt-mailchimp/v1/subscribe';
 
 
 		//
 		// Methods
 		//
-
-		/**
-		 * Serialize form data into a query string
-		 * @param  {Form}   form The form
-		 * @return {String}      The query string
-		 */
-		function serializeForm (form) {
-			let data = new FormData(form);
-			return new URLSearchParams(data).toString();
-		}
 
 		/**
 		 * Show a status message
@@ -111,46 +84,31 @@
 
 		/**
 		 * Send data to the API
-		 * @param  {String} params The form parameters
 		 */
-		function sendData (params) {
-			fetch(endpoint, {
+		function sendData () {
+			fetch(form.action, {
 				method: 'POST',
-				body: params,
+				body: new FormData(form),
 				headers: {
-					'Content-type': 'application/x-www-form-urlencoded'
+					'Accept': 'application/json'
 				}
 			}).then(function (response) {
-				return response.json();
-			}).then(function (data) {
-
-				// Show status
-				let success = data.code >= 200 && data.code < 300 ? true : false;
-				showStatus(success ? messages.success : data.message, success);
-
-				// If there's a callback, run it
-				if (callback && typeof callback === 'function') {
-					callback(data);
+				if (response.ok) {
+					return response.json();
 				}
-
+				throw response;
+			}).then(function (data) {
+				showStatus(data.msg, true);
+				if (data.redirect) {
+					window.location.href = data.redirect;
+				}
 			}).catch(function (error) {
-				showStatus(messages.failed);
+				error.json().then(function (err) {
+					showStatus(err.msg);
+				});
 			}).finally(function () {
 				form.removeAttribute('data-submitting');
 			});
-		}
-
-		/**
-		 * Submit the form to the API
-		 */
-		function submitForm () {
-
-			// Add submitting state
-			form.setAttribute('data-submitting', true);
-
-			// Send the data to the MailChimp API
-			sendData(serializeForm(form));
-
 		}
 
 		/**
@@ -192,18 +150,20 @@
 			// Stop form from submitting
 			event.preventDefault();
 
-			// Don't run again if form currrent submitting
+			// Don't run again if form currently submitting
 			if (form.hasAttribute('data-submitting')) return;
 
 			// Show submitting status
 			showStatus(btn.getAttribute('data-processing'), true);
 
 			// Validate email
-			let valid = validate();
+			if (!validate()) return;
 
-			if (valid) {
-				submitForm();
-			}
+			// Add submitting state
+			form.setAttribute('data-submitting', '');
+
+			// Send the data to the MailChimp API
+			sendData();
 
 		}
 
@@ -213,6 +173,7 @@
 		//
 
 		form.addEventListener('submit', submitHandler);
+		form.setAttribute('novalidate', '');
 
 	}
 
@@ -252,14 +213,8 @@
 
 	}
 
-	// Mailchimp form
-	if (document.querySelector('#mailchimp-form')) {
-		mailchimp(function (data) {
-			if (data.code === 200) {
-				window.location.href = 'https://gomakethings.com/newsletter-success';
-			}
-		});
-	}
+	// ConvertKit form
+	convertkit();
 
 	// Add table of contents
 	if (document.querySelector('#table-of-contents')) {

@@ -1,16 +1,9 @@
-import '../../../../../gmt-theme/dist/js/_matches.polyfill.js';
 import addHeadingLinks from '../../../../../gmt-theme/dist/js/heading-links.js';
-import mailchimp from '../../../../../gmt-theme/dist/js/mailchimp.js';
+import convertkit from '../../../../../gmt-theme/dist/js/convertkit.js';
 import tableOfContents from '../../../../../gmt-theme/dist/js/tableOfContents.js';
 
-// Mailchimp form
-if (document.querySelector('#mailchimp-form')) {
-	mailchimp(function (data) {
-		if (data.code === 200) {
-			window.location.href = 'https://gomakethings.com/newsletter-success';
-		}
-	});
-}
+// ConvertKit form
+convertkit();
 
 // Add table of contents
 if (document.querySelector('#table-of-contents')) {
