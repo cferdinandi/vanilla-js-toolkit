@@ -3,4 +3,4 @@
 
 <h2>Get Daily Developer Tips</h2>
 
-{{ if isset $ctas "ck-blurb" }}<p>{{ index $ctas "ck-blurb" | safeHTML }}</p>{{ end }}
+{{ if isset $ctas "ck-blurb" }}<p>{{ index $ctas "ck-blurb" | markdownify }}</p>{{ end }}
