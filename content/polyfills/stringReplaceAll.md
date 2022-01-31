@@ -17,17 +17,13 @@ Pushes support back to at least IE6.
  */
 if (!String.prototype.replaceAll) {
 	String.prototype.replaceAll = function(str, newStr){
-		function escapeRegex(regstr){
-		    return regstr.replace(/[.*+?(){}^$|[\]\\]/g, '\\$&');
-		}
-
 		// If a regex pattern
 		if (Object.prototype.toString.call(str).toLowerCase() === '[object regexp]') {
 			return this.replace(str, newStr);
 		}
 
 		// If a string
-		return this.replace(new RegExp(escapeRegex(str), 'g'), newStr);
+		return this.replace(new RegExp(str.replace(/[.*+?(){}^$|[\]\\]/g, '\\$&'), 'g'), newStr);
 
 	};
 }
