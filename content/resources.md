@@ -12,5 +12,3 @@ Let's make {{<year>}} the year that you master&nbsp;JavaScript! You can do this.
 {{<cta for="funnel">}}
 
 {{<cta for="products">}}
-
-**Want more?** I also host the [Vanilla JS Podcast](https://vanillajspodcast.com), and [give talks and appear on podcasts](https://gomakethings.com/talks).
