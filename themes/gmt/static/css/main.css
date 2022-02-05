@@ -1,4 +1,4 @@
-/*! gmt-theme v2.7.0 | (c) 2021 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
+/*! gmt-theme v2.7.0 | (c) 2022 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
 @charset "UTF-8";
 /**
  * @section CSS Reset
@@ -1168,6 +1168,7 @@ figcaption {
  */
 iframe {
 	aspect-ratio: 16/9;
+	background-color: #f7f7f7;
 	height: 100%;
 	margin-bottom: 1.5625em;
 	width: 100%;
