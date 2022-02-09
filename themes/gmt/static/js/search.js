@@ -11,6 +11,7 @@
 		let form = document.querySelector('#form-search');
 		let input = document.querySelector('#input-search');
 		let resultList = document.querySelector('#search-results');
+		let stopWords = ['a', 'an', 'and', 'are', 'aren\'t', 'as', 'by', 'can', 'cannot', 'can\'t', 'could', 'couldn\'t', 'how', 'is', 'isn\'t', 'it', 'its', 'it\'s', 'that', 'the', 'their', 'there', 'they', 'they\'re', 'them', 'to', 'too', 'us', 'very', 'was', 'we', 'well', 'were', 'what', 'whatever', 'when', 'whenever', 'where', 'with', 'would', 'yet', 'you', 'your', 'yours', 'yourself', 'yourselves', 'the', 'vanilla', 'javascript', 'js'];
 
 
 		//
@@ -64,7 +65,9 @@
 		function search (query) {
 
 			// Create a regex for each query
-			let regMap = query.split(' ').map(function (word) {
+			let regMap = query.toLowerCase().split(' ').filter(function (word) {
+				return word.length && !stopWords.includes(word);
+			}).map(function (word) {
 				return new RegExp(word, 'i');
 			});
 
@@ -76,8 +79,10 @@
 
 				// Assign priority
 				for (let reg of regMap) {
-					if (reg.test(article.title)) { priority += 20; }
-					if (reg.test(article.content)) { priority += 1; }
+					if (reg.test(article.title)) { priority += 100; }
+					let occurences = article.content.match(reg);
+					// console.log(occurences);
+					if (occurences) { priority += occurences.length; }
 				}
 
 				// If any matches, push to results
