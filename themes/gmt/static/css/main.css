@@ -19,7 +19,8 @@ summary {
 	touch-action: manipulation;
 }
 
-button {
+button,
+[type=submit] {
 	-webkit-appearance: none;
 }
 
