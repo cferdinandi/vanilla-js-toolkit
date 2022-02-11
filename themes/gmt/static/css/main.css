@@ -1038,12 +1038,6 @@ textarea:focus {
 	padding-left: 0.9375em;
 	padding-right: 2.5em;
 	border-radius: 1.3125em;
-	transition: width 300ms ease-in;
-}
-@media (min-width: 38em) {
-	.input-search {
-		width: 65%;
-	}
 }
 
 /**
