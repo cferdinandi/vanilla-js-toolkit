@@ -6,12 +6,11 @@ noTitle: true
 fullWidth: false
 ---
 
-<h1 class="text-xlarge margin-bottom-small">The Vanilla JavaScript Toolkit</h1>
-
-<p class="text-large">{{%md%}}A collection of native JavaScript [methods](/reference), [helper functions](/helpers), [libraries](/libraries), [boilerplates](/boilerplates), and [learning resources](/resources).{{%/md%}}</p>
+<h1 class="text-xlarge no-padding-top margin-bottom-small text-normal">The Vanilla JavaScript Toolkit</h1>
+<p class="text-large">A collection of JavaScript methods, utility functions, libraries, boilerplates, and learning resources.</p>
 
 {{<cta for="funnel">}}
 
 {{<mailchimp intro="true">}}
 
-{{<about-me>}}
+{{<cta for="bio-short">}}

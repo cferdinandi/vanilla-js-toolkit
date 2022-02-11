@@ -1,6 +1,0 @@
-{{- $data := getJSON $.Site.Params.api -}}
-{{- $ctas := index $data "ctas" -}}
-{{- if isset $ctas "bio" -}}
-<h2 id="about">Hi, I'm Chris Ferdinandi. 👋</h2>
-{{ index $ctas "bio-short" | safeHTML }}
-{{- end -}}
