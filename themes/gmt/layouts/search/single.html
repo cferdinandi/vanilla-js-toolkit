@@ -7,9 +7,11 @@
 		{{- if ne .Params.noSearch true -}}
 			{{- $.Scratch.Set "content" (.Content | plainify) -}}
 			{{- if or (eq .Type "boilerplates") (eq .Type "helpers") -}}
-				{{- $.Scratch.Set "content" .Params.description -}}
-			{{- else if eq .Type "polyfills" -}}
-				{{- $.Scratch.Set "content" .Title -}}
+				{{- if isset .Params "description" -}}
+					{{- $.Scratch.Set "content" .Params.description -}}
+				{{- else -}}
+					{{- $.Scratch.Set "content" "" -}}
+				{{- end -}}
 			{{- end -}}
 			{{- $.Scratch.Add "index" (dict "title" .Title "url" .Permalink "content" ($.Scratch.Get "content") "type" .Type ) -}}
 		{{- end -}}

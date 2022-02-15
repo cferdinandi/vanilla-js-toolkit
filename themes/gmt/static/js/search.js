@@ -11,6 +11,7 @@
 		let form = document.querySelector('#form-search');
 		let input = document.querySelector('#input-search');
 		let resultList = document.querySelector('#search-results');
+		let searchStatus = document.querySelector('#search-status');
 		let stopWords = ['a', 'an', 'and', 'are', 'aren\'t', 'as', 'by', 'can', 'cannot', 'can\'t', 'could', 'couldn\'t', 'how', 'is', 'isn\'t', 'it', 'its', 'it\'s', 'that', 'the', 'their', 'there', 'they', 'they\'re', 'them', 'to', 'too', 'us', 'very', 'was', 'we', 'well', 'were', 'what', 'whatever', 'when', 'whenever', 'where', 'with', 'would', 'yet', 'you', 'your', 'yours', 'yourself', 'yourselves', 'the', 'vanilla', 'javascript', 'js'];
 
 
@@ -28,24 +29,14 @@
 		}
 
 		/**
-		 * Create the markup when no results are found
-		 * @return {String} The markup
-		 */
-		function createNoResultsHTML () {
-			return '<p>Sorry, no matches were found.</p>';
-		}
-
-		/**
 		 * Create the markup for results
-		 * @param  {Array} results The results to display
-		 * @return {String}        The results HTML
+		 * @param  {Array}  results The results to display
+		 * @return {String}         The results HTML
 		 */
 		function createResultsHTML (results) {
-			return `
-			<p>Found ${results.length} matching articles</p>
-			${results.map(function (article, index) {
+			return results.map(function (article, index) {
 				return template(article.article, index);
-			}).join('')}`;
+			}).join('');
 		}
 
 		/**
@@ -56,6 +47,20 @@
 		function updateURL (query) {
 			if (!history.pushState) return;
 			history.pushState({}, document.title, window.location.origin + window.location.pathname + '?s=' + encodeURI(query));
+		}
+
+		/**
+		 * Show the search results in the UI
+		 * @param  {Array}  results The results to display
+		 */
+		function showResults (results) {
+			if (results.length) {
+				searchStatus.innerHTML = `<p>Found ${results.length} matching articles</p>`;
+				resultList.innerHTML = createResultsHTML(results);
+			} else {
+				searchStatus.innerHTML = '<p>Sorry, no matches were found.</p>';
+				resultList.innerHTML = '';
+			}
 		}
 
 		/**
@@ -100,7 +105,7 @@
 			});
 
 			// Display the results
-			resultList.innerHTML = results.length < 1 ? createNoResultsHTML() : createResultsHTML(results);
+			showResults(results);
 
 			// Update the URL
 			updateURL(query);
@@ -132,7 +137,7 @@
 		//
 
 		// Make sure required content exists
-		if (!template || typeof template !== 'function' || !form || !input || !resultList || !searchIndex) return;
+		if (!template || typeof template !== 'function' || !form || !input || !resultList || !searchStatus || !searchIndex) return;
 
 		// Create a submit handler
 		form.addEventListener('submit', submitHandler);
@@ -143,10 +148,11 @@
 	}
 
 	crowsNest(function (article, id) {
+		if (!article.title || article.url.contains('/offline/')) return '';
 		return `
 		<li class="margin-bottom-medium">
-			<strong><a href="${article.url}">${article.title}</a></strong>
 			<div class="text-capitalize text-muted text-small">${article.type.replace('page', 'reference')}</div>
+			<div><strong><a class="link-no-underline" href="${article.url}">${article.title}</a></strong></div>
 		</li>`;
 	});
 

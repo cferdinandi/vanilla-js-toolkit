@@ -3,11 +3,11 @@ baseURL: "https://vanillajstoolkit.com"
 
 # Customer parameters
 params:
-  description: "A growing collection of vanilla JavaScript code snippets, helper functions, polyfills, plugins, and learning resources."
+  description: "A collection of tools and snippets for working with JavaScript."
   api: "https://gomakethings.com/api/data.json"
   rssURL: ""
   rssLimit: 7
-  minify: true
+  minify: false
 
 # Caches
 caches:
