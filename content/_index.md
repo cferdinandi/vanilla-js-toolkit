@@ -6,7 +6,7 @@ noTitle: true
 fullWidth: false
 ---
 
-<h1 class="text-xlarge no-padding-top margin-bottom-small text-normal">A collection of tools and snippets for working with JavaScript.</h1>
+<h1 class="padding-top-small margin-bottom-small text-xlarge text-normal">A collection of tools and snippets for working with JavaScript.</h1>
 <p class="text-large">Find modern JS methods and utility functions, and browse hand&#8209;selected libraries, boilerplates, and learning resources.</p>
 
 {{<cta for="funnel">}}
