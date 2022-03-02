@@ -1,6 +1,6 @@
-/*! GMT Service Worker v2.6.0 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
+/*! GMT Service Worker v2.7.0 | (c) 2022 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
 
-var version = 'gmt_2.6.0';
+var version = 'gmt_2.7.0';
 // Cache IDs
 var coreID = version + '_core';
 var pageID = version + '_pages';
@@ -121,7 +121,7 @@ self.addEventListener('fetch', function (event) {
 
 	// Images & Fonts
 	// Offline-first
-	if (request.headers.get('Accept').includes('image') || request.url.includes('pt-serif-v11') || request.url.includes('/css/fonts.css')) {
+	if (request.headers.get('Accept').includes('image') || request.url.includes('.woff') || request.url.includes('/css/fonts.css')) {
 		event.respondWith(
 			caches.match(request).then(function (response) {
 				return response || fetch(request).then(function (response) {
