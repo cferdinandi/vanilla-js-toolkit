@@ -1,6 +1,6 @@
-/*! GMT Service Worker v2.7.0 | (c) 2022 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
+/*! GMT Service Worker v2.8.0 | (c) 2022 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
 
-var version = 'gmt_2.7.0';
+var version = 'gmt_2.8.0';
 // Cache IDs
 var coreID = version + '_core';
 var pageID = version + '_pages';
