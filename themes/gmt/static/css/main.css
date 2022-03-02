@@ -382,7 +382,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "PT Serif", sans-serif;
 	line-height: 1.2;
 	margin: 0 0 1em;
-	padding: 1em 0 0;
+	padding: 0;
 	word-wrap: break-word;
 }
 
@@ -401,6 +401,7 @@ h1,
 h2,
 .h2 {
 	font-size: 1.3125em;
+	padding-top: 1em;
 }
 
 h3,
