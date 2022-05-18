@@ -1,7 +1,7 @@
 import crowsNest from '../../../../../gmt-theme/dist/js/search.js';
 
 crowsNest(function (article, id) {
-	if (!article.title || article.url.contains('/offline/')) return '';
+	if (!article.title || article.url.includes('/offline/')) return '';
 	return `
 		<li class="margin-bottom-medium">
 			<div class="text-capitalize text-muted text-small">${article.type.replace('page', 'reference')}</div>
