@@ -1,4 +1,4 @@
-/*! gmt-theme v2.7.0 | (c) 2022 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
+/*! gmt-theme v2.8.0 | (c) 2022 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
 @charset "UTF-8";
 /**
  * @section CSS Reset
@@ -1150,6 +1150,9 @@ figcaption {
 	}
 	svg path[fill="#f7272f"] {
 		fill: #fdd4d5;
+	}
+	svg path[fill="#2cad4e"] {
+		fill: #a6e8b9;
 	}
 	svg path[fill="#800080"] {
 		fill: #ff4dff;
