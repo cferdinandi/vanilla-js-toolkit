@@ -57,6 +57,10 @@ function timeFromNow (time) {
 		// Hours
 		tfn.unitOfTime = 'hours';
 		tfn.time = Math.floor(difference / (60 * 60));
+	} else if (difference / 60 > 1) {
+		// Minutes
+		tfn.unitOfTime = 'minutes';
+		tfn.time = Math.floor(difference / 60);
 	} else {
 		// Seconds
 		tfn.unitOfTime = 'seconds';
