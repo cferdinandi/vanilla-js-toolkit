@@ -5,12 +5,12 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Take the content of an array and return a single value."
-weight: 80
+weight: 30
 ---
 
 Take the content of an array and return a single value. That value can be anything: a string, number, object, or even another array.
 
-The `Array.reduce()` method accepts two arguments: a callback method to run against each item in the array, and a starting value.
+The `Array.reduce()` method accepts two arguments: a callback method to run against each item in the array, and a starting value. Both are required.
 
 The callback also accepts two arguments: the `accumulator`, which is the current combined value, and the `current` item in the loop. Whatever you return is used as the accumulator for the next item in the loop. On the very first loop, that starting value is used instead.
 
@@ -19,7 +19,8 @@ The callback also accepts two arguments: the `accumulator`, which is the current
  * Add all of the numbers in an array
  */
 
-var total = [1, 2, 3].reduce(function (sum, current) {
+let numbers = [1, 2, 3];
+let total = [1, 2, 3].reduce(function (sum, current) {
 	return sum + current;
 }, 0);
 
@@ -31,7 +32,7 @@ console.log(total);
  * Create a new array with only the names of wizards in Huffepuff
  */
 
-var wizards = [
+let wizards = [
 	{
 		name: 'Harry Potter',
 		house: 'Gryfindor'
@@ -55,7 +56,7 @@ var wizards = [
 ];
 
 // This combines what you would otherwise do with map() and filter() into one step
-var hufflepuff = wizards.reduce(function (newArr, wizard) {
+let hufflepuff = wizards.reduce(function (newArr, wizard) {
 	if (wizard.house === 'Hufflepuff') {
 		newArr.push(wizard.name);
 	}

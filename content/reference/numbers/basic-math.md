@@ -5,7 +5,6 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Do basic arithmetic with JavaScript."
-polyfills: "Works back to at least IE6."
 weight: 60
 ---
 
@@ -39,4 +38,13 @@ console.log(5 * 2);
 // Remainder
 // logs 1 (2 goes into 5 twice, with 1 left over)
 console.log(5 % 2);
+```
+
+You can combine operators. Group the items you want to run first/together with parentheses.
+
+```javascript
+let total = (3 + 1) * 2;
+
+// logs 8 (3 plus 1 is 4, multiplied by 2)
+console.log(total);
 ```

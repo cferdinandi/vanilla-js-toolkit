@@ -5,13 +5,12 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Set an attribute on an element."
-polyfills: "Works back to at least IE6."
 weight: 20
 ---
 
-Set an attribute (including data attributes) on an element. This method can also be used to manipulate other types of attributes---things like `id`, `tabindex`, `name`, and so on.
+Set an attribute (including data attributes) on an element.
 
 ```javascript
-var elem = document.querySelector('#lunch');
+let elem = document.querySelector('#lunch');
 elem.setAttribute('data-sandwich', 'turkey');
 ```

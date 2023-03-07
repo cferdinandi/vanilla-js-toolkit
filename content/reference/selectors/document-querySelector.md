@@ -8,18 +8,15 @@ description: "Find the first matching element on a page."
 weight: 20
 ---
 
-Find the first matching element on a page.
+Find the first matching element on a page. If an element isn't found, `querySelector()` returns `null`.
 
 ```javascript
-// The first div
-var elem = document.querySelector('div');
+// The first button
+let button = document.querySelector('button');
 
-// The first div with the .bg-red class
-var elemRed = document.querySelector('.bg-red');
+// The first element with the .bg-red class
+let red = document.querySelector('.bg-red');
 
-// The first div with a data attribute of snack equal to carrots
-var elemCarrots = document.querySelector('[data-snack="carrots"]');
-
-// An element that doesn't exist
-var elemNone = document.querySelector('.bg-orange');
+// The first element with a data attribute of snack equal to carrots
+let carrots = document.querySelector('[data-snack="carrots"]');
 ```

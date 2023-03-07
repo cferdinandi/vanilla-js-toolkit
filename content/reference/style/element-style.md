@@ -5,21 +5,39 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Get and set inline styles for an element."
-polyfills: "Works back to at least IE6."
 weight: 10
 ---
 
 Get and set inline styles for an element.
 
+```html
+<p id="sandwich" style="background-color: green; color: white;">
+	Sandwich
+</p>
+```
+
 ```javascript
-var elem = document.querySelector('#sandwich');
+let sandwich = document.querySelector('#sandwich');
 
 // Get a style
 // If this style is not set as an inline style directly on the element, it returns an empty string
-// ex. <div id="sandwich" style="background-color: green"></div>
-var bgColor = elem.style.backgroundColor; // this will return "green"
-var fontWeight = elem.style.fontWeight; // this will return ""
+let bgColor = sandwich.style.backgroundColor; // this will return "green"
+let fontWeight = sandwich.style.fontWeight; // this will return ""
 
-// Set a style
-elem.style.backgroundColor = 'purple';
+// Set the background-color style property
+sandwich.style.backgroundColor = 'purple';
+```
+
+You can also get and set a string representation of the entire inline `style` property on the element itself with the `Element.style.cssText` property.
+
+```javascript
+// Get the styles on an element
+// returns "background-color: green; color: white;"
+let styles = sandwich.style.cssText;
+
+// Completely replace the inline styles on an element
+sandwich.style.cssText = 'font-size: 2em; font-weight: bold;';
+
+// Add additional styles
+sandwich.style.cssText += 'color: purple;';
 ```

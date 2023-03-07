@@ -5,7 +5,6 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Add characters to the end of a string if it's less than a certain length."
-polyfills: "[Requires a polyfill for IE.](/polyfills/stringpadend/)"
 weight: 20
 ---
 
@@ -13,8 +12,8 @@ Add characters to the end of a string if it's less than a certain length. Accept
 
 ```javascript
 // Add a leading zero for hours below 10
-var minutes0 = '0';
-var minutes12 = '12';
+let minutes0 = '0';
+let minutes12 = '12';
 
 // returns "00"
 minutes0.padEnd(2, '0');

@@ -5,7 +5,6 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Create an autocompletion text input."
-polyfills: "Works in Chrome, Firefox, and IE11 and up, but not Safari. Defaults to a standard input in unsupported browsers."
 weight: 20
 ---
 

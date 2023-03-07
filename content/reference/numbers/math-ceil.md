@@ -5,7 +5,6 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Get the smallest integer greater than or equal to a number."
-polyfills: "Works back to at least IE6."
 weight: 110
 ---
 

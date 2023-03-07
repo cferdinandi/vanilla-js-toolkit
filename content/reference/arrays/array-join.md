@@ -5,28 +5,27 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Combine all items in an array into a string."
-polyfills: "Works back to at least IE6."
-weight: 100
+weight: 60
 ---
 
 Combine all items in an array into a string, separated by a delimiter that you can pass in as an argument. By default, it will use a comma (`,`) as the delimiter if one is not provided.
 
 ```javascript
-var strings = [
+let messages = [
 	'I love Cape Cod potato chips.',
 	'What about you?'
 ];
 
-var concat = strings.join();
-var concatWithSpace = strings.join(' ');
-var concatWithSmiley = strings.join(' =) ');
+let str = messages.join();
+let strWithSpace = messages.join(' ');
+let strWithSmiley = messages.join(' =) ');
 
 // logs "I love Cape Cod potato chips.,What about you?"
-console.log(concat);
+console.log(str);
 
 // logs "I love Cape Cod potato chips. What about you?"
-console.log(concatWithSpace);
+console.log(strWithSpace);
 
 // logs "I love Cape Cod potato chips. =) What about you?"
-console.log(concatWithSmiley);
+console.log(strWithSmiley);
 ```

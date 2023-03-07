@@ -1,23 +1,32 @@
 ---
-title: "Element.after()"
+title: "Node.after()"
 date: 2018-01-14T21:38:44-05:00
 draft: false
 noTitle: false
 fullWidth: false
 description: "Insert an element into the DOM after another one."
-polyfills: "[Requires a polyfill for IE.](/polyfills/after/)"
-weight: 40
+weight: 30
 ---
 
-Insert an element in the DOM after another one. Call the `after()` method on the reference node, and pass in the new node as an argument.
+Insert elements and strings after another element. Call the `Node.after()` method on the node you want to insert after, and pass in one or more new elements or strings as arguments.
+
+```html
+<div id="app">Good morning</div>
+```
 
 ```javascript
 // Create a new element
-var newNode = document.createElement('div');
+let p = document.createElement('p');
+p.textContent = 'Hello!';
 
-// Get the reference node
-var referenceNode = document.querySelector('#some-element');
+// Get the target node
+let app = document.querySelector('#app');
 
-// Insert the new node after the reference node
-referenceNode.after(newNode);
+// Insert the new node after the target node
+// <div id="app">Good morning</div><p>Hello!</p>
+app.after(p);
+
+// You can inject more than one item by passing in multiple arguments
+// <div id="app">Good morning</div><p>Hello!</p>What's poppin'
+app.after(p, `What's poppin?`);
 ```

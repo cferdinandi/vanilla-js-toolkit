@@ -5,20 +5,36 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Insert an element at the end of a set of elements inside a shared parent."
-polyfills: "[Requires a polyfill for IE.](/polyfills/append/)"
-weight: 60
+weight: 40
 ---
 
-Insert an element at the end of a set elements inside a shared parent. Call the `append()` method on the reference node, and pass in the new node as an argument.
+Insert one or more elements or strings at the end of a set elements inside a shared parent. Call the `Element.append()` method on the target node, and pass in one or more new elements or strings as arguments.
+
+```html
+<ul id="list">
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3</li>
+</ul>
+```
 
 ```javascript
 // Create a new element
-var newNode = document.createElement('li');
-newNode.textContent = 'I am new here.';
+let li = document.createElement('li');
+li.textContent = 'I am new here.';
 
-// Get the reference node
-var referenceNode = document.querySelector('#some-element');
+// Create another new element
+let liToo = document.createElement('li');
+liToo.textContent = `I'm new, too!`;
 
-// Insert the new node after the last element in the reference node
-referenceNode.append(newNode);
+// Get the parent node
+let list = document.querySelector('#list');
+
+// Insert the new node after the last element in the parent node
+// ...<li>Item 3</li><li>I am new here.</li>
+list.append(li);
+
+// You can inject more than one item by passing in multiple arguments
+// ...<li>Item 3</li><li>I am new here.</li><li>I'm new, too!</li>
+list.append(li, liToo);
 ```

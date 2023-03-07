@@ -2,12 +2,10 @@
 
 <article>
 
-	<p class="no-margin-bottom"><strong><a href="/reference#{{ replace .Page.Parent.Title " " "-" }}">{{ .Page.Parent.Title }}</a></strong></p>
+	<p class="no-margin-bottom"><strong><a href='/reference#{{ replace .Page.Parent.Title " " "-" }}'>{{ .Page.Parent.Title }}</a></strong></p>
 	<h1 class="no-padding-top">{{ ( .Title | htmlUnescape ) }}</h1>
 
 	{{ .Content }}
-
-	{{ if isset .Params "support" }}<p><em>{{ markdownify .Params.support }}</em></p>{{ end }}
 
 	<aside>
 		{{ partial "mailchimp-intro.html" . }}

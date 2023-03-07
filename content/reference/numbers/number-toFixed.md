@@ -5,15 +5,14 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Format a number to a fixed number of decimal places."
-polyfills: "Works back to at least IE6."
 weight: 40
 ---
 
 Format a number to a fixed number of decimal places. Pass in the number of decimal places as an argument.
 
 ```javascript
-var pi = 3.14159;
-var eleven = 11;
+let pi = 3.14159;
+let eleven = 11;
 
 // returns 3.14
 pi.toFixed(2);

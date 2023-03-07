@@ -5,14 +5,13 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Convert stringified JSON back into an object or array."
-polyfills: "Works back to IE8."
 weight: 20
 ---
 
-Converts stringified JSON back into an object or array.
+Convert stringified JSON back into an object or array.
 
 ```javascript
 // Get data from local storage
-var savedLunch = JSON.parse(localStorage.getItem('lunchOrder'));
-var savedDrinks = JSON.parse(localStorage.getItem('drinkOptions'));
+let savedLunch = JSON.parse(localStorage.getItem('lunchOrder'));
+let savedDrinks = JSON.parse(localStorage.getItem('drinkOptions'));
 ```

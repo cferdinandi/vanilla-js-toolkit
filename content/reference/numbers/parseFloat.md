@@ -5,7 +5,6 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Convert a string into a point number (a number with decimal points)."
-polyfills: "Works back to at least IE6."
 weight: 20
 ---
 

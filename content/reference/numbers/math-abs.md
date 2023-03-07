@@ -5,8 +5,7 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Get the absolute value of a number."
-polyfills: "Works back to at least IE6."
-weight: 80
+weight: 90
 ---
 
 Get the absolute (positive) value of a number.

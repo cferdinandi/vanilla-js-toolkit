@@ -5,26 +5,25 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Add, remove, toggle, and check for classes on an element."
-polyfills: "Works back to IE10. [Extend back to IE8 with a polyfill.](/polyfills/classlist/)"
 weight: 10
 ---
 
-Add, remove, toggle, and check for the presence of a class.
+Add, remove, toggle, and check for classes on an element.
 
 ```javascript
-var elem = document.querySelector('#sandwich');
+let elem = document.querySelector('#sandwich');
 
-// Add a class
+// Add the .turkey class
 elem.classList.add('turkey');
 
-// Remove a class
+// Remove the .tuna class
 elem.classList.remove('tuna');
 
-// Toggle a class
+// Toggle the .tomato class on or off
 // (Add the class if it's not already on the element, remove it if it is.)
 elem.classList.toggle('tomato');
 
-// Check if an element has a specific class
+// Check if an element has the .mayo class
 if (elem.classList.contains('mayo')) {
 	console.log('add mayo!');
 }

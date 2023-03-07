@@ -5,17 +5,16 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Get and set classes on an element."
-polyfills: "Works back to IE6."
 weight: 20
 ---
 
 Get all of the classes on an element as a string, add a class or classes, or completely replace or remove all classes.
 
 ```javascript
-var elem = document.querySelector('div');
+let elem = document.querySelector('div');
 
 // Get all of the classes on an element
-var elemClasses = elem.className;
+let elemClasses = elem.className;
 
 // Add a class to an element
 elem.className += ' vanilla-js';

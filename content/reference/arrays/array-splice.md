@@ -5,8 +5,7 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Delete, replace, and add items to an array at specific indexes."
-polyfills: "Works back to at least IE6."
-weight: 40
+weight: 100
 ---
 
 Delete, replace, and add items to an array at specific indexes. The `Array.splice()` method accepts three arguments: `start`, `delete`, and `items`.
@@ -18,7 +17,7 @@ The second, `delete`, is the number of items to delete from the array. If you om
 Finally, if you want to insert one or more items into the array, you can pass them in as additional arguments.
 
 ```javascript
-var sandwiches = ['turkey', 'tuna', 'ham', 'pb&j'];
+let sandwiches = ['turkey', 'tuna', 'ham', 'pb&j'];
 
 // Remove "ham" from the array
 // It has an index of 2, and we only want to remove 1 item
@@ -31,4 +30,11 @@ sandwiches.splice(2, 0, 'italian');
 // Replace "tuna" with "chicken salad"
 // It has an index of 1, we want to remove 1 item, and add "chicken salad"
 sandwiches.splice(1, 1, 'chicken salad');
+```
+
+You can combine `splice()` with `indexOf()` to remove an item by it's name.
+
+```javascript
+// Remove "pb&j"
+sandwiches.splice(sandwiches.indexOf('pb&j'), 1);
 ```

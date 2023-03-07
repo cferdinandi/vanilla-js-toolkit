@@ -5,7 +5,6 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Create and emit custom events."
-polyfills: "[Requires a polyfill for IE9/10.](/polyfills/customevent/)"
 weight: 20
 ---
 
@@ -17,7 +16,7 @@ After setting up your event, call the `dispatchEvent()` method on your element a
 
 ```javascript
 // Create a new event
-var event = new CustomEvent('myCustomEvent', {
+let event = new CustomEvent('myCustomEvent', {
 	bubbles: true,
 	cancelable: true,
 	detail: {
@@ -26,6 +25,6 @@ var event = new CustomEvent('myCustomEvent', {
 });
 
 // Dispatch the event
-var elem = document.querySelector('#the-element-to-emit-on');
+let elem = document.querySelector('#the-element-to-emit-on');
 elem.dispatchEvent(event);
 ```

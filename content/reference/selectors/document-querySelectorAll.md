@@ -11,9 +11,12 @@ weight: 10
 Find all matching elements on a page. You can use any valid CSS selector.
 
 ```javascript
+// Get all button elements
+let buttons = document.querySelectorAll('button');
+
 // Get all elements with the .bg-red class
-var elemsRed = document.querySelectorAll('.bg-red');
+let elemsRed = document.querySelectorAll('.bg-red');
 
 // Get all elements with the [data-snack] attribute
-var elemsSnacks = document.querySelectorAll('[data-snack]');
+let elemsSnacks = document.querySelectorAll('[data-snack]');
 ```

@@ -5,7 +5,6 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Convert a string into an integer (whole number)."
-polyfills: "Works back to at least IE6."
 weight: 10
 ---
 

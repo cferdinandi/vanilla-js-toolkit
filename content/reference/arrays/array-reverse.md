@@ -5,14 +5,13 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Reverse the order of items in an array."
-polyfills: "Works back to at least IE6."
-weight: 90
+weight: 40
 ---
 
 Reverse the order of items in an array.
 
 ```javascript
-var count = [1, 2, 3, 4, 5];
+let count = [1, 2, 3, 4, 5];
 
 // Reverse the array order
 count.reverse();

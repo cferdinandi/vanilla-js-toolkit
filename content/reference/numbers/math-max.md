@@ -5,8 +5,7 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Get the largest number from a set of numbers"
-polyfills: "Works back to at least IE6."
-weight: 115
+weight: 120
 ---
 
 Returns the largest number from a set of numbers. Pass each number in as an argument.

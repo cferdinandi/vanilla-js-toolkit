@@ -5,24 +5,17 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Loop through arrays and array-like objects."
-polyfills: "Works back to at least IE6."
 weight: 10
 ---
 
-Loop through array and array-like (ex. `NodeList`) lists items.
+Loop through arrays, NodeLists, and other array-like objects.
 
 ```javascript
-var sandwiches = [
-	'tuna',
-	'ham',
-	'turkey',
-	'pb&j'
-];
+let sandwiches = ['turkey', 'tuna', 'ham', 'pb&j'];
 
-for (var i = 0; i < sandwiches.length; i++) {
-	console.log(i) // index
-	console.log(sandwiches[i]) // value
+// logs 0, "tuna", 1, "ham", 2, "turkey", 3, "pb&j"
+for (let i = 0; i < sandwiches.length; i++) {
+	console.log(i); // index
+	console.log(sandwiches[i]); // value
 }
-
-// returns 0, tuna, 1, ham, 2, turkey, 3, pb&j
 ```

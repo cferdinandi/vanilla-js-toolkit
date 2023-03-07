@@ -5,19 +5,20 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Get the parent of an element."
-polyfills: "Works back to at least IE6."
 weight: 10
 ---
 
 Get the parent of an element.
 
-```javascript
-var elem = document.querySelector('#some-elem');
-var parent = elem.parentNode;
+```html
+<div id="app">
+	<h1>Hello, world!</h1>
+</div>
 ```
 
-You can also string them together to go several levels up.
-
 ```javascript
-var levelUpParent = elem.parentNode.parentNode;
+let h1 = document.querySelector('h1');
+
+// returns the #app element
+let parent = h1.parentNode;
 ```

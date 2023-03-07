@@ -5,13 +5,12 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Remove an attribute from an element."
-polyfills: "Works back to at least IE6."
 weight: 30
 ---
 
-Remove an attribute (including data attributes) on an element. This method can also be used to manipulate other types of attributes---things like `id`, `tabindex`, `name`, and so on.
+Remove an attribute (including data attributes) on an element.
 
 ```javascript
-var elem = document.querySelector('#lunch');
+let elem = document.querySelector('#lunch');
 elem.removeAttribute('data-chips');
 ```

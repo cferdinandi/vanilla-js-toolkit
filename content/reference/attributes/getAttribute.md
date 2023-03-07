@@ -5,13 +5,12 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Get an attribute on an element."
-polyfills: "Works back to at least IE6."
 weight: 10
 ---
 
-Get an attribute (including data attributes) on an element. This method can also be used to manipulate other types of attributes---things like `id`, `tabindex`, `name`, and so on.
+Get attributes (including data attributes) on an element.
 
 ```javascript
-var elem = document.querySelector('#lunch');
-var sandwich = elem.getAttribute('data-sandwich');
+let elem = document.querySelector('#lunch');
+let sandwich = elem.getAttribute('data-sandwich');
 ```

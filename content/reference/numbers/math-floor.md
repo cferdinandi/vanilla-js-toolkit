@@ -5,8 +5,7 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Get the largest integer less than or equal to a number."
-polyfills: "Works back to at least IE6."
-weight: 90
+weight: 100
 ---
 
 Returns the largest integer (whole number) less than or equal to a number.

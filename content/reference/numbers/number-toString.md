@@ -5,15 +5,14 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Convert a number to a string."
-polyfills: "Works back to at least IE6."
 weight: 50
 ---
 
 Convert a number to a string.
 
 ```javascript
-var pi = 3.14;
-var eleven = 11;
+let pi = 3.14;
+let eleven = 11;
 
 // returns "3.14"
 pi.toString();

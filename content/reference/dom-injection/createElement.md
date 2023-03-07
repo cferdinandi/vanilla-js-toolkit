@@ -5,14 +5,13 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Create an element."
-polyfills: "Works back to at least IE6."
 weight: 10
 ---
 
-Create an element.
+Create an element. Pass in the element to create, without angled brackets (`<>`), as an argument
 
 ```javascript
-var div = document.createElement('div');
-var link = document.createElement('a');
-var article = document.createElement('article');
+let div = document.createElement('div');
+let link = document.createElement('a');
+let article = document.createElement('article');
 ```

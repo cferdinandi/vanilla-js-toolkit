@@ -5,15 +5,14 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Transform all text in a string to lowercase."
-polyfills: "Works back to at least IE6."
 weight: 50
 ---
 
 Transform all text in a string to lowercase.
 
 ```javascript
-var text = 'This sentence has some MIXED CASE LeTTeRs in it.';
+let text = 'This sentence has some MIXED CASE LeTTeRs in it.';
 
 // returns "this sentence has some mixed case letters in it."
-var lower = text.toLowerCase();
+let lower = text.toLowerCase();
 ```

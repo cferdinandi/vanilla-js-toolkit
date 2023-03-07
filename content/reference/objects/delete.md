@@ -5,14 +5,13 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Remove an item from an object."
-polyfills: "Works back to at least IE6."
-weight: 40
+weight: 30
 ---
 
 Remove an item from an object. Use the `delete` operator on the key to remove.
 
 ```javascript
-var lunch = {
+let lunch = {
 	sandwich: 'turkey',
 	chips: 'cape cod',
 	drink: 'soda'

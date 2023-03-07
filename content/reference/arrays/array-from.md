@@ -5,13 +5,12 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Create a new array from an existing array or array-like object."
-polyfills: "[Requires a polyfill for IE.](https://vanillajstoolkit.com/polyfills/arrayfrom/)"
-weight: 50
+weight: 130
 ---
 
 Create a new array from an existing one, or transform an array-like object (like a NodeList) into an array. Pass the array (or array-like object) to copy in as an argument.
 
 ```javascript
-var sandwiches = ['turkey', 'tuna', 'ham', 'pb&j'];
-var sandwichesCopy = Array.from(sandwiches);
+let sandwiches = ['turkey', 'tuna', 'ham', 'pb&j'];
+let sandwichesCopy = Array.from(sandwiches);
 ```

@@ -5,7 +5,6 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Store data locally in the browser for later use."
-polyfills: "Works back to IE8.<br><br>For more complex `localStorage` management, I wrote [a small helper library](https://github.com/cferdinandi/bin)."
 weight: 20
 ---
 

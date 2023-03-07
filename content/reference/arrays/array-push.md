@@ -5,16 +5,15 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Add items to an array."
-polyfills: "Works back to at least IE6."
-weight: 10
+weight: 70
 ---
 
 Add items to an array. Pass the new items in as arguments.
 
 ```javascript
-var sandwiches = ['turkey', 'tuna', 'blt'];
+let sandwiches = ['turkey', 'tuna', 'blt'];
 sandwiches.push('chicken', 'pb&j');
 
-// logs ['turkey', 'tuna', 'blt', 'chicken', 'pb&j']
+// logs ["turkey", "tuna", "blt", "chicken", "pb&j"]
 console.log(sandwiches);
 ```

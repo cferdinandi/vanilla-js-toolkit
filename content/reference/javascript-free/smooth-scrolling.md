@@ -5,7 +5,6 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Animate scrolling to anchor links."
-polyfills: "Works in Chrome and Firefox. No Edge, IE, or Safari support. Defaults to traditional anchor jumps in unsupported browsers."
 weight: 30
 ---
 

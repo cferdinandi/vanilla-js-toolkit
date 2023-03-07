@@ -5,7 +5,6 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Add characters to the beginning of a string if it's less than a certain length."
-polyfills: "[Requires a polyfill for IE.](/polyfills/stringpadstart/)"
 weight: 10
 ---
 
@@ -13,8 +12,8 @@ Add characters to the beginning of a string if it's less than a certain length. 
 
 ```javascript
 // Add a leading zero for hours below 10
-var hour3 = '3';
-var hour12 = '12';
+let hour3 = '3';
+let hour12 = '12';
 
 // returns "03"
 hour3.padStart(2, '0');

@@ -5,18 +5,20 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Transform the items in an array and create a new one."
-weight: 60
+weight: 10
 ---
 
-Iterate through each item in an array, transform it, and return a new array. The callback accepts three arguments: the current item in the loop's value, its index, and the array itself.
+Loop through each item in an array, transform it, and return a new array. Pass in a callback function that accepts three arguments: the current item in the loop, its index, and the array itself. All three are optional.
+
+Whatever you `return` inside the callback function becomes the new value at that index in the new array.
 
 ```javascript
 /**
  * Double each number in an array
  */
 
-var numbers = [1, 4, 9];
-var doubles = numbers.map(function(num) {
+let numbers = [1, 4, 9];
+let doubles = numbers.map(function(num) {
 	return num * 2;
 });
 
@@ -27,7 +29,7 @@ console.log(doubles);
 /**
  * Get an array of just names
  */
-var data = [
+let data = [
 	{
 		name: 'Kyle',
 		occupation: 'Fashion Designer'
@@ -50,7 +52,7 @@ var data = [
 	}
 ];
 
-var names = data.map(function (item) {
+let names = data.map(function (item) {
 	return item.name;
 });
 

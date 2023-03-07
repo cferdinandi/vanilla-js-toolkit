@@ -5,7 +5,6 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Store data locally for the duration of the current browser session."
-polyfills: "Works back to IE8.<br><br>For more complex `sessionStorage` management, I wrote [a small helper library](https://github.com/cferdinandi/bin)."
 weight: 30
 ---
 

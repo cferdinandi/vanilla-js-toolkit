@@ -5,8 +5,7 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Make Promise-based HTTP request."
-polyfills: Works in all modern browsers, including Edge, but has no IE support. Include polyfilles for [fetch()](https://vanillajstoolkit.com/polyfills/fetch/) and [Promises](https://vanillajstoolkit.com/polyfills/promise/).
-weight: 160
+weight: 10
 ---
 
 The Fetch API is used to make Promise-based, asynchronous HTTP requests.
@@ -15,9 +14,7 @@ The Fetch API is used to make Promise-based, asynchronous HTTP requests.
 
 Pass the URL for your HTTP request into the `fetch()` method as an argument.
 
-In a `then()` callback method, if the `response.ok` property is `true`, return the `response.json()`. Otherwise, return a rejected Promise.
-
-In the next `then()` callback, you can work with the JSON response `data`. Use the `catch()` method to handle errors.
+In a `then()` callback method, if the `response.ok` property is `true`, return the `response.json()`. Otherwise, return a rejected Promise. In the next `then()` callback, you can work with the JSON response `data`. Use the `catch()` method to handle errors.
 
 ```javascript
 fetch('https://jsonplaceholder.typicode.com/posts').then(function (response) {

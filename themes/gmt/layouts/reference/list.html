@@ -5,11 +5,11 @@
 {{ if ne (len .Sections) 0 }}
 
 	{{ range .Sections }}
-		<h2 class="margin-bottom-small" id="{{ replace .Title " " "-" }}">{{ .Title }}</h2>
+		<h2 class="margin-bottom-small" id='{{ replace .Title " " "-" }}'>{{ .Title }}</h2>
 
 		<ul>
 		{{ range .Pages }}
-			<li><a href="{{ .URL }}">{{ .Title | htmlUnescape }}</a>{{ if ne .Description "" }} - {{ .Description | markdownify }}{{ end }}</li>
+			<li><strong><a href="{{ .URL }}">{{ .Title | htmlUnescape }}</a>{{ if ne .Description "" }}</strong> - {{ .Description | markdownify }}{{ end }}</li>
 		{{ end }}
 		</ul>
 	{{ end }}
@@ -18,7 +18,7 @@
 
 	<ul>
 	{{ range .Pages }}
-		<li><a href="{{ .URL }}">{{ .Title | htmlUnescape }}</a>{{ if ne .Description "" }} - {{ .Description | markdownify }}{{ end }}</li>
+		<li><strong><a href="{{ .URL }}">{{ .Title | htmlUnescape }}</a></strong>{{ if ne .Description "" }} - {{ .Description | markdownify }}{{ end }}</li>
 	{{ end }}
 	</ul>
 

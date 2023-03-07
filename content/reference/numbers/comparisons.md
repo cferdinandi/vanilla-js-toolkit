@@ -5,8 +5,7 @@ draft: false
 noTitle: false
 fullWidth: false
 description: "Compare two numbers."
-polyfills: "Works back to at least IE6."
-weight: 70
+weight: 80
 ---
 
 JavaScript includes a handful of comparison operators:
