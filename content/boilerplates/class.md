@@ -1,14 +1,14 @@
 ---
-title: "Constructor Pattern"
+title: "Class Pattern"
 date: 2018-01-24T12:16:26-05:00
-description: "Create multiple instances of script that share methods but contain unique information."
+description: "An alternative approach to implementing the constructor pattern, with a nicer syntax and some additional features."
 example: "a piggy bank library."
 draft: false
-weight: 30
+weight: 40
 noIndex: false
 ---
 
-Change `MyLibrary` to whatever namespace you’d like to use for your library. Constructors start with a capital letter.
+Change `MyLibrary` to whatever namespace you’d like to use for your library. The constructor object is lowercase, and functions are automatically attached to the instance `prototype`.
 
 ## Examples
 
@@ -26,34 +26,29 @@ let total = dug.total;
 ## The Boilerplate
 
 ```js
-/**
- * Constructor Pattern Boilerplate
- */
-let MyLibrary = (function () {
+class MyLibrary {
 
 	/**
-	 * Create the Constructor object
+	 * Create the constructor object
 	 * @param {Number} start The starting amount
 	 */
-	function Constructor (start = 0) {
+
+	constructor (start = 0) {
 		this.total = start;
 	}
 
 	/**
 	 * Add money to the total
 	 */
-	Constructor.prototype.add = function (num = 1) {
+	add (num = 1) {
 		this.total = this.total + num;
-	};
+	}
 
 	/**
 	 * Remove money from the total
 	 */
-	Constructor.prototype.subtract = function (num = 1) {
+	subtract (num = 1) {
 		this.total = this.total - num;
-	};
-
-	return Constructor;
-
-})();
+	}
+}
 ```

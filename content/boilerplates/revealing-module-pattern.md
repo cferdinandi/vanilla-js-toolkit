@@ -8,65 +8,39 @@ weight: 20
 noIndex: false
 ---
 
-Change `myPlugin` to whatever namespace you’d like to use for your plugin.
+Change `MyLibrary` to whatever namespace you’d like to use for your library.
 
 ## Examples
 
 ```js
-myPlugin.doSomething();
-myPlugin.init();
+MyLibrary.sayHi();
+MyLibrary.sayBye();
 ```
 
 ## The Boilerplate
 
 ```js
-/*!
+/**
  * Revealing Module Pattern Boilerplate
- * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
  */
-var myPlugin = (function () {
+let MyLibrary = (function () {
 
-	'use strict';
+	// This variable is scoped internally
+	// It can't be accessed externally
+	let name = 'Wall-E';
 
-	//
-	// Variables
-	//
+	// This is returned at the end and can be run externally
+	function sayHi () {
+		console.log(`Hi ${name}`);
+	}
 
-	var publicAPIs = {};
+	// This can also be run externally
+	function sayBye () {
+		console.log(`Bye ${name}`);
+	}
 
-
-	//
-	// Methods
-	//
-
-	/**
-	 * A private method
-	 */
-	var somePrivateMethod = function () {
-		// Code goes here...
-	};
-
-	/**
-	 * A public method
-	 */
-	publicAPIs.doSomething = function () {
-		somePrivateMethod();
-		// Code goes here...
-	};
-
-	/**
-	 * Another public method
-	 */
-	publicAPIs.init = function (options) {
-		// Code goes here...
-	};
-
-
-	//
-	// Return the Public APIs
-	//
-
-	return publicAPIs;
+	// Return and functions and variables that should be accessible externally
+	return {sayHi, sayBye};
 
 })();
 ```
