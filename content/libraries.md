@@ -18,6 +18,7 @@ As a result, the list is a lot shorter than some of the bigger "library reposito
 - **[Houdini.](https://github.com/cferdinandi/houdini/)** A progressively enhanced expand-and-collapse and accordion widget.
 - **[Tabby.](https://github.com/cferdinandi/tabby/)** Lightweight toggle tabs.
 - **[A11Y Modal Dialog.](https://github.com/scottaohara/accessible_modal_window)** An accessible modal dialogue script.
+- **[Sortable Tables.](https://adrianroselli.com/2021/04/sortable-table-columns.html)** A tutorial on accessible sortable table columns.
 - **[ScrollReveal.](https://scrollrevealjs.org/)** Easy scroll animations.
 - **[Gumshoe.](https://github.com/cferdinandi/gumshoe/)** A framework agnostic scrollspy script.
 - **[Offside.js.](https://github.com/toomuchdesign/offside)** Simple off-canvas navigation menus.
