@@ -8,7 +8,7 @@ fullWidth: false
 
 Helper functions make complicated or repetitive tasks a bit easier, and keep your code DRY (an acronym for *Don't Repeat Yourself*).
 
-*Unless otherwise noted, these helper functions work in all modern browsers on desktop and mobile. You can extend support back further with [polyfills](/polyfills).*
+_Unless otherwise noted, these helper functions work in all modern browsers on desktop and mobile._
 
 {{<cta for="funnel">}}
 
