@@ -29,8 +29,7 @@ As a result, the list is a lot shorter than some of the bigger "library reposito
 - **[X-Ray.](https://github.com/cferdinandi/x-ray/)** Let users toggle password visibility.
 - **[PhotoSwipe.](http://photoswipe.com/)** An amazing photo gallery plugin.
 - **[Swiper.](http://idangero.us/swiper/)** Rich touch-supported sliders.
-- **[FluidVids.](https://github.com/toddmotto/fluidvids)** Add true responsive support to your video embeds.
-- **[bouncer.](https://github.com/cferdinandi/bouncer)** A lightweight form validation script that augments native HTML5 form validation elements and attributes.
+- **[Bouncer.](https://github.com/cferdinandi/bouncer)** A lightweight form validation script that augments native HTML5 form validation elements and attributes.
 - **[Dinero.js.](https://sarahdayan.github.io/dinero.js/)** A library for working with monetary values in JavaScript.
 - **[date-fns](https://date-fns.org/)** A small, tree-shakeable library for working with dates. Parse, validate, manipulate, and display dates and times in JavaScript.
 
