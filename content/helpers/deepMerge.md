@@ -33,7 +33,8 @@ function deepMerge (...objs) {
 	 */
 	function mergeObj (clone, obj) {
 		for (let [key, value] of Object.entries(obj)) {
-			if (clone[key] !== undefined && ['array', 'object'].includes(getType(obj))) {
+			let type = getType(value);
+			if (clone[key] !== undefined && getType(clone[key]) === type && ['array', 'object'].includes(type)) {
 				clone[key] = deepMerge(clone[key], value);
 			} else {
 				clone[key] = structuredClone(value);
