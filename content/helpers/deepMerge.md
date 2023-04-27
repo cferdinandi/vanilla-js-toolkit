@@ -1,5 +1,5 @@
 ---
-title: "deepAssign.js"
+title: "deepMerge.js"
 date: 2018-01-24T12:16:26-05:00
 draft: false
 description: "Deep merge two or more objects or arrays."
