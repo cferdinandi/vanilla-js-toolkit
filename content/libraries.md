@@ -14,6 +14,7 @@ As a result, the list is a lot shorter than some of the bigger "library reposito
 
 {{<cta for="funnel">}}
 
+- **[Shoelace.](https://shoelace.style/)** A modern UI library built with native Web Components and vanilla JS.
 - **[Build Tool Boilerplate.](https://github.com/cferdinandi/build-tool-boilerplate)** A simple boilerplate for using NPM tasks to build and compile JavaScript, CSS, and image files.
 - **[Houdini.](https://github.com/cferdinandi/houdini/)** A progressively enhanced expand-and-collapse and accordion widget.
 - **[Tabby.](https://github.com/cferdinandi/tabby/)** Lightweight toggle tabs.
