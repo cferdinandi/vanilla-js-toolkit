@@ -112,23 +112,12 @@ audio {
 @media (min-width: 38em) {
 	.row {
 		display: flex;
-		margin-left: -1.4%;
-		margin-right: -1.4%;
+		gap: 1.4%;
 		justify-content: space-between;
 	}
 
 	.row-reverse {
 		flex-direction: row-reverse;
-	}
-
-	.grid-auto,
-.grid-fourth,
-.grid-third,
-.grid-two-thirds,
-.grid-half,
-.grid-three-fourths {
-		margin-left: 1.4%;
-		margin-right: 1.4%;
 	}
 
 	.grid-auto {
