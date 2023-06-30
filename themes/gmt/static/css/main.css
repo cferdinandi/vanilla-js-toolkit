@@ -217,7 +217,7 @@ a {
 a:active, a:focus, a:hover {
 	color: #00476c;
 }
-main a:not(.btn):visited {
+main a:not(.btn, .link-no-visited):visited {
 	color: #800080;
 }
 @media (prefers-color-scheme: dark) {
@@ -227,7 +227,7 @@ main a:not(.btn):visited {
 	a:active, a:focus, a:hover {
 		color: #29b6f7;
 	}
-	main a:not(.btn):visited {
+	main a:not(.btn, .link-no-visited):visited {
 		color: #debfde;
 	}
 }
@@ -758,6 +758,7 @@ pre code {
 .btn {
 	background-color: #f7272f;
 	border: 0.125em solid #f7272f;
+	border-radius: 0.25em;
 	display: inline-block;
 	font-size: 0.9375em;
 	font-weight: normal;
@@ -845,6 +846,22 @@ a.btn {
 }
 
 /**
+ * Muted buttons
+ */
+.btn-muted {
+	background-color: #e5e5e5;
+	border-color: #e5e5e5;
+}
+.btn-muted, .btn-muted:focus {
+	color: #272727;
+}
+.btn-muted:hover, .btn-muted:active, .btn-muted.active {
+	background-color: lightgray;
+	border-color: lightgray;
+	color: #272727;
+}
+
+/**
  * Active state
  */
 .btn:active {
@@ -866,10 +883,19 @@ a.btn {
 /**
  * Button size
  */
+.btn-large,
+.btn-small {
+	line-height: normal;
+}
+
 .btn-large {
 	font-size: 1em;
-	line-height: normal;
 	padding: 0.6875em 0.9375em;
+}
+
+.btn-small {
+	font-size: 0.8125em;
+	padding: 0.25em 0.5em;
 }
 
 /**
@@ -959,6 +985,7 @@ input,
 textarea,
 select {
 	border: 1px solid #adadad;
+	border-radius: 0.25em;
 	display: block;
 	line-height: 1.5;
 	margin-bottom: 1.1875em;
