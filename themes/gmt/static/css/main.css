@@ -119,22 +119,22 @@ audio {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		grid-template-rows: 1fr auto;
-		gap: 1.4%;
+		column-gap: 0.75em;
 	}
 
 	.row-gap-large {
-		gap: 2.4%;
+		column-gap: 1.1875em;
 	}
 
 	.row-no-gap {
-		gap: 0;
+		column-gap: 0;
 	}
 
 	.row-auto {
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, 15em), 1fr));
 	}
 
-	.grid-fith,
+	.grid-fifth,
 .grid-sixth {
 		grid-column: auto/span 2;
 	}
