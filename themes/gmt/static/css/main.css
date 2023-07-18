@@ -1217,6 +1217,7 @@ iframe {
 .callout {
 	background-color: #f7f7f7;
 	border: 1px solid #e5e5e5;
+	border-radius: 0.5em;
 	margin-bottom: 1.5625em;
 	padding: 1em 1.5em;
 }
