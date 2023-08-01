@@ -85,6 +85,10 @@ audio {
 	width: 100%;
 }
 
+summary {
+	cursor: pointer;
+}
+
 /**
  * @workaround Remove focus from tabindex="-1" elements which are only script focusable
  * @link https://code.google.com/p/chromium/issues/detail?id=37721
@@ -107,6 +111,11 @@ audio {
 	width: 88%;
 }
 
+@media (max-width: 38em) {
+	.container-nested {
+		width: 100%;
+	}
+}
 .container-large {
 	max-width: 60em;
 }
