@@ -121,6 +121,15 @@ summary {
 }
 
 /**
+ * Full width content
+ */
+.full-width {
+	margin-left: calc(50% - 50vw);
+	min-width: 100vw;
+	width: 100vw;
+}
+
+/**
  * Grids
  */
 @media (min-width: 38em) {
@@ -240,6 +249,10 @@ body {
 
 p {
 	margin: 0 0 1.5625em;
+}
+
+p:empty {
+	margin-bottom: 0;
 }
 
 /**
@@ -563,6 +576,7 @@ code {
 
 pre {
 	background-color: #f7f7f7;
+	color: #272727;
 	display: block;
 	line-height: 1.5;
 	margin: 0 0 1.5625em;
@@ -1471,6 +1485,11 @@ td {
 	text-align: center;
 }
 
+@media (max-width: 38em) {
+	.text-center-small {
+		text-align: center;
+	}
+}
 .text-right {
 	text-align: right;
 }
