@@ -233,6 +233,7 @@ body {
 	font-family: "PT Sans", sans-serif;
 	font-size: 112.5%;
 	line-height: 1.5;
+	overflow-x: hidden;
 }
 @media (min-width: 38em) {
 	body {
@@ -249,10 +250,6 @@ body {
 
 p {
 	margin: 0 0 1.5625em;
-}
-
-p:empty {
-	margin-bottom: 0;
 }
 
 /**
@@ -752,6 +749,7 @@ pre code {
 @media screen {
 	.chroma .nf,
 .chroma .fm,
+.chroma .nx,
 .chroma .ow {
 		color: #dd4a68;
 	}
@@ -759,6 +757,7 @@ pre code {
 @media screen and (prefers-color-scheme: dark) {
 	.chroma .nf,
 .chroma .fm,
+.chroma .nx,
 .chroma .ow {
 		color: #deb6be;
 	}
