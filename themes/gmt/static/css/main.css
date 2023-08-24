@@ -428,7 +428,7 @@ dt {
  */
 h1, h2, h3, h4, h5, h6 {
 	font-family: "PT Serif", sans-serif;
-	line-height: 1.2;
+	line-height: 1.4;
 	margin: 0 0 1em;
 	padding: 0;
 	word-wrap: break-word;
@@ -1499,7 +1499,7 @@ td {
 	}
 }
 /**
- * Background Color
+ * Background Color & Borders
  */
 .bg-muted {
 	background-color: #f7f7f7;
@@ -1508,6 +1508,11 @@ td {
 	.bg-muted {
 		background-color: #171b22;
 	}
+}
+
+.border {
+	border: 1px solid #e5e5e5;
+	border-radius: 0.5em;
 }
 
 /**
