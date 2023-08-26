@@ -1362,6 +1362,7 @@ td {
  * The navigation menu
  */
 .nav {
+	justify-content: center;
 	margin-bottom: 0;
 }
 .nav a:not(.btn) {
