@@ -366,11 +366,11 @@ dt {
  * 1. Add a non-breaking space
  * 2. Make sure it doesn't mess up the DOM flow
  */
-.list-inline, .nav, .list-unstyled {
+.list-inline, .nav-sub, .nav, .list-unstyled {
 	list-style: none;
 	margin-left: 0;
 }
-.list-inline > li::before, .nav > li::before, .list-unstyled > li::before {
+.list-inline > li::before, .nav-sub > li::before, .nav > li::before, .list-unstyled > li::before {
 	content: "​";
 	/* 1 */
 	position: absolute;
@@ -388,12 +388,12 @@ dt {
 /**
  * Display lists on a single line.
  */
-.list-inline, .nav {
+.list-inline, .nav-sub, .nav {
 	display: flex;
 	column-gap: 1em;
 }
 @media (max-width: 38em) {
-	.list-inline.list-inline-responsive, .list-inline-responsive.nav {
+	.list-inline.list-inline-responsive, .nav-sub, .list-inline-responsive.nav {
 		display: block;
 	}
 }
@@ -1397,6 +1397,20 @@ td {
  * Styling for the secondary navigation area
  */
 /**
+ * @section Subnav
+ * Styling for on-page navigation components
+ */
+.nav-sub a {
+	text-decoration: none;
+}
+.nav-sub a:not(.btn):hover,
+.nav-sub a:not(.btn):active,
+.nav-sub a:not(.btn):focus,
+.nav-sub [aria-current=page] {
+	border-bottom: 0.125em solid #fa7176;
+}
+
+/**
  * @section Overrides
  * Nudge and tweak alignment, spacing, and visibility.
  */
@@ -1483,6 +1497,17 @@ td {
 		text-align: right;
 	}
 }
+/**
+ * Flex alignment
+ */
+.flex-center {
+	justify-content: center;
+}
+
+.flex-middle {
+	align-items: center;
+}
+
 /**
  * Background Color & Borders
  */
