@@ -391,6 +391,7 @@ dt {
 .list-inline, .nav-sub, .nav {
 	display: flex;
 	column-gap: 1em;
+	align-items: center;
 }
 @media (max-width: 38em) {
 	.list-inline.list-inline-responsive, .nav-sub, .list-inline-responsive.nav {
@@ -1502,10 +1503,6 @@ td {
  */
 .flex-center {
 	justify-content: center;
-}
-
-.flex-middle {
-	align-items: center;
 }
 
 /**
