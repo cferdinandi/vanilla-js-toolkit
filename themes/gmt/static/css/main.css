@@ -1,4 +1,4 @@
-/*! gmt-theme v2.8.1 | (c) 2023 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
+/*! gmt-theme v2.9.0 | (c) 2023 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
 @charset "UTF-8";
 /**
  * @section CSS Reset
@@ -389,37 +389,21 @@ dt {
  * Display lists on a single line.
  */
 .list-inline, .nav {
-	margin-left: -0.5em;
-	margin-right: -0.5em;
-	padding: 0;
-}
-.list-inline > li, .nav > li {
-	display: inline-block;
-	margin-left: 0.5em;
-	margin-right: 0.5em;
+	display: flex;
+	column-gap: 1em;
 }
 @media (max-width: 38em) {
-	.list-inline.list-inline-responsive > li, .list-inline-responsive.nav > li {
+	.list-inline.list-inline-responsive, .list-inline-responsive.nav {
 		display: block;
 	}
 }
 
 .list-inline-spaced {
-	margin-left: -1.3125em;
-	margin-right: -1.3125em;
-}
-.list-inline-spaced > li {
-	margin-left: 1.3125em;
-	margin-right: 1.3125em;
+	column-gap: 2.875em;
 }
 
 .list-inline-compact {
-	margin-left: -0.25em;
-	margin-right: -0.25em;
-}
-.list-inline-compact li {
-	margin-left: 0.25em;
-	margin-right: 0.25em;
+	column-gap: 0.5em;
 }
 
 /**
