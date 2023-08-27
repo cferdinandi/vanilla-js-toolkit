@@ -580,6 +580,7 @@ pre {
 @media (prefers-color-scheme: dark) {
 	pre {
 		background-color: #343d4d;
+		color: #ffffff;
 	}
 }
 pre code {
