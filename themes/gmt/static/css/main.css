@@ -390,8 +390,9 @@ dt {
  */
 .list-inline, .nav-sub, .nav {
 	display: flex;
-	column-gap: 1em;
 	align-items: center;
+	column-gap: 1em;
+	flex-wrap: wrap;
 }
 @media (max-width: 38em) {
 	.list-inline.list-inline-responsive, .nav-sub, .list-inline-responsive.nav {
@@ -1370,6 +1371,11 @@ td {
 .nav {
 	justify-content: center;
 	margin-bottom: 0;
+}
+@media (max-width: 38em) {
+	.nav {
+		column-gap: 0.75em;
+	}
 }
 .nav a:not(.btn) {
 	color: #757575;
