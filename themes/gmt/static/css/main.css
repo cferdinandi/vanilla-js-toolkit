@@ -1280,6 +1280,9 @@ iframe {
 		background-color: #1f252f;
 	}
 }
+.callout-cta del {
+	color: #b2b2b2;
+}
 
 /**
  * @section Honeypot
