@@ -219,6 +219,24 @@ summary {
 	}
 }
 /**
+ * Flexbox
+ */
+@media (min-width: 38em) {
+	.row-flex {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.row-flex-top {
+		align-items: start;
+	}
+
+	.row-flex-gap {
+		column-gap: 2em;
+	}
+}
+/**
  * @section Typography
  * Sets font styles for entire site
  */
@@ -366,11 +384,11 @@ dt {
  * 1. Add a non-breaking space
  * 2. Make sure it doesn't mess up the DOM flow
  */
-.list-inline, .nav-sub, .nav, .list-unstyled {
+.list-inline, .nav-sub, .nav, .list-unstyled, .list-checked {
 	list-style: none;
 	margin-left: 0;
 }
-.list-inline > li::before, .nav-sub > li::before, .nav > li::before, .list-unstyled > li::before {
+.list-inline > li::before, .nav-sub > li::before, .nav > li::before, .list-unstyled > li::before, .list-checked > li::before {
 	content: "​";
 	/* 1 */
 	position: absolute;
@@ -381,8 +399,25 @@ dt {
  * Removes list styling.
  * For semantic reasons, should only be used on unordered lists.
  */
-.list-unstyled {
+.list-unstyled, .list-checked {
 	margin-left: 0;
+}
+
+/**
+ * Checkmark lists
+ */
+.list-checked li {
+	padding-left: 1em;
+}
+.list-checked li:before {
+	content: "✓";
+	color: #f7272f;
+	margin-left: -1em;
+}
+@media (prefers-color-scheme: dark) {
+	.list-checked li:before {
+		color: #fdd4d5;
+	}
 }
 
 /**
@@ -1175,6 +1210,11 @@ figcaption {
 	}
 }
 
+iframe,
+img {
+	border-radius: 0.5em;
+}
+
 /**
  * Adds a border
  */
@@ -1230,7 +1270,8 @@ figcaption {
 		fill: #1f252f;
 	}
 
-	.company-logo path {
+	.company-logo path,
+path.company-logo {
 		fill: #ffffff;
 	}
 
