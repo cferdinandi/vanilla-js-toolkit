@@ -2,7 +2,7 @@
 
 A growing collection of vanilla JavaScript code snippets, helper functions, polyfills, plugins, and learning resources.
 
-**[View the Toolkit](https://vanillajstoolkit.com)**
+_**Note:** The toolkit has been relocated to [GoMakeThings.com/toolkit](https://gomakethings.com/toolkit/)_
 
 ## Todo
 
